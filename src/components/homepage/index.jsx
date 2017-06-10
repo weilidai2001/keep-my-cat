@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import { frames } from '../../data/states';
 
 class Homepage extends Component {
     constructor(props, context) {
         super(props, context);
 
         this.state = {
-            heroImageUrl: '/placeholder-1.jpg'
+            currentFrame: 'homepage',
+            heroImageUrl: frames.homepage.heroImageUrl
         };
 
         this.onChoice1Click = this.onChoice1Click.bind(this);
@@ -15,9 +15,13 @@ class Homepage extends Component {
     }
 
     onChoice1Click() {
-        console.log('Choice 1 clicked');
+
+        const nextFrameId = frames[this.state.currentFrame].choice1;
+        const nextFrame = frames[nextFrameId];
+
         this.setState({
-            heroImageUrl: '/placeholder-2.png'
+            currentFrame: nextFrameId,
+            heroImageUrl: nextFrame.heroImageUrl
         })
     }
 
