@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { frames, getNextHeroImage, getNextFrameId } from '../../data/states';
 
 class Homepage extends Component {
@@ -37,6 +38,7 @@ class Homepage extends Component {
         // using ReactTransitionGroup add-on https://facebook.github.io/react/docs/animation.html
         const button1 = frames[this.state.currentFrame].choice1;
         const button2 = frames[this.state.currentFrame].choice2;
+        const { heroImageUrl } = this.state;
 
         return (
             <div className="page">
@@ -48,7 +50,12 @@ class Homepage extends Component {
                         </div>
                     </header>
                     <main>
-                        <img className="hero-image" src={this.state.heroImageUrl} alt=""/>
+                        <ReactCSSTransitionGroup
+                            transitionName="slide"
+                            transitionEnterTimeout={1000}
+                            transitionLeaveTimeout={1000}>
+                            <img key={heroImageUrl} className="hero-image" src={heroImageUrl} alt=""/>
+                        </ReactCSSTransitionGroup>
                     </main>
                     <footer>Footer</footer>
                 </div>

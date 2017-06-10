@@ -2,7 +2,6 @@ main {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
-  background-color: #73c8ff;
 }
 
 .hero-image {
@@ -10,4 +9,31 @@ main {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.slide-appear {
+  opacity: 0.01;
+}
+
+.slide-appear.slide-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.slide-enter {
+  opacity: 0.01;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.slide-leave {
+  opacity: 1;
+}
+
+.slide-leave.slide-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
