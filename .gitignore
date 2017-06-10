@@ -1,3 +1,15 @@
+# mac
+.DS_Store
+
+# intellij
+.idea
+
+# vscode
+.vscode
+
+# build directory
+dist
+
 # Logs
 logs
 *.log
