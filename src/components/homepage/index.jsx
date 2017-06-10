@@ -1,11 +1,14 @@
 import React from 'react';
+import placeholder from '../../img/placeholder.jpg';
 
 export default () => {
     return (
         <div className="page">
             <div className="page-content">
                 <header>Header</header>
-                <main>Main</main>
+                <main>
+                    <img className="hero-image" src={placeholder} alt=""/>
+                </main>
                 <footer>Footer</footer>
             </div>
         </div>
