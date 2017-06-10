@@ -8,7 +8,9 @@
 .vscode
 
 # build directory
-dist
+build/index.html
+build/main.css*
+build/main.js*
 
 # Logs
 logs
