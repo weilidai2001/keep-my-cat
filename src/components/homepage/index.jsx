@@ -15,8 +15,7 @@ class Homepage extends Component {
     }
 
     onChoice1Click() {
-
-        const nextFrameId = frames[this.state.currentFrame].choice1;
+        const nextFrameId = frames[this.state.currentFrame].choice1.destination;
         const nextFrame = frames[nextFrameId];
 
         this.setState({
@@ -26,16 +25,28 @@ class Homepage extends Component {
     }
 
     onChoice2Click() {
+        const nextFrameId = frames[this.state.currentFrame].choice2.destination;
 
+        const nextFrame = frames[nextFrameId];
+
+        this.setState({
+            currentFrame: nextFrameId,
+            heroImageUrl: nextFrame.heroImageUrl
+        })
     }
 
     render() {
+
+        const button1 = frames[this.state.currentFrame].choice1;
+        const button2 = frames[this.state.currentFrame].choice2;
+
         return (
             <div className="page">
                 <div className="page-content">
                     <header>
                         <div className="next-options">
-                            <button onClick={this.onChoice1Click}>Next</button>
+                            <button onClick={this.onChoice1Click}>{button1.text}</button>
+                            {!!button2 && <button onClick={this.onChoice2Click}>{button2.text}</button>}
                         </div>
                     </header>
                     <main>
