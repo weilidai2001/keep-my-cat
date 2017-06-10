@@ -1,4 +1,4 @@
-// require('../css/main.scss');
+require('../css/main.scss');
 import React, {PropTypes, Component} from 'react';
 import { createStore } from 'redux'
 // import { Provider } from 'react-redux';
