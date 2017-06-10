@@ -18,3 +18,12 @@ export const frames = {
         }
     }
 };
+
+export const getNextHeroImage = (id, choice) => {
+    const nextFrameId = frames[id][choice].destination;
+    return frames[nextFrameId].heroImageUrl;
+};
+
+export const getNextFrameId = (id, choice) => {
+    return frames[id][choice].destination;
+};

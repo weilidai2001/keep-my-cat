@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { frames } from '../../data/states';
+import { frames, getNextHeroImage, getNextFrameId } from '../../data/states';
 
 class Homepage extends Component {
     constructor(props, context) {
@@ -15,28 +15,26 @@ class Homepage extends Component {
     }
 
     onChoice1Click() {
-        const nextFrameId = frames[this.state.currentFrame].choice1.destination;
-        const nextFrame = frames[nextFrameId];
+        const { currentFrame } = this.state;
 
         this.setState({
-            currentFrame: nextFrameId,
-            heroImageUrl: nextFrame.heroImageUrl
+            currentFrame: getNextFrameId(currentFrame, 'choice1'),
+            heroImageUrl: getNextHeroImage(currentFrame, 'choice1')
         })
     }
 
     onChoice2Click() {
-        const nextFrameId = frames[this.state.currentFrame].choice2.destination;
-
-        const nextFrame = frames[nextFrameId];
+        const { currentFrame } = this.state;
 
         this.setState({
-            currentFrame: nextFrameId,
-            heroImageUrl: nextFrame.heroImageUrl
+            currentFrame: getNextFrameId(currentFrame, 'choice2'),
+            heroImageUrl: getNextHeroImage(currentFrame, 'choice2')
         })
     }
 
     render() {
-
+        // TODO: implement sliding React Components https://medium.com/front-end-developers/sliding-react-components-4873e232907e
+        // using ReactTransitionGroup add-on https://facebook.github.io/react/docs/animation.html
         const button1 = frames[this.state.currentFrame].choice1;
         const button2 = frames[this.state.currentFrame].choice2;
 
