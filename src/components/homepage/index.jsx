@@ -45,12 +45,7 @@ class Homepage extends Component {
         return (
             <div className="page">
                 <div className="page-content">
-                    <header>
-                        <div className="next-options">
-                            <button onClick={this.onChoice1Click}>{button1.text}</button>
-                            {!!button2 && <button onClick={this.onChoice2Click}>{button2.text}</button>}
-                        </div>
-                    </header>
+                    <header></header>
                     <main>
                         <ReactCSSTransitionGroup
                             transitionName="slide"
@@ -58,6 +53,10 @@ class Homepage extends Component {
                             transitionLeaveTimeout={1000}>
                             <img key={heroImageUrl} className="hero-image" src={heroImageUrl} alt=""/>
                         </ReactCSSTransitionGroup>
+                        <div className="next-options">
+                            <button onClick={this.onChoice1Click}>{button1.text}</button>
+                            {!!button2 && <button onClick={this.onChoice2Click}>{button2.text}</button>}
+                        </div>
                     </main>
                     <footer>Footer</footer>
                 </div>
