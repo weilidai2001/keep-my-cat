@@ -21,6 +21,20 @@ main {
   width: 80%;
 }
 
+.next-button {
+  display: block;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.next-button-1 {
+  @extend .next-button;
+}
+
+.next-button-2 {
+  @extend .next-button;
+}
+
 .slide-enter {
   transform: translate(100%);
 }

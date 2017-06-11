@@ -42,6 +42,22 @@ class Homepage extends Component {
 
         const { heroImageUrl } = this.state;
 
+        let renderedButton1;
+        if (button1.imageUrl) {
+            renderedButton1 = <img src={button1.imageUrl} onClick={this.onChoice1Click} className="next-button-1"/>;
+        } else {
+            renderedButton1 = <button onClick={this.onChoice1Click}>{button1.text}</button>;
+        }
+
+        let renderedButton2;
+        if (button2) {
+            if (button2.imageUrl) {
+                renderedButton2 = <img src={button2.imageUrl} onClick={this.onChoice2Click} className="next-button-2"/>;
+            } else {
+                renderedButton2 = <button onClick={this.onChoice2Click}>{button2.text}</button>;
+            }
+        }
+
         return (
             <div className="page">
                 <div className="page-content">
@@ -54,8 +70,8 @@ class Homepage extends Component {
                             <img key={heroImageUrl} className="hero-image" src={heroImageUrl} alt=""/>
                         </ReactCSSTransitionGroup>
                         <div className="next-options">
-                            <button onClick={this.onChoice1Click}>{button1.text}</button>
-                            {!!button2 && <button onClick={this.onChoice2Click}>{button2.text}</button>}
+                            {renderedButton1}
+                            {renderedButton2}
                         </div>
                     </main>
                     <footer>Footer</footer>

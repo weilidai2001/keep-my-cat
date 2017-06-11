@@ -3,11 +3,11 @@ const frames = {
         heroImageUrl: 'placeholder-1.jpg',
         choice1: {
             destination: 'frame2',
-            text: 'Choice 1'
+            imageUrl: 'https://media0.giphy.com/media/a74pSGN7wvT7a/200.webp#93-grid1'
         },
         choice2: {
             destination: 'frame2',
-            text: 'Choice 2'
+            imageUrl: 'https://media2.giphy.com/media/14o3AsSMpn6PkY/200w.webp#95-grid1'
         },
     },
     frame2: {
