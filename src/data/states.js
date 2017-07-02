@@ -1,20 +1,207 @@
 const frames = {
     homepage: {
-        heroImageUrl: 'placeholder-1.jpg',
+        heroImageUrl: 'intro_1.png',
         choice1: {
-            destination: 'frame2',
-            imageUrl: 'https://media0.giphy.com/media/a74pSGN7wvT7a/200.webp#93-grid1'
-        },
-        choice2: {
-            destination: 'frame2',
-            imageUrl: 'https://media2.giphy.com/media/14o3AsSMpn6PkY/200w.webp#95-grid1'
-        },
+            destination: 'intro2',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
     },
-    frame2: {
-        heroImageUrl: 'placeholder-2.png',
+    intro2: {
+        heroImageUrl: 'intro_2.png',
         choice1: {
             destination: 'homepage',
-            text: 'Choice 1'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro3',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro3: {
+        heroImageUrl: 'intro_3.png',
+        choice1: {
+            destination: 'intro2',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro4',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro4: {
+        heroImageUrl: 'intro_4.png',
+        choice1: {
+            destination: 'intro3',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro5',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro5: {
+        heroImageUrl: 'intro_5.png',
+        choice1: {
+            destination: 'intro4',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro6',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro6: {
+        heroImageUrl: 'intro_6.png',
+        choice1: {
+            destination: 'intro5',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro7',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro7: {
+        heroImageUrl: 'intro_7.png',
+        choice1: {
+            destination: 'intro6',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro8',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro8: {
+        heroImageUrl: 'intro_8.png',
+        choice1: {
+            destination: 'intro7',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro9',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro9: {
+        heroImageUrl: 'intro_9.png',
+        choice1: {
+            destination: 'intro8',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro10',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro10: {
+        heroImageUrl: 'intro_10.png',
+        choice1: {
+            destination: 'intro9',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro11',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro11: {
+        heroImageUrl: 'intro_11.png',
+        choice1: {
+            destination: 'intro10',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro11a',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro11a: {
+        heroImageUrl: 'intro_11a.png',
+        choice1: {
+            destination: 'intro11',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro11b',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro11b: {
+        heroImageUrl: 'intro_11b.png',
+        choice1: {
+            destination: 'intro11a',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro12',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro12: {
+        heroImageUrl: 'intro_12.png',
+        choice1: {
+            destination: 'intro11b',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro13',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro13: {
+        heroImageUrl: 'intro_13.png',
+        choice1: {
+            destination: 'intro12',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro14',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro14: {
+        heroImageUrl: 'intro_14.png',
+        choice1: {
+            destination: 'intro13',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro15',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro15: {
+        heroImageUrl: 'intro_15.png',
+        choice1: {
+            destination: 'intro14',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro16',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro16: {
+        heroImageUrl: 'intro_16.png',
+        choice1: {
+            destination: 'intro15',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'intro17',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    intro17: {
+        heroImageUrl: 'intro_17.png',
+        choice1: {
+            destination: 'intro16',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png'
+        },
+        choice2: {
+            destination: 'homepage',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     }
 };

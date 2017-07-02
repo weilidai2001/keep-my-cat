@@ -61,18 +61,19 @@ class Homepage extends Component {
         return (
             <div className="page">
                 <div className="page-content">
-                    <header></header>
-                    <main>
-                        <ReactCSSTransitionGroup
-                            transitionName="slide"
-                            transitionEnterTimeout={1000}
-                            transitionLeaveTimeout={1000}>
-                            <img key={heroImageUrl} className="hero-image" src={heroImageUrl} alt=""/>
-                        </ReactCSSTransitionGroup>
+                    <header>
                         <div className="next-options">
                             {renderedButton1}
                             {renderedButton2}
                         </div>
+                    </header>
+                    <main>
+                        <ReactCSSTransitionGroup
+                            transitionName="slide"
+                            transitionEnterTimeout={0}
+                            transitionLeaveTimeout={0}>
+                            <img key={heroImageUrl} className="hero-image" src={heroImageUrl} alt=""/>
+                        </ReactCSSTransitionGroup>
                     </main>
                     <footer>Footer</footer>
                 </div>
