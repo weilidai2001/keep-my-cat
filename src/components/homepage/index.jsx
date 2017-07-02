@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { getCurrentHeroImage, getNextHeroImage, getNextFrameId, getChoice } from '../../data/states';
+import { getCurrentHeroImage, getNextHeroImage, getNextFrameId, getChoice, getNextFrameAnimation } from '../../data/states';
 
 class Homepage extends Component {
     constructor(props, context) {
@@ -10,7 +10,8 @@ class Homepage extends Component {
 
         this.state = {
             currentFrame,
-            heroImageUrl: getCurrentHeroImage(currentFrame)
+            heroImageUrl: getCurrentHeroImage(currentFrame),
+            animation: 'slide--forward'
         };
 
         this.onChoice1Click = this.onChoice1Click.bind(this);
@@ -22,7 +23,8 @@ class Homepage extends Component {
 
         this.setState({
             currentFrame: getNextFrameId(currentFrame, 'choice1'),
-            heroImageUrl: getNextHeroImage(currentFrame, 'choice1')
+            heroImageUrl: getNextHeroImage(currentFrame, 'choice1'),
+            animation: getNextFrameAnimation(currentFrame, 'choice1')
         })
     }
 
@@ -31,7 +33,8 @@ class Homepage extends Component {
 
         this.setState({
             currentFrame: getNextFrameId(currentFrame, 'choice2'),
-            heroImageUrl: getNextHeroImage(currentFrame, 'choice2')
+            heroImageUrl: getNextHeroImage(currentFrame, 'choice2'),
+            animation: getNextFrameAnimation(currentFrame, 'choice2')
         })
     }
 
@@ -40,7 +43,7 @@ class Homepage extends Component {
         const button1 = getChoice(currentFrame, 'choice1');
         const button2 = getChoice(currentFrame, 'choice2');
 
-        const { heroImageUrl } = this.state;
+        const { animation, heroImageUrl } = this.state;
 
         let renderedButton1;
         if (button1.imageUrl) {
@@ -69,7 +72,7 @@ class Homepage extends Component {
                     </header>
                     <main>
                         <ReactCSSTransitionGroup
-                            transitionName="slide"
+                            transitionName={animation}
                             transitionEnterTimeout={0}
                             transitionLeaveTimeout={0}>
                             <img key={heroImageUrl} className="hero-image" src={heroImageUrl} alt=""/>
