@@ -9,6 +9,7 @@ module.exports = {
     context: process.cwd(),
     devtool: 'source-map',
     devServer: {
+        historyApiFallback: true,
         inline: true,
         port: 8099
     },
