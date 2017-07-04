@@ -8,8 +8,10 @@ class Homepage extends Component {
         return (
             <div className="page">
                 <div className="page-content">
-                    Homepage
-                    <Link to="/intro">Slideshow</Link>
+                    <ul>
+                        <li>Homepage</li>
+                        <li><Link to="/intro">Slideshow</Link></li>
+                    </ul>
                 </div>
             </div>
         );
