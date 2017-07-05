@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { withRouter } from 'react-router';
-import cx from 'classnames';
 import { getCurrentHeroImage,
     getNextHeroImage,
     getNextFrameDestination,
@@ -28,29 +27,35 @@ class Slideshow extends Component {
     }
 
     onChoice1Click() {
-
+        const choice = 'choice1';
         const { currentFrame } = this.state;
-        const nextFrameDestination = getNextFrameDestination(currentFrame, 'choice1');
+        const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
 
-        if (isNextFrameExternal(currentFrame, 'choice1')) {
+        if (isNextFrameExternal(currentFrame, choice)) {
             this.props.history.push(nextFrameDestination);
         } else {
             this.setState({
                 currentFrame: nextFrameDestination,
-                heroImageUrl: getNextHeroImage(currentFrame, 'choice1'),
-                animation: getNextFrameAnimation(currentFrame, 'choice1')
+                heroImageUrl: getNextHeroImage(currentFrame, choice),
+                animation: getNextFrameAnimation(currentFrame, choice)
             })
         }
     }
 
     onChoice2Click() {
+        const choice = 'choice2';
         const { currentFrame } = this.state;
+        const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
 
-        this.setState({
-            currentFrame: getNextFrameDestination(currentFrame, 'choice2'),
-            heroImageUrl: getNextHeroImage(currentFrame, 'choice2'),
-            animation: getNextFrameAnimation(currentFrame, 'choice2')
-        })
+        if (isNextFrameExternal(currentFrame, choice)) {
+            this.props.history.push(nextFrameDestination);
+        } else {
+            this.setState({
+                currentFrame: nextFrameDestination,
+                heroImageUrl: getNextHeroImage(currentFrame, choice),
+                animation: getNextFrameAnimation(currentFrame, choice)
+            })
+        }
     }
 
     render() {

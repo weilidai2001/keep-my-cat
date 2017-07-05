@@ -248,7 +248,7 @@ const frames = {
         heroImageUrl: '/intro_17.png',
         choice1: {
             destination: 'intro16',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png',
             animation: 'slide--back'
         },
         choice2: {
