@@ -247,7 +247,12 @@ const frames = {
     intro17: {
         heroImageUrl: '/intro_17.png',
         choice1: {
-            destination: '/dashboards/1',
+            destination: 'intro16',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--back'
+        },
+        choice2: {
+            destination: '/dashboards/0/1',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
