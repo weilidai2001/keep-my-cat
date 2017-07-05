@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { withRouter } from 'react-router';
+import cx from 'classnames';
 import { getCurrentHeroImage,
     getNextHeroImage,
     getNextFrameDestination,
@@ -59,31 +60,24 @@ class Slideshow extends Component {
 
         const { animation, heroImageUrl } = this.state;
 
-        let renderedButton1;
-        if (button1.imageUrl) {
-            renderedButton1 = <img src={button1.imageUrl} onClick={this.onChoice1Click} className="slideshow__next-button-1"/>;
-        } else {
-            renderedButton1 = <button onClick={this.onChoice1Click}>{button1.text}</button>;
-        }
+        const answer1 = button1 && button1.text && <button onClick={this.onChoice1Click}>{button1.text}</button>;
+        const answer2 = button2 && button2.text && <button onClick={this.onChoice2Click}>{button2.text}</button>;
 
-        let renderedButton2;
-        if (button2) {
-            if (button2.imageUrl) {
-                renderedButton2 = <img src={button2.imageUrl} onClick={this.onChoice2Click} className="slideshow__next-button-2"/>;
-            } else {
-                renderedButton2 = <button onClick={this.onChoice2Click}>{button2.text}</button>;
-            }
-        }
+        const navigation1 = button1 && button1.imageUrl && <img src={button1.imageUrl} onClick={this.onChoice1Click} className="slideshow__next-button-1"/>;
+        const navigation2 = button2 && button2.imageUrl && <img src={button2.imageUrl} onClick={this.onChoice2Click} className="slideshow__next-button-2"/>;
+
+        const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
         return (
             <div className="slideshow">
                 <header>
-                    <div className="slideshow__next-options">
-                        {renderedButton1}
-                        {renderedButton2}
-                    </div>
+
                 </header>
                 <main>
+                    <div className="slideshow__answers">
+                        {answer1}
+                        {answer2}
+                    </div>
                     <ReactCSSTransitionGroup
                         transitionName={animation}
                         transitionEnterTimeout={0}
@@ -91,7 +85,12 @@ class Slideshow extends Component {
                         <img key={heroImageUrl} className="slideshow__hero-image" src={heroImageUrl} alt=""/>
                     </ReactCSSTransitionGroup>
                 </main>
-                <footer>Footer</footer>
+                <footer>
+                    <div className={navigationClass}>
+                        {navigation1}
+                        {navigation2}
+                    </div>
+                </footer>
             </div>
         );
     }

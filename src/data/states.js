@@ -1,7 +1,7 @@
 const frames = {
     homepage: {
         heroImageUrl: '/intro_1.gif',
-        choice1: {
+        choice2: {
             destination: 'intro2',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
