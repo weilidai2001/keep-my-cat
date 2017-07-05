@@ -9,9 +9,8 @@ class Homepage extends Component {
             <div className="page">
                 <div className="page-content">
                     <ul>
-                        <li>Homepage</li>
-                        <li><Link to="/intro">Slideshow</Link></li>
-                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <li><Link to="/intro">Intro</Link></li>
+                        <li><Link to="/dashboards/0/1">Start mission</Link></li>
                     </ul>
                 </div>
             </div>

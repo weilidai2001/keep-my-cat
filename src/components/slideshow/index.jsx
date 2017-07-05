@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { getCurrentHeroImage, getNextHeroImage, getNextFrameId, getChoice, getNextFrameAnimation } from '../../data/states';
+import { withRouter } from 'react-router';
+import { getCurrentHeroImage,
+    getNextHeroImage,
+    getNextFrameDestination,
+    getChoice,
+    getNextFrameAnimation,
+    isNextFrameExternal
+} from '../../data/states';
 
 class Slideshow extends Component {
     constructor(props, context) {
@@ -15,25 +22,31 @@ class Slideshow extends Component {
             animation: initialAnimation
         };
 
-        this.onChoice1Click = this.onChoice1Click.bind(this);
-        this.onChoice2Click = this.onChoice2Click.bind(this);
+        this.onChoice1Click = this.onChoice1Click.bind(this, props);
+        this.onChoice2Click = this.onChoice2Click.bind(this, props);
     }
 
     onChoice1Click() {
-        const { currentFrame } = this.state;
 
-        this.setState({
-            currentFrame: getNextFrameId(currentFrame, 'choice1'),
-            heroImageUrl: getNextHeroImage(currentFrame, 'choice1'),
-            animation: getNextFrameAnimation(currentFrame, 'choice1')
-        })
+        const { currentFrame } = this.state;
+        const nextFrameDestination = getNextFrameDestination(currentFrame, 'choice1');
+
+        if (isNextFrameExternal(currentFrame, 'choice1')) {
+            this.props.history.push(nextFrameDestination);
+        } else {
+            this.setState({
+                currentFrame: nextFrameDestination,
+                heroImageUrl: getNextHeroImage(currentFrame, 'choice1'),
+                animation: getNextFrameAnimation(currentFrame, 'choice1')
+            })
+        }
     }
 
     onChoice2Click() {
         const { currentFrame } = this.state;
 
         this.setState({
-            currentFrame: getNextFrameId(currentFrame, 'choice2'),
+            currentFrame: getNextFrameDestination(currentFrame, 'choice2'),
             heroImageUrl: getNextHeroImage(currentFrame, 'choice2'),
             animation: getNextFrameAnimation(currentFrame, 'choice2')
         })
@@ -84,4 +97,4 @@ class Slideshow extends Component {
     }
 }
 
-export default Slideshow;
+export default withRouter(Slideshow);

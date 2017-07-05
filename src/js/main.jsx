@@ -7,14 +7,16 @@ import {
 } from 'react-router-dom';
 import Homepage from '../pages/homepage';
 import Intro from '../pages/intro';
-import Dashboard from '../components/dashboard';
+import MissionDashboard from '../pages/mission-dashboard';
+import MissionBody from '../pages/mission-body';
 
 render(
     <Router>
         <div>
             <Route exact path="/" component={Homepage}/>
             <Route path="/intro" component={Intro}/>
-            <Route path="/dashboard" component={Dashboard}/>
+            <Route path="/dashboards/:branch/:mission" component={MissionDashboard}/>
+            <Route path="/missions/:branch/:mission" component={MissionBody}/>
         </div>
     </Router>,
     document.getElementById('root')
