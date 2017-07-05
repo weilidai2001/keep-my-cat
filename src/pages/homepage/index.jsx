@@ -11,6 +11,7 @@ class Homepage extends Component {
                     <ul>
                         <li>Homepage</li>
                         <li><Link to="/intro">Slideshow</Link></li>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
                     </ul>
                 </div>
             </div>
