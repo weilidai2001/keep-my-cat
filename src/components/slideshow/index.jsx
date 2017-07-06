@@ -77,9 +77,9 @@ class Slideshow extends Component {
 
         const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
-        if (answer1 || answer2) {
+        if ((answer1 || answer2) && !this.state.showAnswer) {
             setTimeout(function () {
-                this.setState({showAnswer: true});
+                this.setState({ showAnswer: true });
             }.bind(this), 3000);
         }
 
