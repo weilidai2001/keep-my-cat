@@ -13,7 +13,11 @@
     width: 100%;
   }
 
-  .slideshow__answers {
+  .slideshow__hero-image--transparent {
+    opacity: 0.5;
+  }
+
+  %slideshow__answers {
     position: absolute;
     z-index: 1;
     left: 50%;
@@ -23,6 +27,17 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 80%;
+    transition: opacity 1s linear;
+  }
+
+  .slideshow__answers--hidden {
+    @extend %slideshow__answers;
+    opacity: 0;
+  }
+
+  .slideshow__answers--show {
+    @extend %slideshow__answers;
+    opacity: 1;
   }
 
   %slideshow__navigation {

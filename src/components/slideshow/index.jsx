@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { withRouter } from 'react-router';
+import cx from 'classnames';
 import { getCurrentHeroImage,
     getNextHeroImage,
     getNextFrameDestination,
@@ -19,7 +20,8 @@ class Slideshow extends Component {
         this.state = {
             currentFrame,
             heroImageUrl: getCurrentHeroImage(currentFrame),
-            animation: initialAnimation
+            animation: initialAnimation,
+            showAnswer: false
         };
 
         this.onChoice1Click = this.onChoice1Click.bind(this, props);
@@ -37,7 +39,8 @@ class Slideshow extends Component {
             this.setState({
                 currentFrame: nextFrameDestination,
                 heroImageUrl: getNextHeroImage(currentFrame, choice),
-                animation: getNextFrameAnimation(currentFrame, choice)
+                animation: getNextFrameAnimation(currentFrame, choice),
+                showAnswer: false
             })
         }
     }
@@ -53,7 +56,8 @@ class Slideshow extends Component {
             this.setState({
                 currentFrame: nextFrameDestination,
                 heroImageUrl: getNextHeroImage(currentFrame, choice),
-                animation: getNextFrameAnimation(currentFrame, choice)
+                animation: getNextFrameAnimation(currentFrame, choice),
+                showAnswer: false
             })
         }
     }
@@ -73,13 +77,19 @@ class Slideshow extends Component {
 
         const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
+        if (answer1 || answer2) {
+            setTimeout(function () {
+                this.setState({showAnswer: true});
+            }.bind(this), 3000);
+        }
+
         return (
             <div className="slideshow">
                 <header>
 
                 </header>
                 <main>
-                    <div className="slideshow__answers">
+                    <div className={cx({'slideshow__answers--hidden': !this.state.showAnswer}, {'slideshow__answers--show': this.state.showAnswer })}>
                         {answer1}
                         {answer2}
                     </div>
@@ -87,7 +97,7 @@ class Slideshow extends Component {
                         transitionName={animation}
                         transitionEnterTimeout={0}
                         transitionLeaveTimeout={0}>
-                        <img key={heroImageUrl} className="slideshow__hero-image" src={heroImageUrl} alt=""/>
+                        <img key={heroImageUrl} className={cx('slideshow__hero-image', {'slideshow__hero-image--transparent': this.state.showAnswer})} src={heroImageUrl} alt=""/>
                     </ReactCSSTransitionGroup>
                 </main>
                 <footer>
