@@ -135,6 +135,19 @@ const frames = {
             animation: 'slide--back'
         },
         choice2: {
+            destination: 'intro10a',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    intro10a: {
+        heroImageUrl: '/intro_10a.jpg',
+        choice1: {
+            destination: 'intro10',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png',
+            animation: 'slide--back'
+        },
+        choice2: {
             destination: 'intro11',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
@@ -143,7 +156,7 @@ const frames = {
     intro11: {
         heroImageUrl: '/intro_11.gif',
         choice1: {
-            destination: 'intro10',
+            destination: 'intro10a',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png',
             animation: 'slide--back'
         },
