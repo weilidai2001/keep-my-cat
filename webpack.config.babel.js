@@ -24,6 +24,7 @@ module.exports = {
     },
     output: {
         path: path.join(process.cwd(), 'build'),
+        publicPath: '/',
         filename: '[name].js',
         sourceMapFilename: '[file].map'
     },
