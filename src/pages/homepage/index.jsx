@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Slideshow from '../../components/slideshow';
 
 class Homepage extends Component {
 
     render() {
+        const initialFrame = 'homepage';
+        const initialAnimation = 'slide--forward';
+        const props = { initialFrame, initialAnimation };
 
         return (
             <div className="page">
                 <div className="page-content">
-                    <ul>
-                        <li><Link to="/intro">Intro</Link></li>
-                        <li><Link to="/dashboards/0/1">Start mission</Link></li>
-                    </ul>
+                    <Slideshow {...props} />
                 </div>
             </div>
         );

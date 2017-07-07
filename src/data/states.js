@@ -1,5 +1,18 @@
 const frames = {
     homepage: {
+        heroImageUrl: '/intro_11.gif',
+        choice1: {
+            destination: '/intro',
+            text: 'Intro',
+            animation: 'slide--forward'
+        },
+        choice2: {
+            destination: '/dashboards/0/1',
+            text: 'Mission 1',
+            animation: 'slide--forward'
+        }
+    },
+    intro1: {
         heroImageUrl: '/intro_1.gif',
         choice2: {
             destination: 'intro2',
@@ -26,7 +39,7 @@ const frames = {
     intro2: {
         heroImageUrl: '/intro_2.gif',
         choice1: {
-            destination: 'homepage',
+            destination: 'intro1',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-128.png',
             animation: 'slide--back'
         },
@@ -170,12 +183,12 @@ const frames = {
         heroImageUrl: '/mission_b0m1q.png',
         choice1: {
             destination: '/dashboards/1/5',
-            text: 'Question 1',
+            text: 'Choice 1',
             animation: 'slide--forward'
         },
         choice2: {
             destination: '/dashboards/1/5',
-            text: 'Question 2',
+            text: 'Choice 2',
             animation: 'slide--forward'
         }
     },
@@ -183,12 +196,12 @@ const frames = {
         heroImageUrl: '/mission_b1m5q.png',
         choice1: {
             destination: 'mission_b1m5a1',
-            text: 'Question 1',
+            text: 'Choice 1',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b1m5a2',
-            text: 'Question 2',
+            text: 'Choice 2',
             animation: 'slide--forward'
         }
     },
@@ -212,12 +225,12 @@ const frames = {
         heroImageUrl: '/mission_b1m6q.png',
         choice1: {
             destination: 'mission_b1m6a1',
-            text: 'Question 1',
+            text: 'Choice 1',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b1m6a2',
-            text: 'Question 2',
+            text: 'Choice 2',
             animation: 'slide--forward'
         }
     },

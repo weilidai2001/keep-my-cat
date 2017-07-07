@@ -4,7 +4,7 @@ import Slideshow from '../../components/slideshow';
 class Intro extends Component {
 
     render() {
-        const initialFrame = 'homepage';
+        const initialFrame = 'intro1';
         const initialAnimation = 'slide--forward';
         const props = { initialFrame, initialAnimation };
 
