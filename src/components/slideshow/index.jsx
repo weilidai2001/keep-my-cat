@@ -86,7 +86,9 @@ class Slideshow extends Component {
         return (
             <div className="slideshow">
                 <header>
-
+                    <div className="slideshow__question">
+                        This is a question. A very long worded question. A very very long worded question.
+                    </div>
                 </header>
                 <main>
                     <div className={cx({'slideshow__answers--hidden': !this.state.showAnswer}, {'slideshow__answers--show': this.state.showAnswer })}>
