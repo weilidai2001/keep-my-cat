@@ -181,6 +181,7 @@ const frames = {
     },
     mission_b0m1q: {
         heroImageUrl: '/mission_b0m1q.png',
+        question: 'This is question 1. A very long worded question. A very very long worded question.',
         choice1: {
             destination: '/dashboards/1/5',
             text: 'Choice 1',
@@ -194,6 +195,7 @@ const frames = {
     },
     mission_b1m5q: {
         heroImageUrl: '/mission_b1m5q.png',
+        question: 'This is question 2. A very long worded question. A very very long worded question.',
         choice1: {
             destination: 'mission_b1m5a1',
             text: 'Choice 1',
@@ -207,6 +209,7 @@ const frames = {
     },
     mission_b1m5a1: {
         heroImageUrl: '/mission_b1m5a1.png',
+        question: 'This is question 3. A very long worded question. A very very long worded question.',
         choice1: {
             destination: 'won',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -254,6 +257,8 @@ const frames = {
 
 export const getCurrentHeroImage = id => frames[id].heroImageUrl;
 
+export const getCurrentQuestion = id => frames[id].question;
+
 export const getNextHeroImage = (id, choice) => {
     const nextFrameId = frames[id][choice].destination;
     return frames[nextFrameId].heroImageUrl;
@@ -262,6 +267,8 @@ export const getNextHeroImage = (id, choice) => {
 export const getNextFrameDestination = (id, choice) => frames[id][choice].destination;
 
 export const getNextFrameAnimation = (id, choice) => frames[id][choice].animation;
+
+export const getNextFrameQuestion = (id, choice) => frames[id][choice].question;
 
 export const getChoice = (id, choice) => frames[id][choice];
 

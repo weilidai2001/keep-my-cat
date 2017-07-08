@@ -2,13 +2,32 @@ import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { withRouter } from 'react-router';
 import cx from 'classnames';
-import { getCurrentHeroImage,
+import {
+    getCurrentHeroImage,
+    getCurrentQuestion,
+    getNextFrameQuestion,
     getNextHeroImage,
     getNextFrameDestination,
     getChoice,
     getNextFrameAnimation,
     isNextFrameExternal
 } from '../../data/states';
+
+function moveToNextFrame (currentFrame, choice) {
+    const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
+
+    if (isNextFrameExternal(currentFrame, choice)) {
+        this.props.history.push(nextFrameDestination);
+    } else {
+        this.setState({
+            currentFrame: nextFrameDestination,
+            heroImageUrl: getNextHeroImage(currentFrame, choice),
+            animation: getNextFrameAnimation(currentFrame, choice),
+            question: getNextFrameQuestion(currentFrame, choice),
+            showAnswer: false
+        })
+    }
+}
 
 class Slideshow extends Component {
     constructor(props, context) {
@@ -21,6 +40,7 @@ class Slideshow extends Component {
             currentFrame,
             heroImageUrl: getCurrentHeroImage(currentFrame),
             animation: initialAnimation,
+            question: getCurrentQuestion(currentFrame),
             showAnswer: false
         };
 
@@ -31,35 +51,15 @@ class Slideshow extends Component {
     onChoice1Click() {
         const choice = 'choice1';
         const { currentFrame } = this.state;
-        const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
 
-        if (isNextFrameExternal(currentFrame, choice)) {
-            this.props.history.push(nextFrameDestination);
-        } else {
-            this.setState({
-                currentFrame: nextFrameDestination,
-                heroImageUrl: getNextHeroImage(currentFrame, choice),
-                animation: getNextFrameAnimation(currentFrame, choice),
-                showAnswer: false
-            })
-        }
+        moveToNextFrame.call(this, currentFrame, choice);
     }
 
     onChoice2Click() {
         const choice = 'choice2';
         const { currentFrame } = this.state;
-        const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
 
-        if (isNextFrameExternal(currentFrame, choice)) {
-            this.props.history.push(nextFrameDestination);
-        } else {
-            this.setState({
-                currentFrame: nextFrameDestination,
-                heroImageUrl: getNextHeroImage(currentFrame, choice),
-                animation: getNextFrameAnimation(currentFrame, choice),
-                showAnswer: false
-            })
-        }
+        moveToNextFrame.call(this, currentFrame, choice);
     }
 
     render() {
@@ -67,7 +67,7 @@ class Slideshow extends Component {
         const button1 = getChoice(currentFrame, 'choice1');
         const button2 = getChoice(currentFrame, 'choice2');
 
-        const { animation, heroImageUrl } = this.state;
+        const { animation, heroImageUrl, question } = this.state;
 
         const answer1 = button1 && button1.text && <button onClick={this.onChoice1Click}>{button1.text}</button>;
         const answer2 = button2 && button2.text && <button onClick={this.onChoice2Click}>{button2.text}</button>;
@@ -86,9 +86,7 @@ class Slideshow extends Component {
         return (
             <div className="slideshow">
                 <header>
-                    <div className="slideshow__question">
-                        This is a question. A very long worded question. A very very long worded question.
-                    </div>
+                    {question && <div className="slideshow__question">{question}</div>}
                 </header>
                 <main>
                     <div className={cx({'slideshow__answers--hidden': !this.state.showAnswer}, {'slideshow__answers--show': this.state.showAnswer })}>
