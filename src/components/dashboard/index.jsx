@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const renderMission = (currentBranch, missionNumber, branchNumber, currentMission) => {
-    if (missionNumber == currentMission && branchNumber == currentBranch) {
+// b0m1	-	b1m1	-	b3m1	-	b3m2
+//  |		 	 |			 		 |
+// b4m1		b2m1		b3m4	-	b3m3
+//  |
+// b4m2
+//  |
+// b4m3	-	b4m4	-	b4m5
+
+const isMissionAccomplished = (thisBranch, thisMission, latestBranch, latestMission) => {
+    if (thisBranch == 0)
+    {
+        return true;
+    } else if (thisBranch == 1 && (latestBranch == 2 || latestBranch == 3)){
+        return true;
+    } else if (thisBranch == 3 && latestBranch == 3 && thisMission <= latestMission) {
+        return true;
+    } else if (thisBranch == 4 && latestBranch == 4 && thisMission <= latestMission) {
+        return true;
+    }
+    return false;
+};
+
+const renderMission = (thisBranch, thisMission, latestBranch, latestMission) => {
+    if (thisMission == latestMission && thisBranch == latestBranch) {
         return (
-            <Link to={`/missions/${branchNumber}/${missionNumber}`}>
+            <Link to={`/missions/${latestBranch}/${latestMission}`}>
                 <img src="/dashboard_mission_active.png"/>
             </Link>
         )
-    } else if (currentBranch < branchNumber) {
+    } else if (isMissionAccomplished(thisBranch, thisMission, latestBranch, latestMission)) {
         return (<img src="/dashboard_mission_completed.png"/>)
     } else {
         return (<img src="/dashboard_mission_incomplete.png"/>)
