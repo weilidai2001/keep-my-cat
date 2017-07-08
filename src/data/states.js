@@ -245,7 +245,7 @@ const frames = {
             animation: 'slide--forward'
         }
     },
-    mission_b1m6a2: {
+    mission_b2m1a2: {
         heroImageUrl: '/mission_b2m1a2.png',
         choice1: {
             destination: 'won',
