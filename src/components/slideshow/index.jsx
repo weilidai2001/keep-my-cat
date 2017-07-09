@@ -16,6 +16,11 @@ import {
 function moveToNextFrame (currentFrame, choice) {
     const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
 
+    this.setState({
+        showAnswer: false,
+        showContinue: false
+    });
+
     if (isNextFrameExternal(currentFrame, choice)) {
         this.props.history.push(nextFrameDestination);
     } else {
@@ -23,9 +28,7 @@ function moveToNextFrame (currentFrame, choice) {
             currentFrame: nextFrameDestination,
             heroImageUrl: getNextHeroImage(currentFrame, choice),
             animation: getNextFrameAnimation(currentFrame, choice),
-            question: getNextFrameQuestion(currentFrame, choice),
-            showAnswer: false,
-            showContinue: false
+            question: getNextFrameQuestion(currentFrame, choice)
         })
     }
 }
@@ -101,9 +104,9 @@ class Slideshow extends Component {
         const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
         if (!this.state.showContinue) {
-            setTimeout(function () {
+            setImmediate(function () {
                 this.setState({ showContinue: true });
-            }.bind(this), 3000);
+            }.bind(this));
         }
 
         return (
