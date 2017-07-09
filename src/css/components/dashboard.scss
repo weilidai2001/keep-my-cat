@@ -45,6 +45,12 @@
       height: 100%;
       width: 100%;
     }
+
+    .dashboard__path-img {
+      $size: 5px;
+      height: $size;
+      width: $size;
+    }
   }
 
   &__balance {

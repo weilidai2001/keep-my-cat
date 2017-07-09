@@ -25,7 +25,7 @@ const renderMission = (thisBranch, thisMission, latestBranch, latestMission) => 
     }
 };
 
-const renderPath = () => (<img src="/dashboard_mission_path.png" />);
+const renderPath = () => (<img className="dashboard__path-img" src="/dashboard_mission_path.png" />);
 
 const renderQuestionMark = () => (<img src="/dashboard_mission_question_mark.png" />);
 
