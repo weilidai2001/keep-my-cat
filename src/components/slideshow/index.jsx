@@ -133,15 +133,17 @@ class Slideshow extends Component {
                              src={heroImageUrl}
                         />
                     </ReactCSSTransitionGroup>
-                    <div className={
-                        cx(
-                            {'slideshow__continue--hidden': !this.state.showContinue || this.state.showAnswer},
-                            {'slideshow__continue--shown': this.state.showContinue && !this.state.showAnswer}
+                    {
+                        !this.state.showAnswer && <div className={
+                            cx(
+                                {'slideshow__continue--hidden': !this.state.showContinue },
+                                {'slideshow__continue--shown': this.state.showContinue}
 
-                        )
-                    }>
-                        <img src="/slideshow_continue.png" />
-                    </div>
+                            )
+                        }>
+                            <img src="/slideshow_continue.png" />
+                        </div>
+                    }
                 </main>
                 <footer>
                     {
