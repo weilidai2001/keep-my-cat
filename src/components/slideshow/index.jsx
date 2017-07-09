@@ -46,6 +46,7 @@ class Slideshow extends Component {
 
         this.onChoice1Click = this.onChoice1Click.bind(this, props);
         this.onChoice2Click = this.onChoice2Click.bind(this, props);
+        this.onImageClick = this.onImageClick.bind(this);
     }
 
     onChoice1Click() {
@@ -60,6 +61,16 @@ class Slideshow extends Component {
         const { currentFrame } = this.state;
 
         moveToNextFrame.call(this, currentFrame, choice);
+    }
+
+    onImageClick() {
+        const { currentFrame } = this.state;
+        const button1 = getChoice(currentFrame, 'choice1');
+        const button2 = getChoice(currentFrame, 'choice2');
+
+        if ((button1 && button1.text || button2 && button2.text) && !this.state.showAnswer) {
+            this.setState({ showAnswer: true });
+        }
     }
 
     render() {
@@ -77,12 +88,6 @@ class Slideshow extends Component {
 
         const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
-        if ((answer1 || answer2) && !this.state.showAnswer) {
-            setTimeout(function () {
-                this.setState({ showAnswer: true });
-            }.bind(this), 3000);
-        }
-
         return (
             <div className="slideshow">
                 <header>
@@ -97,7 +102,16 @@ class Slideshow extends Component {
                         transitionName={animation}
                         transitionEnterTimeout={0}
                         transitionLeaveTimeout={0}>
-                        <img key={heroImageUrl} className={cx('slideshow__hero-image', {'slideshow__hero-image--transparent': this.state.showAnswer})} src={heroImageUrl} alt=""/>
+                        <img key={heroImageUrl}
+                             className={
+                                 cx(
+                                     'slideshow__hero-image',
+                                     {'slideshow__hero-image--transparent': this.state.showAnswer}
+                                 )
+                             }
+                             src={heroImageUrl}
+                             onClick={this.onImageClick}
+                        />
                     </ReactCSSTransitionGroup>
                 </main>
                 <footer>
