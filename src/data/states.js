@@ -403,6 +403,142 @@ const frames = {
             text: 'No',
             animation: 'slide--forward'
         }
+    },
+    mission_b3m3: {
+        heroImageUrl: '/mission_b3m3.jpg',
+        question: 'Do you want to pole dance?',
+        choice1: {
+            destination: 'mission_b3m3a1',
+            text: 'Yes',
+            animation: 'slide--forward'
+        },
+        choice2: {
+            destination: 'mission_b3m3a2',
+            text: 'No',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m3a1: {
+        heroImageUrl: '/mission_b3m3a1.jpg',
+        choice2: {
+            destination: '/dashboards/3/4',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m3a2: {
+        heroImageUrl: '/mission_b3m3a2.jpg',
+        choice2: {
+            destination: '/dashboards/3/4',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m4: {
+        heroImageUrl: '/mission_b3m4.jpg',
+        question: 'Do you want to pole dance?',
+        choice1: {
+            destination: 'mission_b3m4a1',
+            text: 'Yes',
+            animation: 'slide--forward'
+        },
+        choice2: {
+            destination: 'mission_b3m4a2',
+            text: 'No',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m4a1: {
+        heroImageUrl: '/mission_b3m4a1.jpg',
+        choice2: {
+            destination: '/dashboards/3/5',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m4a2: {
+        heroImageUrl: '/mission_b3m4a2.jpg',
+        choice2: {
+            destination: '/dashboards/3/5',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m5: {
+        heroImageUrl: '/mission_b3m5.jpg',
+        question: 'Do you want to pole dance?',
+        choice1: {
+            destination: 'mission_b3m5a1',
+            text: 'Yes',
+            animation: 'slide--forward'
+        },
+        choice2: {
+            destination: 'mission_b3m5a2',
+            text: 'No',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m5a1: {
+        heroImageUrl: '/mission_b3m5a1.jpg',
+        choice2: {
+            destination: '/dashboards/3/6',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m5a2: {
+        heroImageUrl: '/mission_b3m5a2.jpg',
+        choice2: {
+            destination: '/dashboards/3/6',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6: {
+        heroImageUrl: '/mission_b3m6.0.jpg',
+        choice2: {
+            destination: 'mission_b3m6q1',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6q1: {
+        heroImageUrl: '/mission_b3m6.1.jpg',
+        choice2: {
+            destination: 'mission_b3m6q2',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6q2: {
+        heroImageUrl: '/mission_b3m6.2.jpg',
+        choice2: {
+            destination: 'mission_b3m6q3',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6q3: {
+        heroImageUrl: '/mission_b3m6.3.jpg',
+        choice2: {
+            destination: 'mission_b3m6q4',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6q4: {
+        heroImageUrl: '/mission_b3m6.4.jpg',
+        question: 'Do you want to pole dance?',
+        choice1: {
+            destination: 'won',
+            text: 'Yes',
+            animation: 'slide--forward'
+        },
+        choice2: {
+            destination: 'lost',
+            text: 'No',
+            animation: 'slide--forward'
+        }
     }
 };
 
