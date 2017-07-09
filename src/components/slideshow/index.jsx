@@ -24,7 +24,8 @@ function moveToNextFrame (currentFrame, choice) {
             heroImageUrl: getNextHeroImage(currentFrame, choice),
             animation: getNextFrameAnimation(currentFrame, choice),
             question: getNextFrameQuestion(currentFrame, choice),
-            showAnswer: false
+            showAnswer: false,
+            showContinue: false
         })
     }
 }
@@ -41,7 +42,8 @@ class Slideshow extends Component {
             heroImageUrl: getCurrentHeroImage(currentFrame),
             animation: initialAnimation,
             question: getCurrentQuestion(currentFrame),
-            showAnswer: false
+            showAnswer: false,
+            showContinue: false
         };
 
         this.onChoice1Click = this.onChoice1Click.bind(this, props);
@@ -98,6 +100,12 @@ class Slideshow extends Component {
 
         const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
+        if (!this.state.showContinue) {
+            setTimeout(function () {
+                this.setState({ showContinue: true });
+            }.bind(this), 3000);
+        }
+
         return (
             <div className="slideshow" onClick={this.onNextFrameClick}>
                 <header>
@@ -122,6 +130,15 @@ class Slideshow extends Component {
                              src={heroImageUrl}
                         />
                     </ReactCSSTransitionGroup>
+                    <div className={
+                        cx(
+                            {'slideshow__continue--hidden': !this.state.showContinue || this.state.showAnswer},
+                            {'slideshow__continue--shown': this.state.showContinue && !this.state.showAnswer}
+
+                        )
+                    }>
+                        <img src="/slideshow_continue.png" />
+                    </div>
                 </main>
                 <footer>
                     {
