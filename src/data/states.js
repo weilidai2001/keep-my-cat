@@ -183,32 +183,32 @@ const frames = {
         heroImageUrl: '/mission_b0m1q.png',
         question: 'Do you want to work as an engineer?',
         choice1: {
-            destination: '/dashboards/1/1',
+            destination: '/dashboards/0/2',
             text: 'Yes',
             animation: 'slide--forward'
         },
         choice2: {
-            destination: '/dashboards/1/1',
+            destination: '/dashboards/0/2',
             text: 'No',
             animation: 'slide--forward'
         }
     },
-    mission_b1m1q: {
-        heroImageUrl: '/mission_b1m1q.png',
+    mission_b0m2q: {
+        heroImageUrl: '/mission_b0m2q.png',
         question: 'Do you want to go on vacation?',
         choice1: {
-            destination: 'mission_b1m1a1',
+            destination: 'mission_b0m2a1',
             text: 'Yes',
             animation: 'slide--forward'
         },
         choice2: {
-            destination: 'mission_b1m1a2',
+            destination: 'mission_b0m2a2',
             text: 'No',
             animation: 'slide--forward'
         }
     },
-    mission_b1m1a1: {
-        heroImageUrl: '/mission_b1m1a1.png',
+    mission_b0m2a1: {
+        heroImageUrl: '/mission_b0m2a1.png',
         question: 'This is question 3. A very long worded question. A very very long worded question.',
         choice1: {
             destination: 'won',
@@ -216,37 +216,37 @@ const frames = {
             animation: 'slide--forward'
         }
     },
-    mission_b1m1a2: {
-        heroImageUrl: '/mission_b1m1a2.png',
+    mission_b0m2a2: {
+        heroImageUrl: '/mission_b0m2a2.png',
         choice1: {
-            destination: '/dashboards/2/1',
+            destination: '/dashboards/1/1',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
     },
-    mission_b2m1q: {
-        heroImageUrl: '/mission_b2m1q.png',
+    mission_b1m1q: {
+        heroImageUrl: '/mission_b1m1q.png',
         choice1: {
-            destination: 'mission_b2m1a1',
+            destination: 'mission_b1m1a1',
             text: 'Choice 1',
             animation: 'slide--forward'
         },
         choice2: {
-            destination: 'mission_b2m1a2',
+            destination: 'mission_b1m1a2',
             text: 'Choice 2',
             animation: 'slide--forward'
         }
     },
-    mission_b2m1a1: {
-        heroImageUrl: '/mission_b2m1a1.png',
+    mission_b1m1a1: {
+        heroImageUrl: '/mission_b1m1a1.png',
         choice1: {
             destination: 'lost',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
     },
-    mission_b2m1a2: {
-        heroImageUrl: '/mission_b2m1a2.png',
+    mission_b1m1a2: {
+        heroImageUrl: '/mission_b1m1a2.png',
         choice1: {
             destination: 'won',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
