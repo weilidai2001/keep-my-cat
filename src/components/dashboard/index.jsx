@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 const isMissionAccomplished = (thisBranch, thisMission, latestBranch, latestMission) => {
-    if (thisBranch == 0 && latestBranch > 0)
-    {
+    if (thisBranch == 0 && latestBranch > 0) {
         return true;
-    } else if (thisBranch == latestBranch && thisMission < latestMission) {
+    } else if (thisBranch == 1 && (latestBranch == 2 || latestBranch == 3)) {
+        return true;
+    }
+    else if (thisBranch == latestBranch && thisMission < latestMission) {
         return true;
     }
     return false;
@@ -37,10 +39,10 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile1">{renderQuestionMark()}</div>
             <div className="dashboard__tile dashboard__tile2">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile3">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile4">{renderMission(3, 4, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile4">{renderMission(3, 6, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile5">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile6">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile7">{renderMission(3, 3, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile7">{renderMission(3, 5, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile8"></div>
             <div className="dashboard__tile dashboard__tile9"></div>
             <div className="dashboard__tile dashboard__tile10"></div>
@@ -64,13 +66,13 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile28"></div>
             <div className="dashboard__tile dashboard__tile29"></div>
             <div className="dashboard__tile dashboard__tile30"></div>
-            <div className="dashboard__tile dashboard__tile31">{renderQuestionMark()}</div>
-            <div className="dashboard__tile dashboard__tile32"></div>
-            <div className="dashboard__tile dashboard__tile33"></div>
+            <div className="dashboard__tile dashboard__tile31">{renderMission(4, 2, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile32">{renderPath()}</div>
+            <div className="dashboard__tile dashboard__tile33">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile34">{renderMission(0, 1, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile35"></div>
             <div className="dashboard__tile dashboard__tile36"></div>
-            <div className="dashboard__tile dashboard__tile37">{renderMission(3, 2, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile37">{renderMission(3, 4, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile38"></div>
             <div className="dashboard__tile dashboard__tile39"></div>
             <div className="dashboard__tile dashboard__tile40">{renderQuestionMark()}</div>
@@ -94,17 +96,17 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile58"></div>
             <div className="dashboard__tile dashboard__tile59"></div>
             <div className="dashboard__tile dashboard__tile60">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile61">{renderMission(1, 1, branchNumber, missionNumber)}</div>
-            <div className="dashboard__tile dashboard__tile62">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile63">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile64">{renderMission(0, 2, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile61">{renderMission(4, 3, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile62"></div>
+            <div className="dashboard__tile dashboard__tile63"></div>
+            <div className="dashboard__tile dashboard__tile64">{renderMission(1, 2, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile65">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile66">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile67">{renderMission(3, 1, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile67">{renderMission(3, 3, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile68"></div>
             <div className="dashboard__tile dashboard__tile69"></div>
-            <div className="dashboard__tile dashboard__tile70">{renderMission(2, 4, branchNumber, missionNumber)}</div>
-            <div className="dashboard__tile dashboard__tile71"></div>
+            <div className="dashboard__tile dashboard__tile70">{renderMission(2, 6, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile71">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile72"></div>
             <div className="dashboard__tile dashboard__tile73"></div>
             <div className="dashboard__tile dashboard__tile74">{renderPath()}</div>
@@ -114,7 +116,7 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile78"></div>
             <div className="dashboard__tile dashboard__tile79"></div>
             <div className="dashboard__tile dashboard__tile80">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile81"></div>
+            <div className="dashboard__tile dashboard__tile81">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile82"></div>
             <div className="dashboard__tile dashboard__tile83"></div>
             <div className="dashboard__tile dashboard__tile84">{renderPath()}</div>
@@ -124,16 +126,16 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile88"></div>
             <div className="dashboard__tile dashboard__tile89"></div>
             <div className="dashboard__tile dashboard__tile90">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile91"></div>
+            <div className="dashboard__tile dashboard__tile91">{renderQuestionMark()}</div>
             <div className="dashboard__tile dashboard__tile92"></div>
             <div className="dashboard__tile dashboard__tile93"></div>
-            <div className="dashboard__tile dashboard__tile94">{renderMission(2, 1, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile94">{renderMission(2, 3, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile95">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile96">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile97">{renderMission(2, 2, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile97">{renderMission(2, 4, branchNumber, missionNumber)}</div>
             <div className="dashboard__tile dashboard__tile98">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile99">{renderPath()}</div>
-            <div className="dashboard__tile dashboard__tile10">{renderMission(2, 3, branchNumber, missionNumber)}</div>
+            <div className="dashboard__tile dashboard__tile10">{renderMission(2, 5, branchNumber, missionNumber)}</div>
         </div>
         <div className="dashboard__balance">BALANCE: £3,500</div>
     </div>

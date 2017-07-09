@@ -4,7 +4,7 @@ import Slideshow from '../../components/slideshow';
 const MissionBody = ({ match }) => {
     const branchNumber = match.params.branch;
     const missionNumber = match.params.mission;
-    const initialFrame = `mission_b${branchNumber}m${missionNumber}q`;
+    const initialFrame = `mission_b${branchNumber}m${missionNumber}`;
     const initialAnimation = 'slide--forward';
     const props = { initialFrame, initialAnimation };
 
