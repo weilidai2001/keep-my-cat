@@ -355,6 +355,7 @@ const frames = {
     },
     mission_b2m4a1: {
         heroImageUrl: '/mission_b2m4a1.png',
+        script: 'That was embarrassing but worth it!<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/5',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -363,6 +364,7 @@ const frames = {
     },
     mission_b2m4a2: {
         heroImageUrl: '/mission_b2m4a2.png',
+        script: 'Sorry, the place is managed perfectly by algorithms!<br/>+£0',
         choice2: {
             destination: '/dashboards/2/5',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -371,20 +373,21 @@ const frames = {
     },
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.png',
-        script: 'Do you want to be a maid?',
+        script: 'Today is Sunday, neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b2m5a1',
-            text: 'Yes',
+            text: 'Host a workshop for them',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b2m5a2',
-            text: 'No',
+            text: 'I\'d rather be alone!',
             animation: 'slide--forward'
         }
     },
     mission_b2m5a1: {
         heroImageUrl: '/mission_b2m5a1.png',
+        script: 'The local council appreciates your kind work<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/6',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -393,6 +396,7 @@ const frames = {
     },
     mission_b2m5a2: {
         heroImageUrl: '/mission_b2m5a2.png',
+        script: 'One step closer to becoming the smartest guy…<br/>+£0',
         choice2: {
             destination: '/dashboards/2/6',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -401,7 +405,7 @@ const frames = {
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6_intro1.jpg',
-        script: 'Do you want to be a maid?',
+        script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
             destination: 'mission_b2m6q2',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -410,6 +414,7 @@ const frames = {
     },
     mission_b2m6q2: {
         heroImageUrl: '/mission_b2m6_intro2.jpg',
+        script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
             destination: 'mission_b2m6q3',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -418,34 +423,44 @@ const frames = {
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6q.jpg',
-        script: 'Do you want to be a maid?',
+        script: 'A kid is looking for an adult to bring him back to the UK.',
         choice1: {
             destination: 'won',
-            text: 'Yes',
+            text: 'Everyone is happy now',
             animation: 'slide--forward'
         },
         choice2: {
-            destination: 'lost',
-            text: 'No',
+            destination: 'heroImageUrl',
+            text: 'Say no',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b2m6q3a2: {
+        heroImageUrl: '/doesnotexist.jpg',
+        script: 'Don\'t be an *rse…go back and choose again!',
+        choice2: {
+            destination: 'mission_b2m6q3',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
     },
     mission_b3m3: {
         heroImageUrl: '/mission_b3m3.jpg',
-        script: 'Do you want to pole dance?',
+        script: 'A  traveller wants to live with you for a while',
         choice1: {
             destination: 'mission_b3m3a1',
-            text: 'Yes',
+            text: 'Sure, why not!',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b3m3a2',
-            text: 'No',
+            text: 'Go away',
             animation: 'slide--forward'
         }
     },
     mission_b3m3a1: {
         heroImageUrl: '/mission_b3m3a1.jpg',
+        script: 'Here is your rent money',
         choice2: {
             destination: '/dashboards/3/4',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -454,6 +469,7 @@ const frames = {
     },
     mission_b3m3a2: {
         heroImageUrl: '/mission_b3m3a2.jpg',
+        script: 'Hmm…',
         choice2: {
             destination: '/dashboards/3/4',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -462,20 +478,21 @@ const frames = {
     },
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.jpg',
-        script: 'Do you want to pole dance?',
+        script: 'This farmer keeps a lot of sheep',
         choice1: {
             destination: 'mission_b3m4a1',
-            text: 'Yes',
+            text: 'Shear his sheep',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b3m4a2',
-            text: 'No',
+            text: 'Play with the farmer',
             animation: 'slide--forward'
         }
     },
     mission_b3m4a1: {
         heroImageUrl: '/mission_b3m4a1.jpg',
+        script: 'The sheep prefers machine than you…<br/>+£0',
         choice2: {
             destination: '/dashboards/3/5',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -484,6 +501,7 @@ const frames = {
     },
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.jpg',
+        script: 'The farmer enjoys your company.<br/>+£2,000',
         choice2: {
             destination: '/dashboards/3/5',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -492,20 +510,21 @@ const frames = {
     },
     mission_b3m5: {
         heroImageUrl: '/mission_b3m5.jpg',
-        script: 'Do you want to pole dance?',
+        script: 'One of the robots is looking anxious.',
         choice1: {
             destination: 'mission_b3m5a1',
-            text: 'Yes',
+            text: 'Rob it!',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b3m5a2',
-            text: 'No',
+            text: 'Try to help it.',
             animation: 'slide--forward'
         }
     },
     mission_b3m5a1: {
         heroImageUrl: '/mission_b3m5a1.jpg',
+        script: 'You have picked the wrong target man!<br/>+£0',
         choice2: {
             destination: '/dashboards/3/6',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -514,6 +533,7 @@ const frames = {
     },
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.jpg',
+        script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
         choice2: {
             destination: '/dashboards/3/6',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -522,6 +542,7 @@ const frames = {
     },
     mission_b3m6: {
         heroImageUrl: '/mission_b3m6.0.jpg',
+        script: 'This old lady can cover the rest of the cat tax.',
         choice2: {
             destination: 'mission_b3m6q1',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -530,6 +551,7 @@ const frames = {
     },
     mission_b3m6q1: {
         heroImageUrl: '/mission_b3m6.1.jpg',
+        script: 'She says you can pay her back by having more VR bike rides together in the future.',
         choice2: {
             destination: 'mission_b3m6q2',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -554,15 +576,33 @@ const frames = {
     },
     mission_b3m6q4: {
         heroImageUrl: '/mission_b3m6.4.jpg',
-        script: 'Do you want to pole dance?',
+        script: '',
         choice1: {
             destination: 'won',
-            text: 'Yes',
+            text: 'Agree to the plan',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'lost',
-            text: 'No',
+            text: 'I\'d rather lose my cat',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6a1: {
+        heroImageUrl: '/doesnotexist.jpg',
+        script: 'Good choice!<br/>+£2,000',
+        choice1: {
+            destination: 'won',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b3m6a2: {
+        heroImageUrl: '/doesnotexist.jpg',
+        script: 'What?! Go back and choose again!',
+        choice1: {
+            destination: 'mission_b3m6q4',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
     }
