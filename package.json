@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --content-base build/",
     "build": "webpack",
-    "serve": "http-server -p 8000 build/"
+    "serve": "http-server -p 8000 -c-1 build/"
   },
   "repository": {
     "type": "git",

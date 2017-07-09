@@ -46,7 +46,7 @@ class Slideshow extends Component {
 
         this.onChoice1Click = this.onChoice1Click.bind(this, props);
         this.onChoice2Click = this.onChoice2Click.bind(this, props);
-        this.onImageClick = this.onImageClick.bind(this);
+        this.onNextFrameClick = this.onNextFrameClick.bind(this);
     }
 
     onChoice1Click() {
@@ -63,14 +63,24 @@ class Slideshow extends Component {
         moveToNextFrame.call(this, currentFrame, choice);
     }
 
-    onImageClick() {
+    onNextFrameClick() {
         const { currentFrame } = this.state;
         const button1 = getChoice(currentFrame, 'choice1');
         const button2 = getChoice(currentFrame, 'choice2');
+        const onlyOneImageButtonIsAvailable = button1 && button1.imageUrl && !button2 || button2 && button2.imageUrl && !button1;
+
+        if (onlyOneImageButtonIsAvailable) {
+            if (button1) {
+                this.onChoice1Click();
+            } else {
+                this.onChoice2Click();
+            }
+        }
 
         if ((button1 && button1.text || button2 && button2.text) && !this.state.showAnswer) {
             this.setState({ showAnswer: true });
         }
+
     }
 
     render() {
@@ -89,7 +99,7 @@ class Slideshow extends Component {
         const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
         return (
-            <div className="slideshow">
+            <div className="slideshow" onClick={this.onNextFrameClick}>
                 <header>
                     {question && <div className="slideshow__question">{question}</div>}
                 </header>
@@ -110,15 +120,21 @@ class Slideshow extends Component {
                                  )
                              }
                              src={heroImageUrl}
-                             onClick={this.onImageClick}
                         />
                     </ReactCSSTransitionGroup>
                 </main>
                 <footer>
-                    <div className={navigationClass}>
-                        {navigation1}
-                        {navigation2}
-                    </div>
+                    {
+                        navigation1 &&
+                        navigation2 &&
+                        (
+                            <div className={navigationClass}>
+                                {navigation1}
+                                {navigation2}
+                            </div>
+                        )
+                    }
+
                 </footer>
             </div>
         );
