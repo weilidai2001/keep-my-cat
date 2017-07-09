@@ -15,7 +15,7 @@ const renderMission = (thisBranch, thisMission, latestBranch, latestMission) => 
     if (thisMission == latestMission && thisBranch == latestBranch) {
         return (
             <Link to={`/missions/${latestBranch}/${latestMission}`}>
-                <img src="/dashboard_mission_active.png"/>
+                <img className="dashboard__active-img" src="/dashboard_mission_active.png"/>
             </Link>
         )
     } else if (isMissionAccomplished(thisBranch, thisMission, latestBranch, latestMission)) {
