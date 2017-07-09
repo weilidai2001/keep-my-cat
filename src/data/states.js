@@ -181,35 +181,53 @@ const frames = {
     },
     mission_b0m1: {
         heroImageUrl: '/mission_b0m1.png',
-        question: 'Do you want to work as an engineer?',
+        script: 'Do you want to become a drone engineer again? It will take a few weeks to retrain yourself though.',
         choice1: {
-            destination: '/dashboards/4/2',
-            text: 'Yes',
+            destination: 'mission_b0m1a1',
+            text: 'Yes, why not?',
             animation: 'slide--forward'
         },
         choice2: {
+            destination: 'mission_b0m1a2',
+            text: 'No, it takes too long.',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b0m1a1: {
+        heroImageUrl: '/doesnotexist.png',
+        script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
+        choice1: {
+            destination: '/dashboards/4/2',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
+    mission_b0m1a2: {
+        heroImageUrl: '/doesnotexist.png',
+        script: 'No worries, you still have 5 more missions to go. <br/>£0',
+        choice1: {
             destination: '/dashboards/1/2',
-            text: 'No',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
     },
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
-        question: 'Do you want to go on vacation?',
+        script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b4m2a1',
-            text: 'Yes',
+            text: 'Sounds fun!',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b4m2a2',
-            text: 'No',
+            text: 'I\'m not leaving home.',
             animation: 'slide--forward'
         }
     },
     mission_b4m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
-        question: 'This is question 3. A very long worded question. A very very long worded question.',
+        script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice1: {
             destination: 'won',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -218,6 +236,7 @@ const frames = {
     },
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
+        script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice1: {
             destination: '/dashboards/4/3',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -226,49 +245,53 @@ const frames = {
     },
     mission_b4m3: {
         heroImageUrl: '/mission_b4m3.png',
+        script: 'Today is Sunday neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b4m3a1',
-            text: 'Choice 1',
+            text: 'Host a workshop for them',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b4m3a2',
-            text: 'Choice 2',
+            text: 'I\'d rather be alone!',
             animation: 'slide--forward'
         }
     },
     mission_b4m3a1: {
         heroImageUrl: '/mission_b4m3a1.png',
-        choice1: {
-            destination: 'lost',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
-        }
-    },
-    mission_b4m3a2: {
-        heroImageUrl: '/mission_b4m3a2.png',
+        script: 'The local council appreciates your kind work. <br/>+£2,000',
         choice1: {
             destination: 'won',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
             animation: 'slide--forward'
         }
     },
+    mission_b4m3a2: {
+        heroImageUrl: '/mission_b4m3a2.png',
+        script: 'One step closer to becoming the smartest guy…<br/>+£0',
+        choice1: {
+            destination: 'lost',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
+            animation: 'slide--forward'
+        }
+    },
     mission_b1m2: {
         heroImageUrl: '/mission_b1m2.png',
-        question: 'Do you want to go on vacation?',
+        script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b1m2a1',
-            text: 'Yes',
+            text: 'Sounds fun!',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b1m2a2',
-            text: 'No',
+            text: 'I\'m not leaving my home.',
             animation: 'slide--forward'
         }
     },
     mission_b1m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
+        script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice2: {
             destination: '/dashboards/2/3',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -277,6 +300,7 @@ const frames = {
     },
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
+        script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice2: {
             destination: '/dashboards/3/3',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -285,20 +309,21 @@ const frames = {
     },
     mission_b2m3: {
         heroImageUrl: '/mission_b2m3.png',
-        question: 'Do you want to pole dance?',
+        script: 'You met a successful business man',
         choice1: {
             destination: 'mission_b2m3a1',
-            text: 'Yes',
+            text: 'Apply to be his accountant',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b2m3a2',
-            text: 'No',
+            text: 'Show him your sexy moves',
             animation: 'slide--forward'
         }
     },
     mission_b2m3a1: {
         heroImageUrl: '/mission_b2m3a1.png',
+        script: 'He prefers AI.<br/>+£0',
         choice2: {
             destination: '/dashboards/2/4',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -307,6 +332,7 @@ const frames = {
     },
     mission_b2m3a2: {
         heroImageUrl: '/mission_b2m3a2.png',
+        script: 'He likes it.<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/4',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -315,15 +341,15 @@ const frames = {
     },
     mission_b2m4: {
         heroImageUrl: '/mission_b2m4.png',
-        question: 'Do you want to be a maid?',
+        script: 'A maid café just opened.',
         choice1: {
             destination: 'mission_b2m4a1',
-            text: 'Yes',
+            text: 'I don’t mind waiting tables',
             animation: 'slide--forward'
         },
         choice2: {
             destination: 'mission_b2m4a2',
-            text: 'No',
+            text: 'Sell yourself as a manager',
             animation: 'slide--forward'
         }
     },
@@ -345,7 +371,7 @@ const frames = {
     },
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.png',
-        question: 'Do you want to be a maid?',
+        script: 'Do you want to be a maid?',
         choice1: {
             destination: 'mission_b2m5a1',
             text: 'Yes',
@@ -375,7 +401,7 @@ const frames = {
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6_intro1.jpg',
-        question: 'Do you want to be a maid?',
+        script: 'Do you want to be a maid?',
         choice2: {
             destination: 'mission_b2m6q2',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
@@ -392,7 +418,7 @@ const frames = {
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6q.jpg',
-        question: 'Do you want to be a maid?',
+        script: 'Do you want to be a maid?',
         choice1: {
             destination: 'won',
             text: 'Yes',
@@ -406,7 +432,7 @@ const frames = {
     },
     mission_b3m3: {
         heroImageUrl: '/mission_b3m3.jpg',
-        question: 'Do you want to pole dance?',
+        script: 'Do you want to pole dance?',
         choice1: {
             destination: 'mission_b3m3a1',
             text: 'Yes',
@@ -436,7 +462,7 @@ const frames = {
     },
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.jpg',
-        question: 'Do you want to pole dance?',
+        script: 'Do you want to pole dance?',
         choice1: {
             destination: 'mission_b3m4a1',
             text: 'Yes',
@@ -466,7 +492,7 @@ const frames = {
     },
     mission_b3m5: {
         heroImageUrl: '/mission_b3m5.jpg',
-        question: 'Do you want to pole dance?',
+        script: 'Do you want to pole dance?',
         choice1: {
             destination: 'mission_b3m5a1',
             text: 'Yes',
@@ -528,7 +554,7 @@ const frames = {
     },
     mission_b3m6q4: {
         heroImageUrl: '/mission_b3m6.4.jpg',
-        question: 'Do you want to pole dance?',
+        script: 'Do you want to pole dance?',
         choice1: {
             destination: 'won',
             text: 'Yes',
@@ -544,7 +570,7 @@ const frames = {
 
 export const getCurrentHeroImage = id => frames[id].heroImageUrl;
 
-export const getCurrentQuestion = id => frames[id].question;
+export const getCurrentScript = id => frames[id].script;
 
 export const getNextHeroImage = (id, choice) => {
     const nextFrameId = frames[id][choice].destination;
@@ -555,7 +581,7 @@ export const getNextFrameDestination = (id, choice) => frames[id][choice].destin
 
 export const getNextFrameAnimation = (id, choice) => frames[id][choice].animation;
 
-export const getNextFrameQuestion = (id, choice) => frames[id][choice].question;
+export const getNextFrameScript = (id, choice) => frames[getNextFrameDestination(id, choice)].script;
 
 export const getChoice = (id, choice) => frames[id][choice];
 

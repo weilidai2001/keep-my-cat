@@ -4,8 +4,8 @@ import { withRouter } from 'react-router';
 import cx from 'classnames';
 import {
     getCurrentHeroImage,
-    getCurrentQuestion,
-    getNextFrameQuestion,
+    getCurrentScript,
+    getNextFrameScript,
     getNextHeroImage,
     getNextFrameDestination,
     getChoice,
@@ -28,8 +28,8 @@ function moveToNextFrame (currentFrame, choice) {
             currentFrame: nextFrameDestination,
             heroImageUrl: getNextHeroImage(currentFrame, choice),
             animation: getNextFrameAnimation(currentFrame, choice),
-            question: getNextFrameQuestion(currentFrame, choice)
-        })
+            script: getNextFrameScript(currentFrame, choice)
+        });
     }
 }
 
@@ -44,7 +44,7 @@ class Slideshow extends Component {
             currentFrame,
             heroImageUrl: getCurrentHeroImage(currentFrame),
             animation: initialAnimation,
-            question: getCurrentQuestion(currentFrame),
+            script: getCurrentScript(currentFrame),
             showAnswer: false,
             showContinue: false
         };
@@ -93,8 +93,7 @@ class Slideshow extends Component {
         const button1 = getChoice(currentFrame, 'choice1');
         const button2 = getChoice(currentFrame, 'choice2');
 
-        const { animation, heroImageUrl, question } = this.state;
-
+        const { animation, heroImageUrl, script } = this.state;
         const answer1 = button1 && button1.text && <button onClick={this.onChoice1Click}>{button1.text}</button>;
         const answer2 = button2 && button2.text && <button onClick={this.onChoice2Click}>{button2.text}</button>;
 
@@ -112,7 +111,7 @@ class Slideshow extends Component {
         return (
             <div className="slideshow" onClick={this.onNextFrameClick}>
                 <header>
-                    {question && <div className="slideshow__question">{question}</div>}
+                    {script && <div className="slideshow__script" dangerouslySetInnerHTML={{__html: script}} />}
                 </header>
                 <main>
                     <div className={cx({'slideshow__answers--hidden': !this.state.showAnswer}, {'slideshow__answers--show': this.state.showAnswer })}>
