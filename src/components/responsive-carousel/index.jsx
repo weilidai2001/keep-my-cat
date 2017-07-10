@@ -5,6 +5,18 @@ import {Carousel} from 'react-responsive-carousel';
 // carousel styles
 import 'react-responsive-carousel/lib/styles/carousel.css';
 
+const styles = {
+    footer: {
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    button: {
+        fontSize: '15px',
+        width: 'auto',
+        padding: '5px 15px'
+    }
+};
+
 class ResponsiveCarousel extends Component {
     constructor(props, context) {
         super(props, context);
@@ -53,8 +65,8 @@ class ResponsiveCarousel extends Component {
                         )}
                     </Carousel>
                 </main>
-                <footer>
-                    <button onClick={this.onNextDestinationClick}>{buttonText}</button>
+                <footer style={styles.footer}>
+                    <button style={styles.button} onClick={this.onNextDestinationClick}>{buttonText}</button>
                 </footer>
             </div>
         );
