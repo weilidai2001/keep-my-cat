@@ -29,24 +29,28 @@ class ResponsiveCarousel extends Component {
             onChange: (index) => {
                 const id = createImageNameByIndex(index);
                 const el = document.getElementById(id);
-                const originalSrc = el.src;
-                el.src = '/white.png';
-                setTimeout(() => {el.src = originalSrc;}, 100)
+                el.src = el.dataset.src;
             }
         };
 
-        const styles = {
-            image: {
-                height: '100%'
-            }
-        };
+        const placeholder = '/white.png';
+
+        const props = src => ({
+            'data-src': src
+        });
 
         return (
             <div className="responsive-carousel">
                 <header/>
                 <main>
                     <Carousel {...config}>
-                        {images.map((image, i) => (<img style={styles.image} id={createImageNameByIndex(i)} key={image} src={image}/>))}
+                        {images.map((image, i) => (
+                            <img
+                                id={createImageNameByIndex(i)}
+                                {...props(image)}
+                                key={image}
+                                src={i === 0 ? image : placeholder}/>)
+                        )}
                     </Carousel>
                 </main>
                 <footer>
