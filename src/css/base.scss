@@ -1,3 +1,8 @@
 div {
   font-family: "AmaticSC-Regular", serif;
 }
+
+html {
+  // https://stackoverflow.com/questions/11885161/remove-grey-background-on-link-clicked-in-ios-safari
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
