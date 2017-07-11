@@ -9,6 +9,7 @@ import Homepage from '../pages/homepage';
 import Intro from '../pages/intro';
 import MissionDashboard from '../pages/mission-dashboard';
 import MissionBody from '../pages/mission-body';
+import Retro from '../pages/retro';
 
 render(
     <Router>
@@ -17,6 +18,7 @@ render(
             <Route path="/intro" component={Intro}/>
             <Route path="/dashboards/:branch/:mission" component={MissionDashboard}/>
             <Route path="/missions/:branch/:mission" component={MissionBody}/>
+            <Route path="/retro" component={Retro}/>
         </div>
     </Router>,
     document.getElementById('root')

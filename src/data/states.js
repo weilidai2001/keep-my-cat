@@ -76,6 +76,7 @@ const frames = {
     },
     mission_b4m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
+        retro: 'retro text for mission_b4m2a1',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice1: {
             destination: 'won',
@@ -85,6 +86,7 @@ const frames = {
     },
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
+        retro: 'retro text for mission_b4m2a2',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice1: {
             destination: '/dashboards/4/3',
@@ -108,6 +110,7 @@ const frames = {
     },
     mission_b4m3a1: {
         heroImageUrl: '/mission_b4m3a1.png',
+        retro: 'retro text for mission_b4m3a1',
         script: 'The local council appreciates your kind work. <br/>+£2,000',
         choice1: {
             destination: 'won',
@@ -473,5 +476,7 @@ export const getNextFrameAnimation = (id, choice) => frames[id][choice].animatio
 export const getNextFrameScript = (id, choice) => frames[getNextFrameDestination(id, choice)].script;
 
 export const getChoice = (id, choice) => frames[id][choice];
+
+export const getRetroScript = (id) => frames[id].retro;
 
 export const isNextFrameExternal = (currentFrameId, choice) => frames[currentFrameId][choice].destination.includes('/');
