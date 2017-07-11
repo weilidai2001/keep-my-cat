@@ -1,7 +1,7 @@
 const frames = {
     homepage: {
         heroImageUrl: '/intro_11.gif',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         choice1: {
             destination: '/intro',
             text: 'Intro'
@@ -13,7 +13,7 @@ const frames = {
     },
     won: {
         heroImageUrl: '/win.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         choice1: {
             destination: '/',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
@@ -21,7 +21,7 @@ const frames = {
     },
     lost: {
         heroImageUrl: '/loose.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         choice1: {
             destination: '/',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
@@ -29,7 +29,7 @@ const frames = {
     },
     mission_b0m1: {
         heroImageUrl: '/mission_b0m1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Do you want to become a drone engineer again? It will take a few weeks to retrain yourself though.',
         choice1: {
             destination: 'mission_b0m1a1',
@@ -42,7 +42,7 @@ const frames = {
     },
     mission_b0m1a1: {
         heroImageUrl: '/doesnotexist.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
         choice1: {
             destination: '/dashboards/4/2',
@@ -51,7 +51,7 @@ const frames = {
     },
     mission_b0m1a2: {
         heroImageUrl: '/doesnotexist.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'No worries, you still have 5 more missions to go. <br/>£0',
         choice1: {
             destination: '/dashboards/1/2',
@@ -60,7 +60,7 @@ const frames = {
     },
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b4m2a1',
@@ -73,7 +73,7 @@ const frames = {
     },
     mission_b4m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a1',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice1: {
@@ -83,7 +83,7 @@ const frames = {
     },
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a2',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice1: {
@@ -93,7 +93,7 @@ const frames = {
     },
     mission_b4m3: {
         heroImageUrl: '/mission_b4m3.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Today is Sunday neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b4m3a1',
@@ -106,7 +106,7 @@ const frames = {
     },
     mission_b4m3a1: {
         heroImageUrl: '/mission_b4m3a1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m3a1',
         script: 'The local council appreciates your kind work. <br/>+£2,000',
         choice1: {
@@ -116,7 +116,7 @@ const frames = {
     },
     mission_b4m3a2: {
         heroImageUrl: '/mission_b4m3a2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         choice1: {
             destination: 'lost',
@@ -125,7 +125,7 @@ const frames = {
     },
     mission_b1m2: {
         heroImageUrl: '/mission_b1m2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b1m2a1',
@@ -138,7 +138,7 @@ const frames = {
     },
     mission_b1m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice2: {
             destination: '/dashboards/2/3',
@@ -147,7 +147,7 @@ const frames = {
     },
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice2: {
             destination: '/dashboards/3/3',
@@ -156,7 +156,7 @@ const frames = {
     },
     mission_b2m3: {
         heroImageUrl: '/mission_b2m3.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'You met a successful business man',
         choice1: {
             destination: 'mission_b2m3a1',
@@ -169,7 +169,7 @@ const frames = {
     },
     mission_b2m3a1: {
         heroImageUrl: '/mission_b2m3a1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'He prefers AI.<br/>+£0',
         choice2: {
             destination: '/dashboards/2/4',
@@ -178,7 +178,7 @@ const frames = {
     },
     mission_b2m3a2: {
         heroImageUrl: '/mission_b2m3a2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'He likes it.<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/4',
@@ -187,7 +187,7 @@ const frames = {
     },
     mission_b2m4: {
         heroImageUrl: '/mission_b2m4.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'A maid café just opened.',
         choice1: {
             destination: 'mission_b2m4a1',
@@ -200,7 +200,7 @@ const frames = {
     },
     mission_b2m4a1: {
         heroImageUrl: '/mission_b2m4a1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'That was embarrassing but worth it!<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/5',
@@ -209,7 +209,7 @@ const frames = {
     },
     mission_b2m4a2: {
         heroImageUrl: '/mission_b2m4a2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Sorry, the place is managed perfectly by algorithms!<br/>+£0',
         choice2: {
             destination: '/dashboards/2/5',
@@ -218,7 +218,7 @@ const frames = {
     },
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Today is Sunday, neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b2m5a1',
@@ -231,7 +231,7 @@ const frames = {
     },
     mission_b2m5a1: {
         heroImageUrl: '/mission_b2m5a1.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'The local council appreciates your kind work<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/6',
@@ -240,7 +240,7 @@ const frames = {
     },
     mission_b2m5a2: {
         heroImageUrl: '/mission_b2m5a2.png',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         choice2: {
             destination: '/dashboards/2/6',
@@ -249,7 +249,7 @@ const frames = {
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6_intro1.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
             destination: 'mission_b2m6q2',
@@ -258,7 +258,7 @@ const frames = {
     },
     mission_b2m6q2: {
         heroImageUrl: '/mission_b2m6_intro2.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
             destination: 'mission_b2m6q3',
@@ -267,7 +267,7 @@ const frames = {
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6q.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice1: {
             destination: 'won',
@@ -280,7 +280,7 @@ const frames = {
     },
     mission_b2m6q3a2: {
         heroImageUrl: '/doesnotexist.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Don\'t be an *rse…go back and choose again!',
         choice2: {
             destination: 'mission_b2m6q3',
@@ -289,7 +289,7 @@ const frames = {
     },
     mission_b3m3: {
         heroImageUrl: '/mission_b3m3.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'A  traveller wants to live with you for a while',
         choice1: {
             destination: 'mission_b3m3a1',
@@ -302,7 +302,7 @@ const frames = {
     },
     mission_b3m3a1: {
         heroImageUrl: '/mission_b3m3a1.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Here is your rent money',
         choice2: {
             destination: '/dashboards/3/4',
@@ -311,7 +311,7 @@ const frames = {
     },
     mission_b3m3a2: {
         heroImageUrl: '/mission_b3m3a2.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Hmm…',
         choice2: {
             destination: '/dashboards/3/4',
@@ -320,7 +320,7 @@ const frames = {
     },
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'This farmer keeps a lot of sheep',
         choice1: {
             destination: 'mission_b3m4a1',
@@ -333,7 +333,7 @@ const frames = {
     },
     mission_b3m4a1: {
         heroImageUrl: '/mission_b3m4a1.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'The sheep prefers machine than you…<br/>+£0',
         choice2: {
             destination: '/dashboards/3/5',
@@ -342,7 +342,7 @@ const frames = {
     },
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'The farmer enjoys your company.<br/>+£2,000',
         choice2: {
             destination: '/dashboards/3/5',
@@ -351,7 +351,7 @@ const frames = {
     },
     mission_b3m5: {
         heroImageUrl: '/mission_b3m5.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'One of the robots is looking anxious.',
         choice1: {
             destination: 'mission_b3m5a1',
@@ -364,7 +364,7 @@ const frames = {
     },
     mission_b3m5a1: {
         heroImageUrl: '/mission_b3m5a1.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'You have picked the wrong target man!<br/>+£0',
         choice2: {
             destination: '/dashboards/3/6',
@@ -373,7 +373,7 @@ const frames = {
     },
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
         choice2: {
             destination: '/dashboards/3/6',
@@ -382,7 +382,7 @@ const frames = {
     },
     mission_b3m6: {
         heroImageUrl: '/mission_b3m6.0.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'This old lady can cover the rest of the cat tax.',
         choice2: {
             destination: 'mission_b3m6q1',
@@ -391,7 +391,7 @@ const frames = {
     },
     mission_b3m6q1: {
         heroImageUrl: '/mission_b3m6.1.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'She says you can pay her back by having more VR bike rides together in the future.',
         choice2: {
             destination: 'mission_b3m6q2',
@@ -400,7 +400,7 @@ const frames = {
     },
     mission_b3m6q2: {
         heroImageUrl: '/mission_b3m6.2.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         choice2: {
             destination: 'mission_b3m6q3',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
@@ -408,7 +408,7 @@ const frames = {
     },
     mission_b3m6q3: {
         heroImageUrl: '/mission_b3m6.3.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         choice2: {
             destination: 'mission_b3m6q4',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
@@ -416,7 +416,7 @@ const frames = {
     },
     mission_b3m6q4: {
         heroImageUrl: '/mission_b3m6.4.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: '',
         choice1: {
             destination: 'won',
@@ -429,7 +429,7 @@ const frames = {
     },
     mission_b3m6a1: {
         heroImageUrl: '/doesnotexist.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'Good choice!<br/>+£2,000',
         choice1: {
             destination: 'won',
@@ -438,7 +438,7 @@ const frames = {
     },
     mission_b3m6a2: {
         heroImageUrl: '/doesnotexist.jpg',
-        animation: 'slide',
+        animation: 'jackInTheBox',
         script: 'What?! Go back and choose again!',
         choice1: {
             destination: 'mission_b3m6q4',
