@@ -3,32 +3,30 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { withRouter } from 'react-router';
 import cx from 'classnames';
 import {
-    getCurrentHeroImage,
-    getCurrentScript,
-    getNextFrameScript,
-    getNextHeroImage,
-    getNextFrameDestination,
+    getFrameHeroImage,
+    getFrameScript,
     getChoice,
-    getNextFrameAnimation,
-    isNextFrameExternal
+    isFrameSingleChoice,
+    getFrameAnimation,
+    getNextFrame,
+    isFrameExternal,
+    getTheOnlyDestination
 } from '../../data/states';
 
-function moveToNextFrame (currentFrame, choice) {
-    const nextFrameDestination = getNextFrameDestination(currentFrame, choice);
-
+function moveToNextFrame (nextFrameId) {
     this.setState({
         showAnswer: false,
         showContinue: false
     });
 
-    if (isNextFrameExternal(currentFrame, choice)) {
-        this.props.history.push(nextFrameDestination);
+    if (isFrameExternal(nextFrameId)) {
+        this.props.history.push(nextFrameId);
     } else {
         this.setState({
-            currentFrame: nextFrameDestination,
-            heroImageUrl: getNextHeroImage(currentFrame, choice),
-            animation: getNextFrameAnimation(currentFrame, choice),
-            script: getNextFrameScript(currentFrame, choice)
+            currentFrame: nextFrameId,
+            heroImageUrl: getFrameHeroImage(nextFrameId),
+            animation: getFrameAnimation(nextFrameId),
+            script: getFrameScript(nextFrameId)
         });
     }
 }
@@ -42,9 +40,9 @@ class Slideshow extends Component {
 
         this.state = {
             currentFrame,
-            heroImageUrl: getCurrentHeroImage(currentFrame),
+            heroImageUrl: getFrameHeroImage(currentFrame),
             animation: initialAnimation,
-            script: getCurrentScript(currentFrame),
+            script: getFrameScript(currentFrame),
             showAnswer: false,
             showContinue: false
         };
@@ -57,35 +55,28 @@ class Slideshow extends Component {
     onChoice1Click() {
         const choice = 'choice1';
         const { currentFrame } = this.state;
+        const nextFrameId = getNextFrame(currentFrame, choice);
 
-        moveToNextFrame.call(this, currentFrame, choice);
+        moveToNextFrame.call(this, nextFrameId);
     }
 
     onChoice2Click() {
         const choice = 'choice2';
         const { currentFrame } = this.state;
+        const nextFrameId = getNextFrame(currentFrame, choice);
 
-        moveToNextFrame.call(this, currentFrame, choice);
+        moveToNextFrame.call(this, nextFrameId);
     }
 
     onNextFrameClick() {
         const { currentFrame } = this.state;
-        const button1 = getChoice(currentFrame, 'choice1');
-        const button2 = getChoice(currentFrame, 'choice2');
-        const onlyOneImageButtonIsAvailable = button1 && button1.imageUrl && !button2 || button2 && button2.imageUrl && !button1;
 
-        if (onlyOneImageButtonIsAvailable) {
-            if (button1) {
-                this.onChoice1Click();
-            } else {
-                this.onChoice2Click();
-            }
-        }
-
-        if ((button1 && button1.text || button2 && button2.text) && !this.state.showAnswer) {
+        if (isFrameSingleChoice(currentFrame)) {
+            const nextFrameId = getTheOnlyDestination(currentFrame);
+            moveToNextFrame.call(this, nextFrameId);
+        } else if (!this.state.showAnswer) {
             this.setState({ showAnswer: true });
         }
-
     }
 
     render() {
@@ -96,11 +87,6 @@ class Slideshow extends Component {
         const { animation, heroImageUrl, script } = this.state;
         const answer1 = button1 && button1.text && <button onClick={this.onChoice1Click}>{button1.text}</button>;
         const answer2 = button2 && button2.text && <button onClick={this.onChoice2Click}>{button2.text}</button>;
-
-        const navigation1 = button1 && button1.imageUrl && <img src={button1.imageUrl} onClick={this.onChoice1Click} className="slideshow__next-button-1"/>;
-        const navigation2 = button2 && button2.imageUrl && <img src={button2.imageUrl} onClick={this.onChoice2Click} className="slideshow__next-button-2"/>;
-
-        const navigationClass = navigation1 && navigation2 ? 'slideshow__navigation--both': 'slideshow__navigation--single';
 
         if (!this.state.showContinue) {
             setImmediate(function () {
@@ -144,19 +130,6 @@ class Slideshow extends Component {
                         </div>
                     }
                 </main>
-                <footer>
-                    {
-                        navigation1 &&
-                        navigation2 &&
-                        (
-                            <div className={navigationClass}>
-                                {navigation1}
-                                {navigation2}
-                            </div>
-                        )
-                    }
-
-                </footer>
             </div>
         );
     }

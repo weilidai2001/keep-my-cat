@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import {getRetroScript, getCurrentHeroImage} from '../../data/states';
+import {getRetroScript, getFrameHeroImage} from '../../data/states';
 
 const styles = {
     retro: {
@@ -71,7 +71,7 @@ class Retro extends React.Component {
                         <div style={styles.missions}>
                             {
                                 missions.map(mission => {
-                                    const imageUrl = getCurrentHeroImage(mission);
+                                    const imageUrl = getFrameHeroImage(mission);
                                     const script = getRetroScript(mission);
                                     return (
                                         <img key={mission} style={styles.mission}

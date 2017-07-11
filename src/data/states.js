@@ -1,482 +1,475 @@
 const frames = {
     homepage: {
         heroImageUrl: '/intro_11.gif',
+        animation: 'slide',
         choice1: {
             destination: '/intro',
-            text: 'Intro',
-            animation: 'slide--forward'
+            text: 'Intro'
         },
         choice2: {
             destination: '/dashboards/0/1',
-            text: 'Mission 1',
-            animation: 'slide--forward'
+            text: 'Mission 1'
         }
     },
     won: {
         heroImageUrl: '/win.png',
+        animation: 'slide',
         choice1: {
             destination: '/',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     lost: {
         heroImageUrl: '/loose.png',
+        animation: 'slide',
         choice1: {
             destination: '/',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b0m1: {
         heroImageUrl: '/mission_b0m1.png',
+        animation: 'slide',
         script: 'Do you want to become a drone engineer again? It will take a few weeks to retrain yourself though.',
         choice1: {
             destination: 'mission_b0m1a1',
-            text: 'Yes, why not?',
-            animation: 'slide--forward'
+            text: 'Yes, why not?'
         },
         choice2: {
             destination: 'mission_b0m1a2',
-            text: 'No, it takes too long.',
-            animation: 'slide--forward'
+            text: 'No, it takes too long.'
         }
     },
     mission_b0m1a1: {
         heroImageUrl: '/doesnotexist.png',
+        animation: 'slide',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
         choice1: {
             destination: '/dashboards/4/2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b0m1a2: {
         heroImageUrl: '/doesnotexist.png',
+        animation: 'slide',
         script: 'No worries, you still have 5 more missions to go. <br/>£0',
         choice1: {
             destination: '/dashboards/1/2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
+        animation: 'slide',
         script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b4m2a1',
-            text: 'Sounds fun!',
-            animation: 'slide--forward'
+            text: 'Sounds fun!'
         },
         choice2: {
             destination: 'mission_b4m2a2',
-            text: 'I\'m not leaving home.',
-            animation: 'slide--forward'
+            text: 'I\'m not leaving home.'
         }
     },
     mission_b4m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
+        animation: 'slide',
         retro: 'retro text for mission_b4m2a1',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice1: {
             destination: 'won',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
+        animation: 'slide',
         retro: 'retro text for mission_b4m2a2',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice1: {
             destination: '/dashboards/4/3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b4m3: {
         heroImageUrl: '/mission_b4m3.png',
+        animation: 'slide',
         script: 'Today is Sunday neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b4m3a1',
-            text: 'Host a workshop for them',
-            animation: 'slide--forward'
+            text: 'Host a workshop for them'
         },
         choice2: {
             destination: 'mission_b4m3a2',
-            text: 'I\'d rather be alone!',
-            animation: 'slide--forward'
+            text: 'I\'d rather be alone!'
         }
     },
     mission_b4m3a1: {
         heroImageUrl: '/mission_b4m3a1.png',
+        animation: 'slide',
         retro: 'retro text for mission_b4m3a1',
         script: 'The local council appreciates your kind work. <br/>+£2,000',
         choice1: {
             destination: 'won',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b4m3a2: {
         heroImageUrl: '/mission_b4m3a2.png',
+        animation: 'slide',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         choice1: {
             destination: 'lost',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b1m2: {
         heroImageUrl: '/mission_b1m2.png',
+        animation: 'slide',
         script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b1m2a1',
-            text: 'Sounds fun!',
-            animation: 'slide--forward'
+            text: 'Sounds fun!'
         },
         choice2: {
             destination: 'mission_b1m2a2',
-            text: 'I\'m not leaving my home.',
-            animation: 'slide--forward'
+            text: 'I\'m not leaving my home.'
         }
     },
     mission_b1m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
+        animation: 'slide',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         choice2: {
             destination: '/dashboards/2/3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
+        animation: 'slide',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         choice2: {
             destination: '/dashboards/3/3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m3: {
         heroImageUrl: '/mission_b2m3.png',
+        animation: 'slide',
         script: 'You met a successful business man',
         choice1: {
             destination: 'mission_b2m3a1',
-            text: 'Apply to be his accountant',
-            animation: 'slide--forward'
+            text: 'Apply to be his accountant'
         },
         choice2: {
             destination: 'mission_b2m3a2',
-            text: 'Show him your sexy moves',
-            animation: 'slide--forward'
+            text: 'Show him your sexy moves'
         }
     },
     mission_b2m3a1: {
         heroImageUrl: '/mission_b2m3a1.png',
+        animation: 'slide',
         script: 'He prefers AI.<br/>+£0',
         choice2: {
             destination: '/dashboards/2/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m3a2: {
         heroImageUrl: '/mission_b2m3a2.png',
+        animation: 'slide',
         script: 'He likes it.<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m4: {
         heroImageUrl: '/mission_b2m4.png',
+        animation: 'slide',
         script: 'A maid café just opened.',
         choice1: {
             destination: 'mission_b2m4a1',
-            text: 'I don’t mind waiting tables',
-            animation: 'slide--forward'
+            text: 'I don’t mind waiting tables'
         },
         choice2: {
             destination: 'mission_b2m4a2',
-            text: 'Sell yourself as a manager',
-            animation: 'slide--forward'
+            text: 'Sell yourself as a manager'
         }
     },
     mission_b2m4a1: {
         heroImageUrl: '/mission_b2m4a1.png',
+        animation: 'slide',
         script: 'That was embarrassing but worth it!<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m4a2: {
         heroImageUrl: '/mission_b2m4a2.png',
+        animation: 'slide',
         script: 'Sorry, the place is managed perfectly by algorithms!<br/>+£0',
         choice2: {
             destination: '/dashboards/2/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.png',
+        animation: 'slide',
         script: 'Today is Sunday, neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b2m5a1',
-            text: 'Host a workshop for them',
-            animation: 'slide--forward'
+            text: 'Host a workshop for them'
         },
         choice2: {
             destination: 'mission_b2m5a2',
-            text: 'I\'d rather be alone!',
-            animation: 'slide--forward'
+            text: 'I\'d rather be alone!'
         }
     },
     mission_b2m5a1: {
         heroImageUrl: '/mission_b2m5a1.png',
+        animation: 'slide',
         script: 'The local council appreciates your kind work<br/>+£2,000',
         choice2: {
             destination: '/dashboards/2/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m5a2: {
         heroImageUrl: '/mission_b2m5a2.png',
+        animation: 'slide',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         choice2: {
             destination: '/dashboards/2/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6_intro1.jpg',
+        animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
             destination: 'mission_b2m6q2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m6q2: {
         heroImageUrl: '/mission_b2m6_intro2.jpg',
+        animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
             destination: 'mission_b2m6q3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6q.jpg',
+        animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice1: {
             destination: 'won',
-            text: 'Everyone is happy now',
-            animation: 'slide--forward'
+            text: 'Everyone is happy now'
         },
         choice2: {
             destination: 'heroImageUrl',
-            text: 'Say no',
-            animation: 'slide--forward'
+            text: 'Say no'
         }
     },
     mission_b2m6q3a2: {
         heroImageUrl: '/doesnotexist.jpg',
+        animation: 'slide',
         script: 'Don\'t be an *rse…go back and choose again!',
         choice2: {
             destination: 'mission_b2m6q3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m3: {
         heroImageUrl: '/mission_b3m3.jpg',
+        animation: 'slide',
         script: 'A  traveller wants to live with you for a while',
         choice1: {
             destination: 'mission_b3m3a1',
-            text: 'Sure, why not!',
-            animation: 'slide--forward'
+            text: 'Sure, why not!'
         },
         choice2: {
             destination: 'mission_b3m3a2',
-            text: 'Go away',
-            animation: 'slide--forward'
+            text: 'Go away'
         }
     },
     mission_b3m3a1: {
         heroImageUrl: '/mission_b3m3a1.jpg',
+        animation: 'slide',
         script: 'Here is your rent money',
         choice2: {
             destination: '/dashboards/3/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m3a2: {
         heroImageUrl: '/mission_b3m3a2.jpg',
+        animation: 'slide',
         script: 'Hmm…',
         choice2: {
             destination: '/dashboards/3/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.jpg',
+        animation: 'slide',
         script: 'This farmer keeps a lot of sheep',
         choice1: {
             destination: 'mission_b3m4a1',
-            text: 'Shear his sheep',
-            animation: 'slide--forward'
+            text: 'Shear his sheep'
         },
         choice2: {
             destination: 'mission_b3m4a2',
-            text: 'Play with the farmer',
-            animation: 'slide--forward'
+            text: 'Play with the farmer'
         }
     },
     mission_b3m4a1: {
         heroImageUrl: '/mission_b3m4a1.jpg',
+        animation: 'slide',
         script: 'The sheep prefers machine than you…<br/>+£0',
         choice2: {
             destination: '/dashboards/3/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.jpg',
+        animation: 'slide',
         script: 'The farmer enjoys your company.<br/>+£2,000',
         choice2: {
             destination: '/dashboards/3/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m5: {
         heroImageUrl: '/mission_b3m5.jpg',
+        animation: 'slide',
         script: 'One of the robots is looking anxious.',
         choice1: {
             destination: 'mission_b3m5a1',
-            text: 'Rob it!',
-            animation: 'slide--forward'
+            text: 'Rob it!'
         },
         choice2: {
             destination: 'mission_b3m5a2',
-            text: 'Try to help it.',
-            animation: 'slide--forward'
+            text: 'Try to help it.'
         }
     },
     mission_b3m5a1: {
         heroImageUrl: '/mission_b3m5a1.jpg',
+        animation: 'slide',
         script: 'You have picked the wrong target man!<br/>+£0',
         choice2: {
             destination: '/dashboards/3/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.jpg',
+        animation: 'slide',
         script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
         choice2: {
             destination: '/dashboards/3/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6: {
         heroImageUrl: '/mission_b3m6.0.jpg',
+        animation: 'slide',
         script: 'This old lady can cover the rest of the cat tax.',
         choice2: {
             destination: 'mission_b3m6q1',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q1: {
         heroImageUrl: '/mission_b3m6.1.jpg',
+        animation: 'slide',
         script: 'She says you can pay her back by having more VR bike rides together in the future.',
         choice2: {
             destination: 'mission_b3m6q2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q2: {
         heroImageUrl: '/mission_b3m6.2.jpg',
+        animation: 'slide',
         choice2: {
             destination: 'mission_b3m6q3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q3: {
         heroImageUrl: '/mission_b3m6.3.jpg',
+        animation: 'slide',
         choice2: {
             destination: 'mission_b3m6q4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q4: {
         heroImageUrl: '/mission_b3m6.4.jpg',
+        animation: 'slide',
         script: '',
         choice1: {
             destination: 'won',
-            text: 'Agree to the plan',
-            animation: 'slide--forward'
+            text: 'Agree to the plan'
         },
         choice2: {
             destination: 'lost',
-            text: 'I\'d rather lose my cat',
-            animation: 'slide--forward'
+            text: 'I\'d rather lose my cat'
         }
     },
     mission_b3m6a1: {
         heroImageUrl: '/doesnotexist.jpg',
+        animation: 'slide',
         script: 'Good choice!<br/>+£2,000',
         choice1: {
             destination: 'won',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6a2: {
         heroImageUrl: '/doesnotexist.jpg',
+        animation: 'slide',
         script: 'What?! Go back and choose again!',
         choice1: {
             destination: 'mission_b3m6q4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png',
-            animation: 'slide--forward'
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     }
 };
 
-export const getCurrentHeroImage = id => frames[id].heroImageUrl;
+export const getFrameHeroImage = id => frames[id].heroImageUrl;
 
-export const getCurrentScript = id => frames[id].script;
+export const getFrameScript = id => frames[id].script;
+
+
 
 export const getNextHeroImage = (id, choice) => {
     const nextFrameId = frames[id][choice].destination;
     return frames[nextFrameId].heroImageUrl;
 };
 
-export const getNextFrameDestination = (id, choice) => frames[id][choice].destination;
+export const getNextFrame = (id, choice) => frames[id][choice].destination;
 
-export const getNextFrameAnimation = (id, choice) => frames[id][choice].animation;
+export const getFrameAnimation = (id) => frames[id].animation;
 
-export const getNextFrameScript = (id, choice) => frames[getNextFrameDestination(id, choice)].script;
+export const isFrameExternal = (currentFrameId) => currentFrameId.includes('/');
 
 export const getChoice = (id, choice) => frames[id][choice];
 
 export const getRetroScript = (id) => frames[id].retro;
 
-export const isNextFrameExternal = (currentFrameId, choice) => frames[currentFrameId][choice].destination.includes('/');
+export const isFrameSingleChoice = (id) =>
+    frames[id].choice1 && frames[id].choice1.imageUrl && !frames[id].choice2 ||
+    frames[id].choice2 && frames[id].choice2.imageUrl && !frames[id].choice1;
+
+export const getTheOnlyDestination = (id) => frames[id].choice1 ? frames[id].choice1.destination : frames[id].choice2.destination;
