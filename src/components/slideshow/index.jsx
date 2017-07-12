@@ -15,8 +15,7 @@ import {
 
 function moveToNextFrame (nextFrameId) {
     this.setState({
-        showAnswer: false,
-        showContinue: false
+        showAnswer: false
     });
 
     if (isFrameExternal(nextFrameId)) {
@@ -44,7 +43,6 @@ class Slideshow extends Component {
             animation: initialAnimation,
             script: getFrameScript(currentFrame),
             showAnswer: false,
-            showContinue: false
         };
 
         this.onChoice1Click = this.onChoice1Click.bind(this, props);
@@ -88,12 +86,6 @@ class Slideshow extends Component {
         const answer1 = button1 && button1.text && <button onClick={this.onChoice1Click}>{button1.text}</button>;
         const answer2 = button2 && button2.text && <button onClick={this.onChoice2Click}>{button2.text}</button>;
 
-        if (!this.state.showContinue) {
-            setImmediate(function () {
-                this.setState({ showContinue: true });
-            }.bind(this));
-        }
-
         return (
             <div className="slideshow" onClick={this.onNextFrameClick}>
                 <header>
@@ -119,13 +111,7 @@ class Slideshow extends Component {
                         />
                     </ReactCSSTransitionGroup>
                     {
-                        !this.state.showAnswer && <div className={
-                            cx(
-                                {'slideshow__continue--hidden': !this.state.showContinue },
-                                {'slideshow__continue--shown': this.state.showContinue}
-
-                            )
-                        }>
+                        !this.state.showAnswer && <div className="slideshow__continue">
                             <img src="/slideshow_continue.png" />
                         </div>
                     }
