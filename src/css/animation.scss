@@ -48,3 +48,22 @@
     transform: scale(1);
   }
 }
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 1;
+    transform: translate(50px, -50%);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-80px, -50%);
+  }
+  75%{
+    opacity: 0.2;
+    transform: translate(-80px, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-80px, -50%);
+  }
+}

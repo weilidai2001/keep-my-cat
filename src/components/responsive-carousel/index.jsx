@@ -42,6 +42,9 @@ class ResponsiveCarousel extends Component {
                 const id = createImageNameByIndex(index);
                 const el = document.getElementById(id);
                 el.src = el.dataset.src;
+                if (index >= 1) {
+                    document.querySelector('.responsive-carousel__prompt').style.display = 'none';
+                }
             }
         };
 
@@ -55,6 +58,7 @@ class ResponsiveCarousel extends Component {
             <div className="responsive-carousel">
                 <header/>
                 <main>
+                    <img className="responsive-carousel__prompt" src="/slideshow_continue.png"/>
                     <Carousel {...config}>
                         {images.map((image, i) => (
                             <img
