@@ -248,7 +248,7 @@ const frames = {
         }
     },
     mission_b2m6: {
-        heroImageUrl: '/mission_b2m6_intro1.jpg',
+        heroImageUrl: '/mission_b2m6.1.png',
         animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
@@ -257,7 +257,7 @@ const frames = {
         }
     },
     mission_b2m6q2: {
-        heroImageUrl: '/mission_b2m6_intro2.jpg',
+        heroImageUrl: '/mission_b2m6.2.png',
         animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice2: {
@@ -266,7 +266,7 @@ const frames = {
         }
     },
     mission_b2m6q3: {
-        heroImageUrl: '/mission_b2m6q.jpg',
+        heroImageUrl: '/mission_b2m6.3.png',
         animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice1: {
@@ -288,7 +288,7 @@ const frames = {
         }
     },
     mission_b3m3: {
-        heroImageUrl: '/mission_b3m3.jpg',
+        heroImageUrl: '/mission_b3m3.png',
         animation: 'jackInTheBox',
         script: 'A  traveller wants to live with you for a while',
         choice1: {
@@ -301,7 +301,7 @@ const frames = {
         }
     },
     mission_b3m3a1: {
-        heroImageUrl: '/mission_b3m3a1.jpg',
+        heroImageUrl: '/mission_b3m3a1.png',
         animation: 'jackInTheBox',
         script: 'Here is your rent money',
         choice2: {
@@ -310,7 +310,7 @@ const frames = {
         }
     },
     mission_b3m3a2: {
-        heroImageUrl: '/mission_b3m3a2.jpg',
+        heroImageUrl: '/mission_b3m3a2.png',
         animation: 'jackInTheBox',
         script: 'Hmm…',
         choice2: {
@@ -319,7 +319,7 @@ const frames = {
         }
     },
     mission_b3m4: {
-        heroImageUrl: '/mission_b3m4.jpg',
+        heroImageUrl: '/mission_b3m4.png',
         animation: 'jackInTheBox',
         script: 'This farmer keeps a lot of sheep',
         choice1: {
@@ -332,7 +332,7 @@ const frames = {
         }
     },
     mission_b3m4a1: {
-        heroImageUrl: '/mission_b3m4a1.jpg',
+        heroImageUrl: '/mission_b3m4a1.png',
         animation: 'jackInTheBox',
         script: 'The sheep prefers machine than you…<br/>+£0',
         choice2: {
@@ -341,7 +341,7 @@ const frames = {
         }
     },
     mission_b3m4a2: {
-        heroImageUrl: '/mission_b3m4a2.jpg',
+        heroImageUrl: '/mission_b3m4a2.png',
         animation: 'jackInTheBox',
         script: 'The farmer enjoys your company.<br/>+£2,000',
         choice2: {
@@ -350,7 +350,7 @@ const frames = {
         }
     },
     mission_b3m5: {
-        heroImageUrl: '/mission_b3m5.jpg',
+        heroImageUrl: '/mission_b3m5.png',
         animation: 'jackInTheBox',
         script: 'One of the robots is looking anxious.',
         choice1: {
@@ -363,7 +363,7 @@ const frames = {
         }
     },
     mission_b3m5a1: {
-        heroImageUrl: '/mission_b3m5a1.jpg',
+        heroImageUrl: '/mission_b3m5a1.png',
         animation: 'jackInTheBox',
         script: 'You have picked the wrong target man!<br/>+£0',
         choice2: {
@@ -372,7 +372,7 @@ const frames = {
         }
     },
     mission_b3m5a2: {
-        heroImageUrl: '/mission_b3m5a2.jpg',
+        heroImageUrl: '/mission_b3m5a2.png',
         animation: 'jackInTheBox',
         script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
         choice2: {
@@ -381,42 +381,49 @@ const frames = {
         }
     },
     mission_b3m6: {
-        heroImageUrl: '/mission_b3m6.0.jpg',
-        animation: 'jackInTheBox',
+        heroImageUrl: '/mission_b3m6.1.png',
+        animation: 'slide',
         script: 'This old lady can cover the rest of the cat tax.',
-        choice2: {
-            destination: 'mission_b3m6q1',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
-    },
-    mission_b3m6q1: {
-        heroImageUrl: '/mission_b3m6.1.jpg',
-        animation: 'jackInTheBox',
-        script: 'She says you can pay her back by having more VR bike rides together in the future.',
         choice2: {
             destination: 'mission_b3m6q2',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q2: {
-        heroImageUrl: '/mission_b3m6.2.jpg',
-        animation: 'jackInTheBox',
+        heroImageUrl: '/mission_b3m6.2.png',
+        animation: 'slide',
         choice2: {
             destination: 'mission_b3m6q3',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q3: {
-        heroImageUrl: '/mission_b3m6.3.jpg',
-        animation: 'jackInTheBox',
+        heroImageUrl: '/mission_b3m6.3.png',
+        animation: 'slide',
         choice2: {
             destination: 'mission_b3m6q4',
             imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
         }
     },
     mission_b3m6q4: {
-        heroImageUrl: '/mission_b3m6.4.jpg',
-        animation: 'jackInTheBox',
+        heroImageUrl: '/mission_b3m6.4.png',
+        animation: 'slide',
+        choice2: {
+            destination: 'mission_b3m6q5',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    mission_b3m6q5: {
+        heroImageUrl: '/mission_b3m6.5.png',
+        animation: 'slide',
+        choice2: {
+            destination: 'mission_b3m6q6',
+            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
+        }
+    },
+    mission_b3m6q6: {
+        heroImageUrl: '/mission_b3m6.6.png',
+        animation: 'slide',
         script: '',
         choice1: {
             destination: 'won',
