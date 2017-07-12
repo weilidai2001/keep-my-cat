@@ -34,7 +34,6 @@ const renderQuestionMark = () => (<img src="/dashboard_mission_question_mark.png
 export default ({ branchNumber, missionNumber }) => (
     <div className="dashboard">
         <div className="dashboard__title">KEEP MY CAT!</div>
-        <div className="dashboard__title2">MISSIONS</div>
         <div className="dashboard__mission-container">
             <div className="dashboard__tile dashboard__tile1">{renderQuestionMark()}</div>
             <div className="dashboard__tile dashboard__tile2">{renderPath()}</div>
