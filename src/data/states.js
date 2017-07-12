@@ -1,6 +1,6 @@
 const frames = {
     homepage: {
-        heroImageUrl: '/intro_11.gif',
+        heroImageUrl: '/index.gif',
         animation: 'jackInTheBox',
         choice1: {
             destination: '/intro',
