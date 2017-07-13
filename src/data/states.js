@@ -14,18 +14,12 @@ const frames = {
     won: {
         heroImageUrl: '/win.png',
         animation: 'jackInTheBox',
-        choice1: {
-            destination: '/',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/'
     },
     lost: {
         heroImageUrl: '/loose.png',
         animation: 'jackInTheBox',
-        choice1: {
-            destination: '/',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/'
     },
     mission_b0m1: {
         heroImageUrl: '/mission_b0m1.png',
@@ -44,19 +38,13 @@ const frames = {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
-        choice1: {
-            destination: '/dashboards/4/2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/4/2'
     },
     mission_b0m1a2: {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
         script: 'No worries, you still have 5 more missions to go. <br/>£0',
-        choice1: {
-            destination: '/dashboards/1/2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/1/2'
     },
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
@@ -76,20 +64,14 @@ const frames = {
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a1',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
-        choice1: {
-            destination: 'won',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'won'
     },
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a2',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
-        choice1: {
-            destination: '/dashboards/4/3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/4/3'
     },
     mission_b4m3: {
         heroImageUrl: '/mission_b4m3.png',
@@ -109,19 +91,13 @@ const frames = {
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m3a1',
         script: 'The local council appreciates your kind work. <br/>+£2,000',
-        choice1: {
-            destination: 'won',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'won'
     },
     mission_b4m3a2: {
         heroImageUrl: '/mission_b4m3a2.png',
         animation: 'jackInTheBox',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
-        choice1: {
-            destination: 'lost',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'lost'
     },
     mission_b1m2: {
         heroImageUrl: '/mission_b1m2.png',
@@ -140,19 +116,13 @@ const frames = {
         heroImageUrl: '/mission_b4m2a1.png',
         animation: 'jackInTheBox',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
-        choice2: {
-            destination: '/dashboards/2/3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/3'
     },
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
-        choice2: {
-            destination: '/dashboards/3/3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/3'
     },
     mission_b2m3: {
         heroImageUrl: '/mission_b2m3.png',
@@ -171,19 +141,13 @@ const frames = {
         heroImageUrl: '/mission_b2m3a1.png',
         animation: 'jackInTheBox',
         script: 'He prefers AI.<br/>+£0',
-        choice2: {
-            destination: '/dashboards/2/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/4'
     },
     mission_b2m3a2: {
         heroImageUrl: '/mission_b2m3a2.png',
         animation: 'jackInTheBox',
         script: 'He likes it.<br/>+£2,000',
-        choice2: {
-            destination: '/dashboards/2/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/4'
     },
     mission_b2m4: {
         heroImageUrl: '/mission_b2m4.png',
@@ -202,19 +166,13 @@ const frames = {
         heroImageUrl: '/mission_b2m4a1.png',
         animation: 'jackInTheBox',
         script: 'That was embarrassing but worth it!<br/>+£2,000',
-        choice2: {
-            destination: '/dashboards/2/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/5'
     },
     mission_b2m4a2: {
         heroImageUrl: '/mission_b2m4a2.png',
         animation: 'jackInTheBox',
         script: 'Sorry, the place is managed perfectly by algorithms!<br/>+£0',
-        choice2: {
-            destination: '/dashboards/2/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/5'
     },
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.png',
@@ -233,37 +191,25 @@ const frames = {
         heroImageUrl: '/mission_b2m5a1.png',
         animation: 'jackInTheBox',
         script: 'The local council appreciates your kind work<br/>+£2,000',
-        choice2: {
-            destination: '/dashboards/2/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/6'
     },
     mission_b2m5a2: {
         heroImageUrl: '/mission_b2m5a2.png',
         animation: 'jackInTheBox',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
-        choice2: {
-            destination: '/dashboards/2/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/2/6'
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6.1.png',
         animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
-        choice2: {
-            destination: 'mission_b2m6q2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b2m6q2'
     },
     mission_b2m6q2: {
         heroImageUrl: '/mission_b2m6.2.png',
         animation: 'jackInTheBox',
         script: 'A kid is looking for an adult to bring him back to the UK.',
-        choice2: {
-            destination: 'mission_b2m6q3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b2m6q3'
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6.3.png',
@@ -282,10 +228,7 @@ const frames = {
         heroImageUrl: '/doesnotexist.jpg',
         animation: 'jackInTheBox',
         script: 'Don\'t be an *rse…go back and choose again!',
-        choice2: {
-            destination: 'mission_b2m6q3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b2m6q3'
     },
     mission_b3m3: {
         heroImageUrl: '/mission_b3m3.png',
@@ -304,19 +247,13 @@ const frames = {
         heroImageUrl: '/mission_b3m3a1.png',
         animation: 'jackInTheBox',
         script: 'Here is your rent money',
-        choice2: {
-            destination: '/dashboards/3/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/4'
     },
     mission_b3m3a2: {
         heroImageUrl: '/mission_b3m3a2.png',
         animation: 'jackInTheBox',
         script: 'Hmm…',
-        choice2: {
-            destination: '/dashboards/3/4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/4'
     },
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.png',
@@ -335,19 +272,13 @@ const frames = {
         heroImageUrl: '/mission_b3m4a1.png',
         animation: 'jackInTheBox',
         script: 'The sheep prefers machine than you…<br/>+£0',
-        choice2: {
-            destination: '/dashboards/3/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/5'
     },
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.png',
         animation: 'jackInTheBox',
         script: 'The farmer enjoys your company.<br/>+£2,000',
-        choice2: {
-            destination: '/dashboards/3/5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/5'
     },
     mission_b3m5: {
         heroImageUrl: '/mission_b3m5.png',
@@ -366,60 +297,39 @@ const frames = {
         heroImageUrl: '/mission_b3m5a1.png',
         animation: 'jackInTheBox',
         script: 'You have picked the wrong target man!<br/>+£0',
-        choice2: {
-            destination: '/dashboards/3/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/6'
     },
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.png',
         animation: 'jackInTheBox',
         script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
-        choice2: {
-            destination: '/dashboards/3/6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: '/dashboards/3/6'
     },
     mission_b3m6: {
         heroImageUrl: '/mission_b3m6.1.png',
         animation: 'slide',
         script: 'This old lady can cover the rest of the cat tax.',
-        choice2: {
-            destination: 'mission_b3m6q2',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b3m6q2'
     },
     mission_b3m6q2: {
         heroImageUrl: '/mission_b3m6.2.png',
         animation: 'slide',
-        choice2: {
-            destination: 'mission_b3m6q3',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b3m6q3'
     },
     mission_b3m6q3: {
         heroImageUrl: '/mission_b3m6.3.png',
         animation: 'slide',
-        choice2: {
-            destination: 'mission_b3m6q4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b3m6q4'
     },
     mission_b3m6q4: {
         heroImageUrl: '/mission_b3m6.4.png',
         animation: 'slide',
-        choice2: {
-            destination: 'mission_b3m6q5',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b3m6q5'
     },
     mission_b3m6q5: {
         heroImageUrl: '/mission_b3m6.5.png',
         animation: 'slide',
-        choice2: {
-            destination: 'mission_b3m6q6',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b3m6q6'
     },
     mission_b3m6q6: {
         heroImageUrl: '/mission_b3m6.6.png',
@@ -438,19 +348,13 @@ const frames = {
         heroImageUrl: '/doesnotexist.jpg',
         animation: 'jackInTheBox',
         script: 'Good choice!<br/>+£2,000',
-        choice1: {
-            destination: 'won',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'won'
     },
     mission_b3m6a2: {
         heroImageUrl: '/doesnotexist.jpg',
         animation: 'jackInTheBox',
         script: 'What?! Go back and choose again!',
-        choice1: {
-            destination: 'mission_b3m6q4',
-            imageUrl: 'https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png'
-        }
+        destination: 'mission_b3m6q4'
     }
 };
 
@@ -475,8 +379,6 @@ export const getChoice = (id, choice) => frames[id][choice];
 
 export const getRetroScript = (id) => frames[id].retro;
 
-export const isFrameSingleChoice = (id) =>
-    frames[id].choice1 && frames[id].choice1.imageUrl && !frames[id].choice2 ||
-    frames[id].choice2 && frames[id].choice2.imageUrl && !frames[id].choice1;
+export const isFrameSingleChoice = (id) => !!frames[id].destination;
 
-export const getTheOnlyDestination = (id) => frames[id].choice1 ? frames[id].choice1.destination : frames[id].choice2.destination;
+export const getTheOnlyDestination = (id) => frames[id].destination;
