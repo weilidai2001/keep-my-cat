@@ -10,8 +10,7 @@
     height: 30px;
     left: 50%;
     top: 50%;
-    animation: rightToLeft 2s;
-    animation-iteration-count: 3;
+    animation: rightToLeft 2s infinite;
     animation-delay: 3s;
     opacity: 0;
   }
