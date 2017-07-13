@@ -358,6 +358,8 @@ const frames = {
     }
 };
 
+export const getAllImages = () => Object.values(frames).map(({heroImageUrl}) => heroImageUrl);
+
 export const getFrameHeroImage = id => frames[id].heroImageUrl;
 
 export const getFrameScript = id => frames[id].script;

@@ -1,5 +1,5 @@
 require('../css/main.scss');
-import React, {PropTypes, Component} from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import {
     BrowserRouter as Router,
@@ -10,6 +10,12 @@ import Intro from '../pages/intro';
 import MissionDashboard from '../pages/mission-dashboard';
 import MissionBody from '../pages/mission-body';
 import Retro from '../pages/retro';
+
+import {preload} from '../util/preload-image';
+import {getAllImages} from '../data/states';
+
+const stateImages = getAllImages();
+preload(stateImages).then();
 
 render(
     <Router>

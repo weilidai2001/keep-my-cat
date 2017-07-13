@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from '../../components/responsive-carousel';
+import {preload} from '../../util/preload-image';
 
 class Intro extends Component {
 
@@ -22,14 +23,7 @@ class Intro extends Component {
         const rand = Math.random();
         const cacheBustingImages = images.map(image => image.cacheable ? image.src : `${image.src}?${rand}`);
 
-        const preLoadImages = (images) => {
-            return () => images.forEach(img => {
-                const newImage = new Image();
-                newImage.src = img;
-            })
-        };
-
-        setImmediate(preLoadImages(cacheBustingImages));
+        preload(cacheBustingImages).then();
 
         const nextDestination = '/dashboards/0/1';
         const buttonText = 'Skip intro';
