@@ -362,13 +362,6 @@ export const getFrameHeroImage = id => frames[id].heroImageUrl;
 
 export const getFrameScript = id => frames[id].script;
 
-
-
-export const getNextHeroImage = (id, choice) => {
-    const nextFrameId = frames[id][choice].destination;
-    return frames[nextFrameId].heroImageUrl;
-};
-
 export const getNextFrame = (id, choice) => frames[id][choice].destination;
 
 export const getFrameAnimation = (id) => frames[id].animation;
