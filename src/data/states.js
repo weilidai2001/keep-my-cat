@@ -201,19 +201,19 @@ const frames = {
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6.1.png',
-        animation: 'jackInTheBox',
+        animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         destination: 'mission_b2m6q2'
     },
     mission_b2m6q2: {
         heroImageUrl: '/mission_b2m6.2.png',
-        animation: 'jackInTheBox',
+        animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         destination: 'mission_b2m6q3'
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6.3.png',
-        animation: 'jackInTheBox',
+        animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice1: {
             destination: 'won',
@@ -226,7 +226,7 @@ const frames = {
     },
     mission_b2m6q3a2: {
         heroImageUrl: '/doesnotexist.jpg',
-        animation: 'jackInTheBox',
+        animation: 'slide',
         script: 'Don\'t be an *rse…go back and choose again!',
         destination: 'mission_b2m6q3'
     },
