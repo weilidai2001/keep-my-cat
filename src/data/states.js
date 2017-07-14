@@ -387,3 +387,6 @@ export const convertUrlToFrameId = url => {
 export const isDestinationValid = destination => !!frames[destination];
 
 export const convertBranchMissionToFrameId = (branchNumber, missionNumber) => `mission_b${branchNumber}m${missionNumber}`;
+
+export const getFrameIdByIndex = (id) => Object.keys(frames)[id % Object.keys(frames).length];
+
