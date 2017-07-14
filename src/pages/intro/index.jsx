@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Carousel from '../../components/responsive-carousel';
 import {preload} from '../../util/preload-image';
+import {images} from '../../data/assets';
 
 class Intro extends Component {
 
     render() {
         const images = [
-            {src: '/intro_1.gif', cacheable: true},
+            {src: images.intro1, cacheable: true},
             {src: '/intro_2.gif', cacheable: false},
             {src: '/intro_3.gif', cacheable: false},
             {src: '/intro_4.gif', cacheable: false},

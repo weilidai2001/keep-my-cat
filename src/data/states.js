@@ -220,7 +220,7 @@ const frames = {
             text: 'Everyone is happy now'
         },
         choice2: {
-            destination: 'heroImageUrl',
+            destination: 'mission_b2m6q3a2',
             text: 'Say no'
         }
     },
@@ -358,7 +358,6 @@ const frames = {
     }
 };
 
-export const getAllImages = () => Object.values(frames).map(({heroImageUrl}) => heroImageUrl);
 
 export const getFrameHeroImage = id => frames[id].heroImageUrl;
 
@@ -377,3 +376,14 @@ export const getRetroScript = (id) => frames[id].retro;
 export const isFrameSingleChoice = (id) => !!frames[id].destination;
 
 export const getTheOnlyDestination = (id) => frames[id].destination;
+
+export const convertUrlToFrameId = url => {
+    const urlSegments = url.split('/');
+    const branchNumber = urlSegments[2];
+    const missionNumber = urlSegments[3];
+    return `mission_b${branchNumber}m${missionNumber}`;
+};
+
+export const isDestinationValid = destination => !!frames[destination];
+
+export const convertBranchMissionToFrameId = (branchNumber, missionNumber) => `mission_b${branchNumber}m${missionNumber}`;

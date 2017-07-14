@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slideshow from '../../components/slideshow';
+import {convertBranchMissionToFrameId} from '../../data/states';
 
 const MissionBody = ({ match }) => {
     const branchNumber = match.params.branch;
     const missionNumber = match.params.mission;
-    const initialFrame = `mission_b${branchNumber}m${missionNumber}`;
+    const initialFrame = convertBranchMissionToFrameId(branchNumber, missionNumber);
     const initialAnimation = 'slide--forward';
     const props = { initialFrame, initialAnimation };
 

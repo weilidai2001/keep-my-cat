@@ -12,10 +12,9 @@ import MissionBody from '../pages/mission-body';
 import Retro from '../pages/retro';
 
 import {preload} from '../util/preload-image';
-import {getAllImages} from '../data/states';
+import {images} from '../data/assets';
 
-const stateImages = getAllImages();
-preload(stateImages).then();
+preload([images.intro1]).then();
 
 render(
     <Router>

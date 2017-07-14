@@ -13,6 +13,8 @@ import {
     getTheOnlyDestination
 } from '../../data/states';
 
+import {preloadNextState} from '../../util/preload-image';
+
 function moveToNextFrame (nextFrameId) {
     this.setState({
         showAnswer: false
@@ -85,6 +87,10 @@ class Slideshow extends Component {
         const { animation, heroImageUrl, script } = this.state;
         const answer1 = button1 && button1.text && <button onClick={this.onChoice1Click}>{button1.text}</button>;
         const answer2 = button2 && button2.text && <button onClick={this.onChoice2Click}>{button2.text}</button>;
+
+        if (!this.state.showAnswer) { // prevent re-running on answer show
+            preloadNextState(currentFrame);
+        }
 
         return (
             <div className="slideshow" onClick={this.onNextFrameClick}>
