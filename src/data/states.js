@@ -38,13 +38,15 @@ const frames = {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
-        destination: '/dashboards/4/2'
+        destination: '/dashboards/4/2',
+        isAnswer: true
     },
     mission_b0m1a2: {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
         script: 'No worries, you still have 5 more missions to go. <br/>£0',
-        destination: '/dashboards/1/2'
+        destination: '/dashboards/1/2',
+        isAnswer: true
     },
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
@@ -64,14 +66,16 @@ const frames = {
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a1',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
-        destination: 'won'
+        destination: 'won',
+        isAnswer: true
     },
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a2',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
-        destination: '/dashboards/4/3'
+        destination: '/dashboards/4/3',
+        isAnswer: true
     },
     mission_b4m3: {
         heroImageUrl: '/mission_b4m3.png',
@@ -91,13 +95,15 @@ const frames = {
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m3a1',
         script: 'The local council appreciates your kind work. <br/>+£2,000',
-        destination: 'won'
+        destination: 'won',
+        isAnswer: true
     },
     mission_b4m3a2: {
         heroImageUrl: '/mission_b4m3a2.png',
         animation: 'jackInTheBox',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
-        destination: 'lost'
+        destination: 'lost',
+        isAnswer: true
     },
     mission_b1m2: {
         heroImageUrl: '/mission_b1m2.png',
@@ -116,13 +122,15 @@ const frames = {
         heroImageUrl: '/mission_b4m2a1.png',
         animation: 'jackInTheBox',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
-        destination: '/dashboards/2/3'
+        destination: '/dashboards/2/3',
+        isAnswer: true
     },
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
-        destination: '/dashboards/3/3'
+        destination: '/dashboards/3/3',
+        isAnswer: true
     },
     mission_b2m3: {
         heroImageUrl: '/mission_b2m3.png',
@@ -141,13 +149,15 @@ const frames = {
         heroImageUrl: '/mission_b2m3a1.png',
         animation: 'jackInTheBox',
         script: 'He prefers AI.<br/>+£0',
-        destination: '/dashboards/2/4'
+        destination: '/dashboards/2/4',
+        isAnswer: true
     },
     mission_b2m3a2: {
         heroImageUrl: '/mission_b2m3a2.png',
         animation: 'jackInTheBox',
         script: 'He likes it.<br/>+£2,000',
-        destination: '/dashboards/2/4'
+        destination: '/dashboards/2/4',
+        isAnswer: true
     },
     mission_b2m4: {
         heroImageUrl: '/mission_b2m4.png',
@@ -166,13 +176,15 @@ const frames = {
         heroImageUrl: '/mission_b2m4a1.png',
         animation: 'jackInTheBox',
         script: 'That was embarrassing but worth it!<br/>+£2,000',
-        destination: '/dashboards/2/5'
+        destination: '/dashboards/2/5',
+        isAnswer: true
     },
     mission_b2m4a2: {
         heroImageUrl: '/mission_b2m4a2.png',
         animation: 'jackInTheBox',
         script: 'Sorry, the place is managed perfectly by algorithms!<br/>+£0',
-        destination: '/dashboards/2/5'
+        destination: '/dashboards/2/5',
+        isAnswer: true
     },
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.png',
@@ -191,13 +203,15 @@ const frames = {
         heroImageUrl: '/mission_b2m5a1.png',
         animation: 'jackInTheBox',
         script: 'The local council appreciates your kind work<br/>+£2,000',
-        destination: '/dashboards/2/6'
+        destination: '/dashboards/2/6',
+        isAnswer: true
     },
     mission_b2m5a2: {
         heroImageUrl: '/mission_b2m5a2.png',
         animation: 'jackInTheBox',
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
-        destination: '/dashboards/2/6'
+        destination: '/dashboards/2/6',
+        isAnswer: true
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6.1.png',
@@ -216,13 +230,20 @@ const frames = {
         animation: 'slide',
         script: 'A kid is looking for an adult to bring him back to the UK.',
         choice1: {
-            destination: 'won',
-            text: 'Everyone is happy now'
+            destination: 'mission_b2m6q3a1',
+            text: 'Love to help'
         },
         choice2: {
             destination: 'mission_b2m6q3a2',
             text: 'Say no'
         }
+    },
+    mission_b2m6q3a1: {
+        heroImageUrl: '/mission_b2m6.2.png',
+        animation: 'slide',
+        script: 'Everyone is happy now',
+        destination: 'won',
+        isAnswer: true
     },
     mission_b2m6q3a2: {
         heroImageUrl: '/doesnotexist.jpg',
@@ -247,13 +268,15 @@ const frames = {
         heroImageUrl: '/mission_b3m3a1.png',
         animation: 'jackInTheBox',
         script: 'Here is your rent money',
-        destination: '/dashboards/3/4'
+        destination: '/dashboards/3/4',
+        isAnswer: true
     },
     mission_b3m3a2: {
         heroImageUrl: '/mission_b3m3a2.png',
         animation: 'jackInTheBox',
         script: 'Hmm…',
-        destination: '/dashboards/3/4'
+        destination: '/dashboards/3/4',
+        isAnswer: true
     },
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.png',
@@ -272,13 +295,15 @@ const frames = {
         heroImageUrl: '/mission_b3m4a1.png',
         animation: 'jackInTheBox',
         script: 'The sheep prefers machine than you…<br/>+£0',
-        destination: '/dashboards/3/5'
+        destination: '/dashboards/3/5',
+        isAnswer: true
     },
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.png',
         animation: 'jackInTheBox',
         script: 'The farmer enjoys your company.<br/>+£2,000',
-        destination: '/dashboards/3/5'
+        destination: '/dashboards/3/5',
+        isAnswer: true
     },
     mission_b3m5: {
         heroImageUrl: '/mission_b3m5.png',
@@ -297,13 +322,15 @@ const frames = {
         heroImageUrl: '/mission_b3m5a1.png',
         animation: 'jackInTheBox',
         script: 'You have picked the wrong target man!<br/>+£0',
-        destination: '/dashboards/3/6'
+        destination: '/dashboards/3/6',
+        isAnswer: true
     },
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.png',
         animation: 'jackInTheBox',
         script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
-        destination: '/dashboards/3/6'
+        destination: '/dashboards/3/6',
+        isAnswer: true
     },
     mission_b3m6: {
         heroImageUrl: '/mission_b3m6.1.png',
@@ -348,7 +375,8 @@ const frames = {
         heroImageUrl: '/doesnotexist.jpg',
         animation: 'jackInTheBox',
         script: 'Good choice!<br/>+£2,000',
-        destination: 'won'
+        destination: 'won',
+        isAnswer: true
     },
     mission_b3m6a2: {
         heroImageUrl: '/doesnotexist.jpg',
@@ -389,4 +417,6 @@ export const isDestinationValid = destination => !!frames[destination];
 export const convertBranchMissionToFrameId = (branchNumber, missionNumber) => `mission_b${branchNumber}m${missionNumber}`;
 
 export const getFrameIdByIndex = (id) => Object.keys(frames)[id % Object.keys(frames).length];
+
+export const getAllAnswerMissions = () => Object.values(frames).filter(frame => frame.isAnswer);
 
