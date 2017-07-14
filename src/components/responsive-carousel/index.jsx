@@ -14,6 +14,12 @@ const styles = {
         fontSize: '15px',
         width: 'auto',
         padding: '5px 15px'
+    },
+    buttonLast: {
+        fontSize: '22px',
+        width: 'auto',
+        padding: '5px 15px',
+        display: 'none'
     }
 };
 
@@ -29,7 +35,7 @@ class ResponsiveCarousel extends Component {
     }
 
     render(){
-        const { images, buttonText } = this.props;
+        const { images, buttonText, buttonTextLast } = this.props;
         const createImageNameByIndex = index => `intro-image-${index}`;
 
         const config = {
@@ -44,6 +50,13 @@ class ResponsiveCarousel extends Component {
                 el.src = el.dataset.src;
                 if (index >= 1) {
                     document.querySelector('.responsive-carousel__prompt').style.display = 'none';
+                }
+                if (index === images.length - 1) {
+                    document.querySelector('.responsive-carousel__button--normal').style.display = 'none';
+                    document.querySelector('.responsive-carousel__button--last').style.display = 'block';
+                } else {
+                    document.querySelector('.responsive-carousel__button--normal').style.display = 'block';
+                    document.querySelector('.responsive-carousel__button--last').style.display = 'none';
                 }
             }
         };
@@ -70,7 +83,14 @@ class ResponsiveCarousel extends Component {
                     </Carousel>
                 </main>
                 <footer style={styles.footer}>
-                    <button style={styles.button} onClick={this.onNextDestinationClick}>{buttonText}</button>
+                    <button
+                        className="responsive-carousel__button--normal"
+                        style={styles.button}
+                        onClick={this.onNextDestinationClick}>{buttonText}</button>
+                    <button
+                        className="responsive-carousel__button--last"
+                        style={styles.buttonLast}
+                        onClick={this.onNextDestinationClick}>{buttonTextLast}</button>
                 </footer>
             </div>
         );

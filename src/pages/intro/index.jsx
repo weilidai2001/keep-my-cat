@@ -28,8 +28,9 @@ class Intro extends Component {
 
         const nextDestination = '/dashboards/0/1';
         const buttonText = 'Skip intro';
+        const buttonTextLast = 'Start game';
 
-        const props = { images: cacheBustingImages, nextDestination, buttonText };
+        const props = { images: cacheBustingImages, nextDestination, buttonText, buttonTextLast };
 
         return (
             <div className="page">
