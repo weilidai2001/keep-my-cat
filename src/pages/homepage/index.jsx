@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slideshow from '../../components/slideshow';
+import {setBalance, clearMissionsHistory} from '../../util/store';
 
 class Homepage extends Component {
 
@@ -7,6 +8,9 @@ class Homepage extends Component {
         const initialFrame = 'homepage';
         const initialAnimation = 'slide--forward';
         const props = { initialFrame, initialAnimation };
+
+        setBalance(0);
+        clearMissionsHistory();
 
         return (
             <div className="page">

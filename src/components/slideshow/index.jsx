@@ -10,8 +10,11 @@ import {
     getFrameAnimation,
     getNextFrame,
     isFrameExternal,
-    getTheOnlyDestination
+    getTheOnlyDestination,
+    getReward,
+    isAnswer
 } from '../../data/states';
+import {getBalance, setBalance, addMission} from '../../util/store';
 
 import {preloadNextState} from '../../util/preload-image';
 
@@ -20,14 +23,12 @@ function moveToNextFrame (currentFrame, choice) {
         showAnswer: false
     });
 
-    recordMissionHistory(currentFrame);
-
-    let nextFrameId;
-    if (choice) {
-        nextFrameId = getNextFrame(currentFrame, choice);
-    } else {
-        nextFrameId = getTheOnlyDestination(currentFrame);
+    if (isAnswer(currentFrame)) {
+        recordMissionHistory(currentFrame);
+        recordBalance(currentFrame);
     }
+
+    const nextFrameId = choice ? getNextFrame(currentFrame, choice) : getTheOnlyDestination(currentFrame);
 
     if (isFrameExternal(nextFrameId)) {
         this.props.history.push(nextFrameId);
@@ -42,9 +43,12 @@ function moveToNextFrame (currentFrame, choice) {
 }
 
 function recordMissionHistory (currentMissionId) {
-    window.missions = window.missions || [];
-    window.missions.push(currentMissionId);
-    console.log('window.missions', window.missions);
+    addMission(currentMissionId);
+}
+
+function recordBalance (currentFrameId) {
+    const reward = getReward(currentFrameId);
+    setBalance(getBalance() + reward);
 }
 
 class Slideshow extends Component {
@@ -74,7 +78,7 @@ class Slideshow extends Component {
 
     onChoice2Click() {
         const { currentFrame } = this.state;
-        moveToNextFrame.call(this, nextFrameId, 'choice2');
+        moveToNextFrame.call(this, currentFrame, 'choice2');
     }
 
     onNextFrameClick() {

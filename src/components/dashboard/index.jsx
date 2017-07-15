@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {getBalance} from '../../util/store';
+import {numberWithCommas} from '../../util/currencyConverter';
 
 const isMissionAccomplished = (thisBranch, thisMission, latestBranch, latestMission) => {
     if (thisBranch == 0 && latestBranch > 0) {
@@ -136,6 +138,6 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile99">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile10">{renderMission(2, 5, branchNumber, missionNumber)}</div>
         </div>
-        <div className="dashboard__balance">BALANCE: £3,500</div>
+        <div className="dashboard__balance">BALANCE: £{numberWithCommas(getBalance())}</div>
     </div>
 );
