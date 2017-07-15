@@ -456,6 +456,13 @@ export const isGameFinished = (id) => id === wonStateId || id === 'lost';
 export const retroPageUrl = '/retro';
 
 export const deduplicate = (selectedMissionIds) => {
+    let deduped = getAllAnswerMissionIds();
+    if (!selectedMissionIds.length || !selectedMissionIds.includes('mission_b4m2a1')) {
+       deduped = deduped.filter(key => key !== 'mission_b4m2a1')
+    }
 
-    return Object.keys(frames);
+    if (!selectedMissionIds.length || !selectedMissionIds.includes('mission_b4m2a2')) {
+        deduped = deduped.filter(key => key !== 'mission_b4m2a2')
+    }
+    return deduped;
 };

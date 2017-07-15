@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router';
-import {getRetroScript, getFrameHeroImage} from '../../data/states';
+import {getRetroScript, getFrameHeroImage, deduplicate} from '../../data/states';
 
 const styles = {
     missions: {
@@ -63,13 +63,14 @@ class Retro extends React.Component {
 
     render() {
         const {missions} = this.props;
+        const deduped = deduplicate(missions);
 
         return (
             <div style={styles.retro} className="retro">
                 <main>
                         <div style={styles.missions}>
                             {
-                                missions.map(mission => {
+                                deduped.map(mission => {
                                     const imageUrl = getFrameHeroImage(mission);
                                     const script = getRetroScript(mission);
                                     return (

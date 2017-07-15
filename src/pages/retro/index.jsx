@@ -1,11 +1,10 @@
 import React from 'react';
 import Retro from '../../components/retro';
 import {getMissions} from '../../util/store';
-import {getAllAnswerMissionIds} from '../../data/states';
 
 const RetroPage = ( ) => {
 
-    const missions = getAllAnswerMissionIds().slice(0, getAllAnswerMissionIds().length - 3);
+    const missions = getMissions();
     const props = { missions };
 
     return (
