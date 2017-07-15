@@ -35,7 +35,9 @@ const renderQuestionMark = () => (<img src="/dashboard_mission_question_mark.png
 
 export default ({ branchNumber, missionNumber }) => (
     <div className="dashboard">
-        <div className="dashboard__title">KEEP MY CAT!</div>
+        <header>
+            <div className="dashboard__title">KEEP MY CAT!</div>
+        </header>
         <div className="dashboard__mission-container">
             <div className="dashboard__tile dashboard__tile1">{renderQuestionMark()}</div>
             <div className="dashboard__tile dashboard__tile2">{renderPath()}</div>
@@ -138,6 +140,10 @@ export default ({ branchNumber, missionNumber }) => (
             <div className="dashboard__tile dashboard__tile99">{renderPath()}</div>
             <div className="dashboard__tile dashboard__tile10">{renderMission(2, 5, branchNumber, missionNumber)}</div>
         </div>
-        <div className="dashboard__balance">BALANCE: £{numberWithCommas(getBalance())}</div>
+        <div style={{
+            textAlign: 'center',
+            paddingTop: '28px',
+            fontSize: '24px'
+        }}>BALANCE: £{numberWithCommas(getBalance())}</div>
     </div>
 );

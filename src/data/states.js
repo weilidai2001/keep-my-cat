@@ -22,11 +22,13 @@ export const frames = {
     won: {
         heroImageUrl: images.won,
         animation: 'jackInTheBox',
+        script: 'You win!',
         destination: '/'
     },
     lost: {
         heroImageUrl: images.lost,
         animation: 'jackInTheBox',
+        script: 'You loose!',
         destination: '/'
     },
     mission_b0m1: {
@@ -170,7 +172,7 @@ export const frames = {
     mission_b2m3a1: {
         heroImageUrl: '/mission_b2m3a1.jpg',
         animation: 'jackInTheBox',
-        retro: 'Accountancy is one of the professions very likely to taken by AI in the 2037.',
+        retro: 'Accountancy is one of the professions very likely to be taken by AI in the 2037.',
         script: 'He prefers AI.<br/>+£0',
         destination: '/dashboards/2/4',
         isAnswer: true,
