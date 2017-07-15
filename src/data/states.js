@@ -454,3 +454,8 @@ export const wonStateId = 'won';
 export const isGameFinished = (id) => id === wonStateId || id === 'lost';
 
 export const retroPageUrl = '/retro';
+
+export const deduplicate = (selectedMissionIds) => {
+
+    return Object.keys(frames);
+};

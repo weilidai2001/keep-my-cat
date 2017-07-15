@@ -3,15 +3,11 @@ import {withRouter} from 'react-router';
 import {getRetroScript, getFrameHeroImage} from '../../data/states';
 
 const styles = {
-    retro: {},
-    missionsContainer: {
-        width: '100%',
-        position: 'relative'
-    },
     missions: {
         display: 'flex',
-        width: '100%',
-        flexWrap: 'wrap'
+        width: '90%',
+        flexWrap: 'wrap',
+        margin: '10px auto'
     },
     mission: {
         width: '25%',
@@ -24,12 +20,15 @@ const styles = {
         height: '100%'
     },
     text: {
-        paddingTop: '15px',
-        textAlign: 'center',
+        paddingTop: '10px',
         margin: '0 auto',
         width: '310px',
+        height: '48px',
         fontSize: '16px',
-        lineHeight: '1.3'
+        lineHeight: '1.5',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     footer: {
         display: 'flex',
@@ -84,7 +83,7 @@ class Retro extends React.Component {
                             }
                         </div>
                     <div style={styles.text}>
-                        {this.state.script || '(Tap on each thumbnail to review your journey)'}
+                        {this.state.script || '(Tap on each thumbnail to review your journey) (Tap on each thumbnail to review your journey)'}
                     </div>
                 </main>
                 <footer style={styles.footer}>
