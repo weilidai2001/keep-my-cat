@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack-dev-server --content-base build/",
     "build": "webpack",
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
+    "jest": "^20.0.4",
     "karma": "^1.7.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.1.1",

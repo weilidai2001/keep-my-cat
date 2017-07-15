@@ -6,7 +6,7 @@ const contribute = 'In 2037, contributing to the community is very encouraged. T
 const noContribute = 'If you don’t contribute, you aren\'t rewarded…';
 const coliving = 'Co-living will become very common, especially in big cities.';
 
-const frames = {
+export const frames = {
     homepage: {
         heroImageUrl: '/index.gif',
         animation: 'jackInTheBox',
@@ -483,12 +483,14 @@ export const retroPageUrl = '/retro';
 
 export const deduplicate = (selectedMissionIds) => {
     let deduped = getAllAnswerMissionIds();
-    if (!selectedMissionIds.length || !selectedMissionIds.includes('mission_b4m2a1')) {
-       deduped = deduped.filter(key => key !== 'mission_b4m2a1')
+    if (!selectedMissionIds.length || selectedMissionIds.includes('mission_b1m2a1') || selectedMissionIds.includes('mission_b1m2a2')) {
+       deduped = deduped.filter(key => key !== 'mission_b4m2a1');
+       deduped = deduped.filter(key => key !== 'mission_b4m2a2');
+    }
+    if (selectedMissionIds.includes('mission_b4m2a1') || selectedMissionIds.includes('mission_b4m2a2')) {
+        deduped = deduped.filter(key => key !== 'mission_b1m2a1');
+        deduped = deduped.filter(key => key !== 'mission_b1m2a2');
     }
 
-    if (!selectedMissionIds.length || !selectedMissionIds.includes('mission_b4m2a2')) {
-        deduped = deduped.filter(key => key !== 'mission_b4m2a2')
-    }
     return deduped;
 };
