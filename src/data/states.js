@@ -30,7 +30,7 @@ export const frames = {
         destination: '/'
     },
     mission_b0m1: {
-        heroImageUrl: '/mission_b0m1.png',
+        heroImageUrl: '/mission_b0m1.jpg',
         animation: 'jackInTheBox',
         script: 'Do you want to become a drone engineer again? It will take a few weeks to retrain yourself though.',
         choice1: {
@@ -43,7 +43,7 @@ export const frames = {
         }
     },
     mission_b0m1a1: {
-        heroImageUrl: '/doesnotexist.png',
+        heroImageUrl: '/mission_b0m1a1.jpg',
         animation: 'jackInTheBox',
         retro: 'In 2037, STEM subjects will become even more important than they are now. People are much more likely to find jobs if they have skills in those areas.',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
@@ -52,7 +52,7 @@ export const frames = {
         reward: 3500
     },
     mission_b0m1a2: {
-        heroImageUrl: '/doesnotexist.png',
+        heroImageUrl: '/mission_b0m1a2.jpg',
         animation: 'jackInTheBox',
         retro: 'STEM subjects will continue to be highly employable in 2037. But it doesn\'t mean other jobs will completely disappear.',
         script: 'No worries, you still have 5 more missions to go. <br/>+£0',
@@ -61,7 +61,7 @@ export const frames = {
         reward: 0
     },
     mission_b4m2: {
-        heroImageUrl: '/mission_b4m2.png',
+        heroImageUrl: '/mission_b4m2.jpg',
         animation: 'jackInTheBox',
         retro: livingAbroadAnswer,
         script: 'Fancy living abroad?',
@@ -75,7 +75,7 @@ export const frames = {
         }
     },
     mission_b4m2a1: {
-        heroImageUrl: '/mission_b4m2a1.png',
+        heroImageUrl: '/mission_b4m2a1.jpg',
         animation: 'jackInTheBox',
         retro: notlivingAbroadAnswer,
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
@@ -84,7 +84,7 @@ export const frames = {
         reward: 1500
     },
     mission_b4m2a2: {
-        heroImageUrl: '/mission_b4m2a2.png',
+        heroImageUrl: '/mission_b4m2a2.jpg',
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a2',
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>+£0',
@@ -93,7 +93,7 @@ export const frames = {
         reward: 0
     },
     mission_b4m3: {
-        heroImageUrl: '/mission_b4m3.png',
+        heroImageUrl: '/mission_b4m3.jpg',
         animation: 'jackInTheBox',
         script: 'Today is Sunday neighbour\'s kids seem to want to play with you.',
         choice1: {
@@ -106,7 +106,7 @@ export const frames = {
         }
     },
     mission_b4m3a1: {
-        heroImageUrl: '/mission_b4m3a1.png',
+        heroImageUrl: '/mission_b4m3a1.jpg',
         animation: 'jackInTheBox',
         retro: contribute,
         script: 'The local council appreciates your kind work. <br/>+£2,000',
@@ -115,7 +115,7 @@ export const frames = {
         reward: 2000
     },
     mission_b4m3a2: {
-        heroImageUrl: '/mission_b4m3a2.png',
+        heroImageUrl: '/mission_b4m3a2.jpg',
         animation: 'jackInTheBox',
         retro: noContribute,
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
@@ -124,7 +124,7 @@ export const frames = {
         reward: 0
     },
     mission_b1m2: {
-        heroImageUrl: '/mission_b1m2.png',
+        heroImageUrl: '/mission_b1m2.jpg',
         animation: 'jackInTheBox',
         script: 'Fancy living abroad?',
         choice1: {
@@ -137,7 +137,7 @@ export const frames = {
         }
     },
     mission_b1m2a1: {
-        heroImageUrl: '/mission_b4m2a1.png',
+        heroImageUrl: '/mission_b4m2a1.jpg',
         animation: 'jackInTheBox',
         retro: livingAbroadAnswer,
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
@@ -146,7 +146,7 @@ export const frames = {
         reward: 1500
     },
     mission_b1m2a2: {
-        heroImageUrl: '/mission_b4m2a2.png',
+        heroImageUrl: '/mission_b4m2a2.jpg',
         animation: 'jackInTheBox',
         retro: notlivingAbroadAnswer,
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>+£0',
@@ -155,7 +155,7 @@ export const frames = {
         reward: 0
     },
     mission_b2m3: {
-        heroImageUrl: '/mission_b2m3.png',
+        heroImageUrl: '/mission_b2m3.jpg',
         animation: 'jackInTheBox',
         script: 'You met a successful business man',
         choice1: {
@@ -168,7 +168,7 @@ export const frames = {
         }
     },
     mission_b2m3a1: {
-        heroImageUrl: '/mission_b2m3a1.png',
+        heroImageUrl: '/mission_b2m3a1.jpg',
         animation: 'jackInTheBox',
         retro: 'Accountancy is one of the professions very likely to taken by AI in the 2037.',
         script: 'He prefers AI.<br/>+£0',
@@ -177,7 +177,7 @@ export const frames = {
         reward: 0
     },
     mission_b2m3a2: {
-        heroImageUrl: '/mission_b2m3a2.png',
+        heroImageUrl: '/mission_b2m3a2.jpg',
         animation: 'jackInTheBox',
         retro: 'The entertaining industry will still need human workers in the future.',
         script: 'He likes it.<br/>+£2,000',
@@ -186,7 +186,7 @@ export const frames = {
         reward: 2000
     },
     mission_b2m4: {
-        heroImageUrl: '/mission_b2m4.png',
+        heroImageUrl: '/mission_b2m4.jpg',
         animation: 'jackInTheBox',
         script: 'A maid café just opened.',
         choice1: {
@@ -199,7 +199,7 @@ export const frames = {
         }
     },
     mission_b2m4a1: {
-        heroImageUrl: '/mission_b2m4a1.png',
+        heroImageUrl: '/mission_b2m4a1.jpg',
         animation: 'jackInTheBox',
         retro: 'After 20 years, you may no longer see human staff in fast food restaurants. But places like the maid café will still hire waitresses because the dining experience is as important as the food served. ',
         script: 'That was embarrassing but worth it!<br/>+£2,000',
@@ -217,7 +217,7 @@ export const frames = {
         reward: 0
     },
     mission_b2m5: {
-        heroImageUrl: '/mission_b2m5.png',
+        heroImageUrl: '/mission_b2m5.jpg',
         animation: 'jackInTheBox',
         script: 'Today is Sunday, neighbour\'s kids seem to want to play with you.',
         choice1: {
@@ -239,7 +239,7 @@ export const frames = {
         reward: 2000
     },
     mission_b2m5a2: {
-        heroImageUrl: '/mission_b2m5a2.png',
+        heroImageUrl: '/mission_b2m5a2.jpg',
         animation: 'jackInTheBox',
         retro: noContribute,
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
