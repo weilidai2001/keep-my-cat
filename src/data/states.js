@@ -420,5 +420,5 @@ export const convertBranchMissionToFrameId = (branchNumber, missionNumber) => `m
 
 export const getFrameIdByIndex = (id) => Object.keys(frames)[id % Object.keys(frames).length];
 
-export const getAllAnswerMissions = () => Object.values(frames).filter(frame => frame.isAnswer);
+export const getAllAnswerMissionIds = () => Object.entries(frames).filter(([key, value]) => value.isAnswer).map(([key, value]) => key);
 

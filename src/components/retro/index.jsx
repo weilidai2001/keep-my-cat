@@ -1,10 +1,9 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import {withRouter} from 'react-router';
 import {getRetroScript, getFrameHeroImage} from '../../data/states';
 
 const styles = {
-    retro: {
-    },
+    retro: {},
     missionsContainer: {
         width: '100%',
         paddingBottom: '66.666%',
@@ -14,13 +13,17 @@ const styles = {
         position: 'absolute',
         display: 'flex',
         width: '100%',
-        height: '100%',
         flexWrap: 'wrap'
     },
     mission: {
         width: '33.333%',
-        height: '50%',
+        paddingBottom: '33.333%',
         position: 'relative'
+    },
+    image: {
+        position: 'absolute',
+        width: '100%',
+        height: '100%'
     },
     text: {
         paddingTop: '15px',
@@ -61,7 +64,7 @@ class Retro extends React.Component {
     }
 
     render() {
-        const { missions } = this.props;
+        const {missions} = this.props;
 
         return (
             <div style={styles.retro} className="retro">
@@ -74,10 +77,11 @@ class Retro extends React.Component {
                                     const imageUrl = getFrameHeroImage(mission);
                                     const script = getRetroScript(mission);
                                     return (
-                                        <img key={mission} style={styles.mission}
-                                             src={imageUrl}
-                                             onClick={this.onMissionClick(script)}
-                                        />
+                                        <div key={mission} style={styles.mission}>
+                                            <img src={imageUrl} style={styles.image}
+                                                 onClick={this.onMissionClick(script)}/>
+                                        </div>
+
                                     );
                                 })
                             }
