@@ -1,0 +1,51 @@
+.retro {
+  &__mask {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+  }
+
+  &__lightbox {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    left: 50%;
+    z-index: 5;
+    background-color: white;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    $padding: 15px;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+
+  &__lightbox-close {
+    $size: 30px;
+
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+    width: $size;
+    height: $size;
+  }
+
+  &__lightbox-thumbnail {
+    width: 100%;
+    padding-top: 40px;
+  }
+
+  &__lightbox-caption {
+    padding-top: 10px;
+
+    $paddingLeftRight: 0px;
+    padding-left: $paddingLeftRight;
+    padding-right: $paddingLeftRight;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.3;
+  }
+}
