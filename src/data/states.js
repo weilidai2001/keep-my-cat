@@ -55,7 +55,7 @@ export const frames = {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
         retro: 'STEM subjects will continue to be highly employable in 2037. But it doesn\'t mean other jobs will completely disappear.',
-        script: 'No worries, you still have 5 more missions to go. <br/>£0',
+        script: 'No worries, you still have 5 more missions to go. <br/>+£0',
         destination: '/dashboards/1/2',
         isAnswer: true,
         reward: 0
@@ -87,7 +87,7 @@ export const frames = {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
         retro: 'retro text for mission_b4m2a2',
-        script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
+        script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>+£0',
         destination: '/dashboards/4/3',
         isAnswer: true,
         reward: 0
@@ -149,7 +149,7 @@ export const frames = {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
         retro: notlivingAbroadAnswer,
-        script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
+        script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>+£0',
         destination: '/dashboards/3/3',
         isAnswer: true,
         reward: 0
@@ -290,7 +290,7 @@ export const frames = {
     mission_b3m3: {
         heroImageUrl: '/mission_b3m3.png',
         animation: 'jackInTheBox',
-        script: 'A traveller wants to live with you for a while',
+        script: 'A traveller wants to live with you for a while.',
         choice1: {
             destination: 'mission_b3m3a1',
             text: 'Sure, why not!'
@@ -304,7 +304,7 @@ export const frames = {
         heroImageUrl: '/mission_b3m3a1.png',
         animation: 'jackInTheBox',
         retro: coliving,
-        script: 'Here is your rent money',
+        script: 'Here is your rent money. <br/>+£1,500',
         destination: '/dashboards/3/4',
         isAnswer: true,
         reward: 1500
@@ -313,7 +313,7 @@ export const frames = {
         heroImageUrl: '/mission_b3m3a2.png',
         animation: 'jackInTheBox',
         retro: coliving,
-        script: 'Hmm…',
+        script: 'Hmm…<br/>+£0',
         destination: '/dashboards/3/4',
         isAnswer: true,
         reward: 0
@@ -321,7 +321,7 @@ export const frames = {
     mission_b3m4: {
         heroImageUrl: '/mission_b3m4.png',
         animation: 'jackInTheBox',
-        script: 'This farmer keeps a lot of sheep',
+        script: 'This farmer keeps a lot of sheep.',
         choice1: {
             destination: 'mission_b3m4a1',
             text: 'Shear his sheep'
@@ -375,7 +375,7 @@ export const frames = {
         heroImageUrl: '/mission_b3m5a2.png',
         animation: 'jackInTheBox',
         retro: 'Who says robots won’t develop their own religion?',
-        script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
+        script: 'You covered its shift so than it can pray to its god. <br/>+£2,000',
         destination: '/dashboards/3/6',
         isAnswer: true,
         reward: 2000
@@ -383,7 +383,7 @@ export const frames = {
     mission_b3m6: {
         heroImageUrl: '/mission_b3m6.1.png',
         animation: 'slide',
-        script: 'This old lady can cover the rest of the cat tax.',
+        script: '',
         destination: 'mission_b3m6q2'
     },
     mission_b3m6q2: {
@@ -409,7 +409,7 @@ export const frames = {
     mission_b3m6q6: {
         heroImageUrl: '/mission_b3m6.6.png',
         animation: 'slide',
-        script: '',
+        script: 'This old lady can cover the rest of the cat tax. She says you can pay her back by having more VR bike rides together in the future.',
         choice1: {
             destination: 'won',
             text: 'Agree to the plan'
