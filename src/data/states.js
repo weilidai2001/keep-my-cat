@@ -1,3 +1,5 @@
+import {images} from '../data/assets';
+
 const frames = {
     homepage: {
         heroImageUrl: '/index.gif',
@@ -12,12 +14,12 @@ const frames = {
         }
     },
     won: {
-        heroImageUrl: '/win.png',
+        heroImageUrl: images.won,
         animation: 'jackInTheBox',
         destination: '/'
     },
     lost: {
-        heroImageUrl: '/loose.png',
+        heroImageUrl: images.lost,
         animation: 'jackInTheBox',
         destination: '/'
     },
