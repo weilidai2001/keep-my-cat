@@ -88,7 +88,7 @@ class Retro extends React.Component {
                     <div className="retro__prompt">(Tap on each thumbnail to review your journey)</div>
                 </main>
                 <footer style={styles.footer}>
-                    <button style={styles.button} onClick={this.onReplayClick}>Replay</button>
+                    <button style={styles.button} onClick={this.onReplayClick}>Play again</button>
                 </footer>
             </div>
         );
