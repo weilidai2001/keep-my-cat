@@ -92,6 +92,12 @@ class Slideshow extends Component {
             preloadNextState(currentFrame);
         }
 
+        window.missions = window.missions || [];
+        if (!window.missions.includes(currentFrame)) {
+            window.missions.push(currentFrame);
+            console.log('window.missions', window.missions);
+        }
+
         return (
             <div className="slideshow" onClick={this.onNextFrameClick}>
                 <header>
