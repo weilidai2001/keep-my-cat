@@ -8,16 +8,7 @@ const coliving = 'Co-living will become very common, especially in big cities.';
 
 export const frames = {
     homepage: {
-        heroImageUrl: '/index.gif',
-        animation: 'jackInTheBox',
-        choice1: {
-            destination: '/intro',
-            text: 'Intro'
-        },
-        choice2: {
-            destination: '/dashboards/0/1',
-            text: 'Mission 1'
-        }
+        heroImageUrl: '/index.gif'
     },
     won: {
         heroImageUrl: images.won,
