@@ -39,6 +39,7 @@ const frames = {
     mission_b0m1a1: {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
+        retro: 'Skills in STEM subjects will be in even greater demand in 2037 than now.',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
         destination: '/dashboards/4/2',
         isAnswer: true,
@@ -47,6 +48,7 @@ const frames = {
     mission_b0m1a2: {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
+        retro: 'STEM subjects will continue to be highly employable in 2037. But it doesn\'t mean other jobs will completely disappear.',
         script: 'No worries, you still have 5 more missions to go. <br/>£0',
         destination: '/dashboards/1/2',
         isAnswer: true,
@@ -55,6 +57,7 @@ const frames = {
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
         animation: 'jackInTheBox',
+        retro: 'Digital nomad will become much more common in 2037. This can be a great way to save on your living cost while receiving the same wage from your employer.',
         script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b4m2a1',
@@ -129,6 +132,7 @@ const frames = {
     mission_b1m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
         animation: 'jackInTheBox',
+        retro: 'More Digital nomad will become much more common in 2037. This can be a great way to save on your living cost while receiving the same wage from your employer.',
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         destination: '/dashboards/2/3',
         isAnswer: true,
