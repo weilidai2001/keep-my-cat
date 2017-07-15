@@ -15,10 +15,19 @@ import {
 
 import {preloadNextState} from '../../util/preload-image';
 
-function moveToNextFrame (nextFrameId) {
+function moveToNextFrame (currentFrame, choice) {
     this.setState({
         showAnswer: false
     });
+
+    recordMissionHistory(currentFrame);
+
+    let nextFrameId;
+    if (choice) {
+        nextFrameId = getNextFrame(currentFrame, choice);
+    } else {
+        nextFrameId = getTheOnlyDestination(currentFrame);
+    }
 
     if (isFrameExternal(nextFrameId)) {
         this.props.history.push(nextFrameId);
@@ -30,6 +39,12 @@ function moveToNextFrame (nextFrameId) {
             script: getFrameScript(nextFrameId)
         });
     }
+}
+
+function recordMissionHistory (currentMissionId) {
+    window.missions = window.missions || [];
+    window.missions.push(currentMissionId);
+    console.log('window.missions', window.missions);
 }
 
 class Slideshow extends Component {
@@ -53,27 +68,20 @@ class Slideshow extends Component {
     }
 
     onChoice1Click() {
-        const choice = 'choice1';
         const { currentFrame } = this.state;
-        const nextFrameId = getNextFrame(currentFrame, choice);
-
-        moveToNextFrame.call(this, nextFrameId);
+        moveToNextFrame.call(this, currentFrame, 'choice1');
     }
 
     onChoice2Click() {
-        const choice = 'choice2';
         const { currentFrame } = this.state;
-        const nextFrameId = getNextFrame(currentFrame, choice);
-
-        moveToNextFrame.call(this, nextFrameId);
+        moveToNextFrame.call(this, nextFrameId, 'choice2');
     }
 
     onNextFrameClick() {
         const { currentFrame } = this.state;
 
         if (isFrameSingleChoice(currentFrame)) {
-            const nextFrameId = getTheOnlyDestination(currentFrame);
-            moveToNextFrame.call(this, nextFrameId);
+            moveToNextFrame.call(this, currentFrame);
         } else if (!this.state.showAnswer) {
             this.setState({ showAnswer: true });
         }
@@ -90,12 +98,6 @@ class Slideshow extends Component {
 
         if (!this.state.showAnswer) { // prevent re-running on answer show
             preloadNextState(currentFrame);
-        }
-
-        window.missions = window.missions || [];
-        if (!window.missions.includes(currentFrame)) {
-            window.missions.push(currentFrame);
-            console.log('window.missions', window.missions);
         }
 
         return (
