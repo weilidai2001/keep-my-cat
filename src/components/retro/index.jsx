@@ -19,16 +19,6 @@ const styles = {
         width: '100%',
         height: '100%'
     },
-    text: {
-        margin: '0 auto',
-        width: '310px',
-        height: '48px',
-        fontSize: '16px',
-        lineHeight: '1.5',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
     footer: {
         display: 'flex',
         justifyContent: 'center',
@@ -95,7 +85,7 @@ class Retro extends React.Component {
                             })
                         }
                     </div>
-                    <div style={styles.text}>(Tap on each thumbnail to review your journey)</div>
+                    <div className="retro__prompt">(Tap on each thumbnail to review your journey)</div>
                 </main>
                 <footer style={styles.footer}>
                     <button style={styles.button} onClick={this.onReplayClick}>Replay</button>

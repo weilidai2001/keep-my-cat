@@ -1,5 +1,11 @@
 import {images} from '../data/assets';
 
+const livingAbroadAnswer = 'Digital nomads, people who enjoy a nomadic lifestyle working remotely from anywhere in the world, will become much more common in 2037. It is a great way to reduce living costs while getting the same salary.';
+const notlivingAbroadAnswer = 'In the future, a lot people may travel to cheaper countries to live while still working for the same employer remotely. But for those who choose to stay, it is still possible to enjoy life.';
+const contribute = 'In 2037, contributing to the community is very encouraged. The government may start to pay salary for such work especially if other kinds of jobs have been taken by the machine.';
+const noContribute = 'If you don’t contribute, you aren\'t rewarded…';
+const coliving = 'Co-living will become very common, especially in big cities.';
+
 const frames = {
     homepage: {
         heroImageUrl: '/index.gif',
@@ -39,7 +45,7 @@ const frames = {
     mission_b0m1a1: {
         heroImageUrl: '/doesnotexist.png',
         animation: 'jackInTheBox',
-        retro: 'Skills in STEM subjects will be in even greater demand in 2037 than now.',
+        retro: 'In 2037, STEM subjects will become even more important than they are now. People are much more likely to find jobs if they have skills in those areas.',
         script: 'You have gone back to your old job. You have 2 missions left to win the game. <br/>+£3,500',
         destination: '/dashboards/4/2',
         isAnswer: true,
@@ -57,7 +63,7 @@ const frames = {
     mission_b4m2: {
         heroImageUrl: '/mission_b4m2.png',
         animation: 'jackInTheBox',
-        retro: 'Digital nomad will become much more common in 2037. This can be a great way to save on your living cost while receiving the same wage from your employer.',
+        retro: livingAbroadAnswer,
         script: 'Fancy living abroad?',
         choice1: {
             destination: 'mission_b4m2a1',
@@ -71,7 +77,7 @@ const frames = {
     mission_b4m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
         animation: 'jackInTheBox',
-        retro: 'retro text for mission_b4m2a1',
+        retro: notlivingAbroadAnswer,
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         destination: 'won',
         isAnswer: true,
@@ -102,7 +108,7 @@ const frames = {
     mission_b4m3a1: {
         heroImageUrl: '/mission_b4m3a1.png',
         animation: 'jackInTheBox',
-        retro: 'retro text for mission_b4m3a1',
+        retro: contribute,
         script: 'The local council appreciates your kind work. <br/>+£2,000',
         destination: 'won',
         isAnswer: true,
@@ -111,6 +117,7 @@ const frames = {
     mission_b4m3a2: {
         heroImageUrl: '/mission_b4m3a2.png',
         animation: 'jackInTheBox',
+        retro: noContribute,
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         destination: 'lost',
         isAnswer: true,
@@ -132,7 +139,7 @@ const frames = {
     mission_b1m2a1: {
         heroImageUrl: '/mission_b4m2a1.png',
         animation: 'jackInTheBox',
-        retro: 'More Digital nomad will become much more common in 2037. This can be a great way to save on your living cost while receiving the same wage from your employer.',
+        retro: livingAbroadAnswer,
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         destination: '/dashboards/2/3',
         isAnswer: true,
@@ -141,6 +148,7 @@ const frames = {
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.png',
         animation: 'jackInTheBox',
+        retro: notlivingAbroadAnswer,
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>£0',
         destination: '/dashboards/3/3',
         isAnswer: true,
@@ -162,6 +170,7 @@ const frames = {
     mission_b2m3a1: {
         heroImageUrl: '/mission_b2m3a1.png',
         animation: 'jackInTheBox',
+        retro: 'Accountancy is one of the professions very likely to taken by AI in the 2037.',
         script: 'He prefers AI.<br/>+£0',
         destination: '/dashboards/2/4',
         isAnswer: true,
@@ -170,6 +179,7 @@ const frames = {
     mission_b2m3a2: {
         heroImageUrl: '/mission_b2m3a2.png',
         animation: 'jackInTheBox',
+        retro: 'The entertaining industry will still need human workers in the future.',
         script: 'He likes it.<br/>+£2,000',
         destination: '/dashboards/2/4',
         isAnswer: true,
@@ -191,6 +201,7 @@ const frames = {
     mission_b2m4a1: {
         heroImageUrl: '/mission_b2m4a1.png',
         animation: 'jackInTheBox',
+        retro: 'After 20 years, you may no longer see human staff in fast food restaurants. But places like the maid café will still hire waitresses because the dining experience is as important as the food served. ',
         script: 'That was embarrassing but worth it!<br/>+£2,000',
         destination: '/dashboards/2/5',
         isAnswer: true,
@@ -199,6 +210,7 @@ const frames = {
     mission_b2m4a2: {
         heroImageUrl: '/mission_b2m4a2.png',
         animation: 'jackInTheBox',
+        retro: 'Artificial intelligence is capable of taking over the managing task in certain working environment. ',
         script: 'Sorry, the place is managed perfectly by algorithms!<br/>+£0',
         destination: '/dashboards/2/5',
         isAnswer: true,
@@ -220,6 +232,7 @@ const frames = {
     mission_b2m5a1: {
         heroImageUrl: '/mission_b2m5a1.png',
         animation: 'jackInTheBox',
+        retro: contribute,
         script: 'The local council appreciates your kind work<br/>+£2,000',
         destination: '/dashboards/2/6',
         isAnswer: true,
@@ -228,6 +241,7 @@ const frames = {
     mission_b2m5a2: {
         heroImageUrl: '/mission_b2m5a2.png',
         animation: 'jackInTheBox',
+        retro: noContribute,
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         destination: '/dashboards/2/6',
         isAnswer: true,
@@ -261,6 +275,7 @@ const frames = {
     mission_b2m6q3a1: {
         heroImageUrl: '/mission_b2m6.2.png',
         animation: 'slide',
+        retro: 'This boy is a second generation British expatriate, a child of digital nomads. Perhaps children like him would be quite common after 20 years.',
         script: 'Everyone is happy now',
         destination: 'won',
         isAnswer: true,
@@ -288,6 +303,7 @@ const frames = {
     mission_b3m3a1: {
         heroImageUrl: '/mission_b3m3a1.png',
         animation: 'jackInTheBox',
+        retro: coliving,
         script: 'Here is your rent money',
         destination: '/dashboards/3/4',
         isAnswer: true,
@@ -296,6 +312,7 @@ const frames = {
     mission_b3m3a2: {
         heroImageUrl: '/mission_b3m3a2.png',
         animation: 'jackInTheBox',
+        retro: coliving,
         script: 'Hmm…',
         destination: '/dashboards/3/4',
         isAnswer: true,
@@ -317,6 +334,7 @@ const frames = {
     mission_b3m4a1: {
         heroImageUrl: '/mission_b3m4a1.png',
         animation: 'jackInTheBox',
+        retro: 'Less labour will be involved in agriculture as machine advances',
         script: 'The sheep prefers machine than you…<br/>+£0',
         destination: '/dashboards/3/5',
         isAnswer: true,
@@ -325,6 +343,7 @@ const frames = {
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.png',
         animation: 'jackInTheBox',
+        retro: 'Since less work is needed, farmers will engage in other activities during the day.',
         script: 'The farmer enjoys your company.<br/>+£2,000',
         destination: '/dashboards/3/5',
         isAnswer: true,
@@ -346,6 +365,7 @@ const frames = {
     mission_b3m5a1: {
         heroImageUrl: '/mission_b3m5a1.png',
         animation: 'jackInTheBox',
+        retro: 'You have picked the wrong target man…',
         script: 'You have picked the wrong target man!<br/>+£0',
         destination: '/dashboards/3/6',
         isAnswer: true,
@@ -354,6 +374,7 @@ const frames = {
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.png',
         animation: 'jackInTheBox',
+        retro: 'Who says robots won’t develop their own religion?',
         script: 'You covered its shift so than it can pray to its god. <br/>£2,000',
         destination: '/dashboards/3/6',
         isAnswer: true,
@@ -401,6 +422,7 @@ const frames = {
     mission_b3m6a1: {
         heroImageUrl: '/doesnotexist.jpg',
         animation: 'jackInTheBox',
+        retro: 'The VR technology could help those whose physical ability is compromised to engage in activities that are impossible for them in real life.',
         script: 'Good choice!<br/>+£2,000',
         destination: 'won',
         isAnswer: true,
