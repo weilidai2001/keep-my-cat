@@ -6,18 +6,16 @@ const styles = {
     retro: {},
     missionsContainer: {
         width: '100%',
-        paddingBottom: '66.666%',
         position: 'relative'
     },
     missions: {
-        position: 'absolute',
         display: 'flex',
         width: '100%',
         flexWrap: 'wrap'
     },
     mission: {
-        width: '33.333%',
-        paddingBottom: '33.333%',
+        width: '25%',
+        paddingBottom: '25%',
         position: 'relative'
     },
     image: {
@@ -30,12 +28,13 @@ const styles = {
         textAlign: 'center',
         margin: '0 auto',
         width: '310px',
-        fontSize: '24px',
+        fontSize: '16px',
         lineHeight: '1.3'
     },
     footer: {
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop: '10px'
     },
     button: {
         fontSize: '15px',
@@ -68,9 +67,7 @@ class Retro extends React.Component {
 
         return (
             <div style={styles.retro} className="retro">
-                <header />
                 <main>
-                    <div style={styles.missionsContainer}>
                         <div style={styles.missions}>
                             {
                                 missions.map(mission => {
@@ -86,7 +83,6 @@ class Retro extends React.Component {
                                 })
                             }
                         </div>
-                    </div>
                     <div style={styles.text}>
                         {this.state.script || '(Tap on each thumbnail to review your journey)'}
                     </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Retro from '../../components/retro';
+import {getMissions} from '../../util/store';
+import {getAllAnswerMissionIds} from '../../data/states';
 
-const RetroPage = ({ match }) => {
-    const branchNumber = match.params.branch;
-    const missionNumber = match.params.mission;
+const RetroPage = ( ) => {
 
-    const missions = ['mission_b4m3a1', 'mission_b4m2a2', 'mission_b4m2a1'];
+    const missions = getAllAnswerMissionIds().slice(0, getAllAnswerMissionIds().length - 3);
     const props = { missions };
 
     return (
