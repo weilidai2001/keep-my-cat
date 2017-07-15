@@ -12,7 +12,10 @@ import {
     isFrameExternal,
     getTheOnlyDestination,
     getReward,
-    isAnswer
+    isAnswer,
+    wonStateId,
+    isGameFinished,
+    retroPageUrl
 } from '../../data/states';
 import {getBalance, setBalance, addMission} from '../../util/store';
 
@@ -28,7 +31,16 @@ function moveToNextFrame (currentFrame, choice) {
         recordBalance(currentFrame);
     }
 
-    const nextFrameId = choice ? getNextFrame(currentFrame, choice) : getTheOnlyDestination(currentFrame);
+    let nextFrameId;
+    if (isGameFinished(currentFrame)) {
+        nextFrameId = retroPageUrl;
+    } else if (getBalance() >= 5000) {
+        nextFrameId = wonStateId;
+    } else if (choice) {
+        nextFrameId = getNextFrame(currentFrame, choice)
+    } else {
+        nextFrameId = getTheOnlyDestination(currentFrame);
+    }
 
     if (isFrameExternal(nextFrameId)) {
         this.props.history.push(nextFrameId);

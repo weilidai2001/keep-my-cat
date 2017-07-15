@@ -449,3 +449,8 @@ export const getFrameIdByIndex = (id) => Object.keys(frames)[id % Object.keys(fr
 
 export const getAllAnswerMissionIds = () => Object.entries(frames).filter(([key, value]) => value.isAnswer).map(([key, value]) => key);
 
+export const wonStateId = 'won';
+
+export const isGameFinished = (id) => id === wonStateId || id === 'lost';
+
+export const retroPageUrl = '/retro';
