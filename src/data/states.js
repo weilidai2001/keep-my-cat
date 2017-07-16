@@ -239,7 +239,8 @@ export const frames = {
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         destination: '/dashboards/2/6',
         isAnswer: true,
-        reward: 0
+        reward: 0,
+        minimumBalance: 2999
     },
     mission_b2m6: {
         heroImageUrl: '/mission_b2m6.1.png',
@@ -333,7 +334,8 @@ export const frames = {
         script: 'The sheep prefers machine than you…<br/>+£0',
         destination: '/dashboards/3/5',
         isAnswer: true,
-        reward: 0
+        reward: 0,
+        minimumBalance: 999
     },
     mission_b3m4a2: {
         heroImageUrl: '/mission_b3m4a2.png',
@@ -364,7 +366,8 @@ export const frames = {
         script: 'You have picked the wrong target man!<br/>+£0',
         destination: '/dashboards/3/6',
         isAnswer: true,
-        reward: 0
+        reward: 0,
+        minimumBalance: 2999
     },
     mission_b3m5a2: {
         heroImageUrl: '/mission_b3m5a2.png',
@@ -451,6 +454,8 @@ export const getRetroScript = (id) => frames[id].retro;
 export const isAnswer = (id) => frames[id].isAnswer;
 
 export const getReward = id => frames[id].reward || 0;
+
+export const getMinimumBalance = id => frames[id].minimumBalance || -1;
 
 export const isFinalMission = id => !!frames[id].isFinalMission;
 

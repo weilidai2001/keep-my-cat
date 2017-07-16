@@ -17,7 +17,8 @@ import {
     lostStateId,
     isGameFinished,
     retroPageUrl,
-    isFinalMission
+    isFinalMission,
+    getMinimumBalance
 } from '../../data/states';
 import {getBalance, setBalance, addMission} from '../../util/store';
 
@@ -42,6 +43,8 @@ function moveToNextFrame (currentFrame, choice) {
         } else {
             nextFrameId = lostStateId;
         }
+    } else if (getBalance() <= getMinimumBalance(currentFrame)) {
+        nextFrameId = lostStateId;
     } else if (getBalance() >= 5000) {
         nextFrameId = wonStateId;
     } else if (choice) {
