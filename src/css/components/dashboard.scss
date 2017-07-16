@@ -1,6 +1,10 @@
 .dashboard {
   width: 100%;
 
+  header {
+    height: 80px;
+  }
+
   &__title {
     width: 60%;
   }
@@ -11,6 +15,7 @@
     flex-wrap: wrap;
     width: 300px;
     margin: 0 auto;
+    padding-bottom: 15px;
   }
 
   &__mission {
