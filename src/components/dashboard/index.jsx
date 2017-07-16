@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {getBalance} from '../../util/store';
 import Odometer from 'react-odometerjs';
+import {getBalance} from '../../util/store';
+import {images} from '../../data/assets';
 
 const isMissionAccomplished = (thisBranch, thisMission, latestBranch, latestMission) => {
     if (thisBranch == 0 && latestBranch > 0) {
@@ -161,7 +162,7 @@ class Dashboard extends Component {
                     <div className="dashboard__tile dashboard__tile10">{renderMission(2, 5, branchNumber, missionNumber)}</div>
                 </div>
                 <div className="dashboard__balance-checker">
-                    <img className="dashboard__arm" src="/dashboard_arm.png"/>
+                    <img className="dashboard__arm" src={images.arm}/>
                     <div className="dashboard__watch-face" style={{opacity: this.state.showBalance ? 1 : 0}} onClick={() => {this.setState({showBalance: !this.state.showBalance})}}>
                         <span>£{<Odometer value={this.state.balance} options={{ format: '(,ddd)', duration: 1000 }}/>}</span>
                     </div>

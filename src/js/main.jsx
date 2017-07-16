@@ -15,7 +15,7 @@ import Inspection from '../pages/linear-inspection';
 import {preload} from '../util/preload-image';
 import {images} from '../data/assets';
 
-preload([images.intro1]).then();
+preload([images.intro1, images.arm]).then();
 
 render(
     <Router>
