@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import {getBalance} from '../../util/store';
 import Odometer from 'react-odometerjs';
@@ -41,6 +42,13 @@ class Dashboard extends Component {
             balance: 0,
             showBalance: false
         }
+    }
+
+    componentDidMount() {
+        this.setState({
+            balance: getBalance(),
+            showBalance: true
+        });
     }
 
     render() {
@@ -153,20 +161,11 @@ class Dashboard extends Component {
                     <div className="dashboard__tile dashboard__tile99">{renderPath()}</div>
                     <div className="dashboard__tile dashboard__tile10">{renderMission(2, 5, branchNumber, missionNumber)}</div>
                 </div>
-                <div onClick={() => {
-                    this.setState({
-                        balance: getBalance(),
-                        showBalance: true
-                    });
-                }} style={{
-                    textAlign: 'center',
-                    paddingTop: '28px',
-                    fontSize: '24px',
-                    letterSpacing: '5px'
-                }}>
-                    {!this.state.showBalance && <span>Click</span>}
-                    <span style={{opacity: this.state.showBalance ? 1: 0}}>£{<Odometer value={this.state.balance} options={{ format: '(,ddd)' }}/>}</span>
-
+                <div className="dashboard__balance-checker">
+                    <img className="dashboard__arm" src="/dashboard_arm.png"/>
+                    <div className="dashboard__watch-face">
+                        <span>£{<Odometer value={this.state.balance} options={{ format: '(,ddd)', duration: 1000 }}/>}</span>
+                    </div>
                 </div>
             </div>
         )
