@@ -88,4 +88,22 @@ describe('deduplicate', () => {
         expectedPresent.forEach(id => {expect(deduplicate(selectedIds)).toContain(id)});
         expectedAbsent.forEach(id => {expect(deduplicate(selectedIds)).not.toContain(id)});
     });
+
+    it('removes branch 4 missions when selectedMissionIds doesn`t contain any of the possible duplicates', () => {
+        const selectedIds = ['mission_b2m6q3a1'];
+
+        const expectedPresent = [
+            'mission_b1m2a1',
+            'mission_b1m2a2'
+
+        ];
+
+        const expectedAbsent = [
+            'mission_b4m2a1',
+            'mission_b4m2a2'
+        ];
+
+        expectedPresent.forEach(id => {expect(deduplicate(selectedIds)).toContain(id)});
+        expectedAbsent.forEach(id => {expect(deduplicate(selectedIds)).not.toContain(id)});
+    });
 });
