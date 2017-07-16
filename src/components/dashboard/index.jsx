@@ -20,19 +20,19 @@ const renderMission = (thisBranch, thisMission, latestBranch, latestMission) => 
     if (thisMission == latestMission && thisBranch == latestBranch) {
         return (
             <Link to={`/missions/${latestBranch}/${latestMission}`}>
-                <img className="dashboard__active-img" src="/dashboard_mission_active.png"/>
+                <img className="dashboard__active-img" src={images.dashboard_active}/>
             </Link>
         )
     } else if (isMissionAccomplished(thisBranch, thisMission, latestBranch, latestMission)) {
-        return (<img src="/dashboard_mission_completed.png"/>)
+        return (<img src={images.dashboard_completed}/>)
     } else {
-        return (<img src="/dashboard_mission_incomplete.png"/>)
+        return (<img src={images.dashboard_incomplete}/>)
     }
 };
 
-const renderPath = () => (<img className="dashboard__path-img" src="/dashboard_mission_path.png" />);
+const renderPath = () => (<img className="dashboard__path-img" src={images.dashboard_path} />);
 
-const renderQuestionMark = () => (<img src="/dashboard_mission_question_mark.png" />);
+const renderQuestionMark = () => (<img src={images.dashboard_question_mark} />);
 
 class Dashboard extends Component {
     constructor(props, context) {
@@ -56,8 +56,8 @@ class Dashboard extends Component {
 
         return (
             <div className="dashboard">
-                <header>
-                    <div className="dashboard__title">KEEP MY CAT!</div>
+                <header style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <img src={images.dashboard_title} className="dashboard__title"/>
                 </header>
                 <div className="dashboard__mission-container">
                     <div className="dashboard__tile dashboard__tile1">{renderQuestionMark()}</div>
