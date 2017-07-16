@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Odometer from 'react-odometerjs';
-import {getBalance} from '../../util/store';
+import {getBalance, getPreviouslyShownBalance, setPreviouslyShownBalance} from '../../util/store';
 import {images} from '../../data/assets';
 
 const isMissionAccomplished = (thisBranch, thisMission, latestBranch, latestMission) => {
@@ -39,14 +39,16 @@ class Dashboard extends Component {
         super(props, context);
 
         this.state = {
-            balance: 0,
+            balance: getPreviouslyShownBalance(),
             showBalance: false
         }
     }
 
     componentDidMount() {
+        const balance = getBalance();
+        setPreviouslyShownBalance(balance);
         this.setState({
-            balance: getBalance(),
+            balance: balance,
             showBalance: true
         });
     }
