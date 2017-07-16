@@ -114,7 +114,8 @@ export const frames = {
         script: 'One step closer to becoming the smartest guy…<br/>+£0',
         destination: 'lost',
         isAnswer: true,
-        reward: 0
+        reward: 0,
+        isFinalMission: true
     },
     mission_b1m2: {
         heroImageUrl: '/mission_b1m2.jpg',
@@ -272,7 +273,8 @@ export const frames = {
         script: 'Everyone is happy now',
         destination: 'won',
         isAnswer: true,
-        reward: 2000
+        reward: 2000,
+        isFinalMission: true
     },
     mission_b2m6q3a2: {
         heroImageUrl: '/doesnotexist.jpg',
@@ -404,11 +406,11 @@ export const frames = {
         animation: 'slide',
         script: 'This old lady can cover the rest of the cat tax. She says you can pay her back by having more VR bike rides together in the future.',
         choice1: {
-            destination: 'won',
+            destination: 'mission_b3m6a1',
             text: 'Agree to the plan'
         },
         choice2: {
-            destination: 'lost',
+            destination: 'mission_b3m6a2',
             text: 'I\'d rather lose my cat'
         }
     },
@@ -419,7 +421,8 @@ export const frames = {
         script: 'Good choice!<br/>+£2,000',
         destination: 'won',
         isAnswer: true,
-        reward: 2000
+        reward: 2000,
+        isFinalMission: true
     },
     mission_b3m6a2: {
         heroImageUrl: '/doesnotexist.jpg',
@@ -449,6 +452,8 @@ export const isAnswer = (id) => frames[id].isAnswer;
 
 export const getReward = id => frames[id].reward || 0;
 
+export const isFinalMission = id => !!frames[id].isFinalMission;
+
 export const isFrameSingleChoice = (id) => !!frames[id].destination;
 
 export const getTheOnlyDestination = (id) => frames[id].destination;
@@ -469,6 +474,8 @@ export const getFrameIdByIndex = (id) => Object.keys(frames)[id % Object.keys(fr
 export const getAllAnswerMissionIds = () => Object.entries(frames).filter(([key, value]) => value.isAnswer).map(([key, value]) => key);
 
 export const wonStateId = 'won';
+
+export const lostStateId = 'lost';
 
 export const isGameFinished = (id) => id === wonStateId || id === 'lost';
 

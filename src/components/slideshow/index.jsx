@@ -14,8 +14,10 @@ import {
     getReward,
     isAnswer,
     wonStateId,
+    lostStateId,
     isGameFinished,
-    retroPageUrl
+    retroPageUrl,
+    isFinalMission
 } from '../../data/states';
 import {getBalance, setBalance, addMission} from '../../util/store';
 
@@ -34,6 +36,12 @@ function moveToNextFrame (currentFrame, choice) {
     let nextFrameId;
     if (isGameFinished(currentFrame)) {
         nextFrameId = retroPageUrl;
+    } else if (isFinalMission(currentFrame)) {
+        if (getBalance() >= 5000) {
+            nextFrameId = wonStateId;
+        } else {
+            nextFrameId = lostStateId;
+        }
     } else if (getBalance() >= 5000) {
         nextFrameId = wonStateId;
     } else if (choice) {
