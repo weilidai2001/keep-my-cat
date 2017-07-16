@@ -3,7 +3,7 @@ import {images} from '../data/assets';
 const livingAbroadAnswer = 'Digital nomads, people who enjoy a nomadic lifestyle working remotely from anywhere in the world, will become much more common in 2037. It is a great way to reduce living costs while getting the same salary.';
 const notLivingAbroadAnswer = 'In the future, a lot people may travel to cheaper countries to live while still working for the same employer remotely. But for those who choose to stay, it is still possible to enjoy life.';
 const contribute = 'In 2037, contributing to the community is very encouraged. The government may start to pay salary for such work especially if other kinds of jobs have been taken by the machine.';
-const noContribute = 'If you don’t contribute, you aren\'t rewarded…';
+const noContribute = 'If you don\'t contribute, you aren\'t rewarded…';
 const coliving = 'Co-living will become very common, especially in big cities.';
 
 export const frames = {
@@ -267,7 +267,7 @@ export const frames = {
         }
     },
     mission_b2m6q3a1: {
-        heroImageUrl: '/mission_b2m6.2.png',
+        heroImageUrl: '/mission_b2m6a1.png',
         animation: 'slide',
         retro: 'This boy is a second generation British expatriate, a child of digital nomads. Perhaps children like him would be quite common after 20 years.',
         script: 'Everyone is happy now',
@@ -277,9 +277,9 @@ export const frames = {
         isFinalMission: true
     },
     mission_b2m6q3a2: {
-        heroImageUrl: '/doesnotexist.jpg',
+        heroImageUrl: '/mission_b2m6a2.png',
         animation: 'slide',
-        script: 'Don\'t be an *rse…go back and choose again!',
+        script: '',
         destination: 'mission_b2m6q3'
     },
     mission_b3m3: {
@@ -415,7 +415,7 @@ export const frames = {
         }
     },
     mission_b3m6a1: {
-        heroImageUrl: '/doesnotexist.jpg',
+        heroImageUrl: '/mission_b3m6a1.png',
         animation: 'jackInTheBox',
         retro: 'The VR technology could help those whose physical ability is compromised to engage in activities that are impossible for them in real life.',
         script: 'Good choice!<br/>+£2,000',
@@ -425,10 +425,10 @@ export const frames = {
         isFinalMission: true
     },
     mission_b3m6a2: {
-        heroImageUrl: '/doesnotexist.jpg',
+        heroImageUrl: '/mission_b3m6a2.png',
         animation: 'jackInTheBox',
-        script: 'What?! Go back and choose again!',
-        destination: 'mission_b3m6q4',
+        script: '',
+        destination: 'mission_b3m6q6',
         reward: 0
     }
 };
