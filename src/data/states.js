@@ -1,7 +1,7 @@
 import {images} from '../data/assets';
 
 const livingAbroadAnswer = 'Digital nomads, people who enjoy a nomadic lifestyle working remotely from anywhere in the world, will become much more common in 2037. It is a great way to reduce living costs while getting the same salary.';
-const notlivingAbroadAnswer = 'In the future, a lot people may travel to cheaper countries to live while still working for the same employer remotely. But for those who choose to stay, it is still possible to enjoy life.';
+const notLivingAbroadAnswer = 'In the future, a lot people may travel to cheaper countries to live while still working for the same employer remotely. But for those who choose to stay, it is still possible to enjoy life.';
 const contribute = 'In 2037, contributing to the community is very encouraged. The government may start to pay salary for such work especially if other kinds of jobs have been taken by the machine.';
 const noContribute = 'If you don’t contribute, you aren\'t rewarded…';
 const coliving = 'Co-living will become very common, especially in big cities.';
@@ -70,7 +70,7 @@ export const frames = {
     mission_b4m2a1: {
         heroImageUrl: '/mission_b4m2a1.jpg',
         animation: 'jackInTheBox',
-        retro: notlivingAbroadAnswer,
+        retro: livingAbroadAnswer,
         script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
         destination: 'won',
         isAnswer: true,
@@ -79,7 +79,7 @@ export const frames = {
     mission_b4m2a2: {
         heroImageUrl: '/mission_b4m2a2.jpg',
         animation: 'jackInTheBox',
-        retro: 'retro text for mission_b4m2a2',
+        retro: notLivingAbroadAnswer,
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>+£0',
         destination: '/dashboards/4/3',
         isAnswer: true,
@@ -142,7 +142,7 @@ export const frames = {
     mission_b1m2a2: {
         heroImageUrl: '/mission_b4m2a2.jpg',
         animation: 'jackInTheBox',
-        retro: notlivingAbroadAnswer,
+        retro: notLivingAbroadAnswer,
         script: 'Loving the British weather too much? That’s ok. There are other things to try…<br/>+£0',
         destination: '/dashboards/3/3',
         isAnswer: true,
