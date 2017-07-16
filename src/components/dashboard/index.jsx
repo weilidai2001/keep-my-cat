@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import {getBalance} from '../../util/store';
 import Odometer from 'react-odometerjs';
@@ -163,7 +162,7 @@ class Dashboard extends Component {
                 </div>
                 <div className="dashboard__balance-checker">
                     <img className="dashboard__arm" src="/dashboard_arm.png"/>
-                    <div className="dashboard__watch-face">
+                    <div className="dashboard__watch-face" style={{opacity: this.state.showBalance ? 1 : 0}} onClick={() => {this.setState({showBalance: !this.state.showBalance})}}>
                         <span>£{<Odometer value={this.state.balance} options={{ format: '(,ddd)', duration: 1000 }}/>}</span>
                     </div>
                 </div>
