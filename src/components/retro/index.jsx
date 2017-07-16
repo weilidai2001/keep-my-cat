@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router';
+import cx from 'classnames';
 import {getRetroScript, getFrameHeroImage, deduplicate} from '../../data/states';
 
 const styles = {
@@ -75,10 +76,13 @@ class Retro extends React.Component {
                             deduped.map(mission => {
                                 const imageUrl = getFrameHeroImage(mission);
                                 const script = getRetroScript(mission);
+                                const isEnabled = missions.includes(mission);
                                 return (
                                     <div key={mission} style={styles.mission}>
-                                        <img src={imageUrl} style={styles.image}
-                                             onClick={this.onMissionClick(script, imageUrl)}/>
+                                        <img src={imageUrl}
+                                             style={styles.image}
+                                             className={cx({'retro__unplayed': !isEnabled})}
+                                             onClick={isEnabled ? this.onMissionClick(script, imageUrl) : null}/>
                                     </div>
 
                                 );
