@@ -250,13 +250,13 @@ export const frames = {
     mission_b2m6q2: {
         heroImageUrl: '/mission_b2m6.2.png',
         animation: 'slide',
-        script: 'A kid is looking for an adult to bring him back to the UK.',
+        script: '',
         destination: 'mission_b2m6q3'
     },
     mission_b2m6q3: {
         heroImageUrl: '/mission_b2m6.3.png',
         animation: 'slide',
-        script: 'A kid is looking for an adult to bring him back to the UK.',
+        script: '',
         choice1: {
             destination: 'mission_b2m6q3a1',
             text: 'Love to help'
@@ -404,7 +404,7 @@ export const frames = {
     mission_b3m6q6: {
         heroImageUrl: '/mission_b3m6.6.png',
         animation: 'slide',
-        script: 'This old lady can cover the rest of the cat tax. She says you can pay her back by having more VR bike rides together in the future.',
+        script: '',
         choice1: {
             destination: 'mission_b3m6a1',
             text: 'Agree to the plan'
