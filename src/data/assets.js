@@ -1,8 +1,8 @@
 export const images = {
     intro1: '/intro_1.gif',
     arm: '/dashboard_arm.jpg',
-    won: '/win.png',
-    lost: '/loose.png',
+    won: '/win.gif',
+    lost: '/lose.gif',
     dashboard_title: '/dashboard_title.png',
     dashboard_active: '/dashboard_mission_active.png',
     dashboard_completed: '/dashboard_mission_completed.png',
