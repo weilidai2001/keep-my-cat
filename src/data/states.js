@@ -19,7 +19,7 @@ export const frames = {
     lost: {
         heroImageUrl: images.lost,
         animation: 'jackInTheBox',
-        script: 'You loose!',
+        script: 'You lose!',
         destination: '/'
     },
     mission_b0m1: {
@@ -71,7 +71,7 @@ export const frames = {
         heroImageUrl: '/mission_b4m2a1.jpg',
         animation: 'jackInTheBox',
         retro: livingAbroadAnswer,
-        script: 'You have saved money by living in somewhere cheaper. <br/>+£1,500',
+        script: 'You have saved money by living somewhere cheaper. <br/>+£1,500',
         destination: 'won',
         isAnswer: true,
         reward: 1500
@@ -88,7 +88,7 @@ export const frames = {
     mission_b4m3: {
         heroImageUrl: '/mission_b4m3.jpg',
         animation: 'jackInTheBox',
-        script: 'Today is Sunday neighbour\'s kids seem to want to play with you.',
+        script: 'Today is Sunday. Your neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b4m3a1',
             text: 'Host a workshop for them'
@@ -151,7 +151,7 @@ export const frames = {
     mission_b2m3: {
         heroImageUrl: '/mission_b2m3.jpg',
         animation: 'jackInTheBox',
-        script: 'You met a successful business man',
+        script: 'You met a successful businessman',
         choice1: {
             destination: 'mission_b2m3a1',
             text: 'Apply to be his accountant'
@@ -213,7 +213,7 @@ export const frames = {
     mission_b2m5: {
         heroImageUrl: '/mission_b2m5.jpg',
         animation: 'jackInTheBox',
-        script: 'Today is Sunday, neighbour\'s kids seem to want to play with you.',
+        script: 'Today is Sunday. Your neighbour\'s kids seem to want to play with you.',
         choice1: {
             destination: 'mission_b2m5a1',
             text: 'Host a workshop for them'
@@ -331,7 +331,7 @@ export const frames = {
         heroImageUrl: '/mission_b3m4a1.png',
         animation: 'jackInTheBox',
         retro: 'Less labour will be involved in agriculture as machine advances',
-        script: 'The sheep prefers machine than you…<br/>+£0',
+        script: 'The sheep prefers a machine than you…<br/>+£0',
         destination: '/dashboards/3/5',
         isAnswer: true,
         reward: 0,
@@ -373,7 +373,7 @@ export const frames = {
         heroImageUrl: '/mission_b3m5a2.png',
         animation: 'jackInTheBox',
         retro: 'Who says robots won’t develop their own religion?',
-        script: 'You covered its shift so than it can pray to its god. <br/>+£2,000',
+        script: 'You covered its shift so that it can pray to its god. <br/>+£2,000',
         destination: '/dashboards/3/6',
         isAnswer: true,
         reward: 2000
