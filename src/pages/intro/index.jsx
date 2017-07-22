@@ -7,7 +7,7 @@ class Intro extends Component {
 
     render() {
         const images = [
-            {src: imageMapping.intro1, cacheable: true},
+            {src: imageMapping.intro1, cacheable: false},
             {src: '/intro_2.gif', cacheable: false},
             {src: '/intro_3.gif', cacheable: false},
             {src: '/intro_4.gif', cacheable: false},
@@ -15,10 +15,6 @@ class Intro extends Component {
             {src: '/intro_6.gif', cacheable: false},
             {src: '/intro_7.gif', cacheable: false},
             {src: '/intro_8.gif', cacheable: false},
-            {src: '/intro_9.gif', cacheable: true},
-            {src: '/intro_10.gif', cacheable: false},
-            {src: '/intro_10a.jpg', cacheable: true},
-            {src: '/intro_11.gif', cacheable: true},
         ];
 
         const rand = Math.random();
