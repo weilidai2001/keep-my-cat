@@ -12,13 +12,13 @@ export const frames = {
     },
     won: {
         heroImageUrl: images.won,
-        animation: 'jackInTheBox',
+        animation: 'zoomIn',
         script: 'You win!',
         destination: '/'
     },
     lost: {
         heroImageUrl: images.lost,
-        animation: 'jackInTheBox',
+        animation: 'zoomIn',
         script: 'You lose!',
         destination: '/'
     },
