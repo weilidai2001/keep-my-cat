@@ -13,6 +13,21 @@
   }
 }
 
+.zoomIn {
+  &-enter {
+    &.zoomIn-enter-active {
+      animation-duration: .5s;
+      animation-name: zoomIn;
+    }
+  }
+  &-leave {
+    &.zoomIn-leave-active {
+      transform: translateY(1px);
+      transition: transform .1s linear;
+    }
+  }
+}
+
 .slide {
   &-enter {
     transform: translateX(100%);
