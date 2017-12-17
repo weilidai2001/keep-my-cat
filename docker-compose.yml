@@ -1,0 +1,7 @@
+version: "3"
+services:
+  web:
+    image: keep-my-cat:latest
+    ports:
+      - 8099:8099
+    restart: always
