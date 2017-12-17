@@ -14,4 +14,4 @@ COPY build .
 EXPOSE $PORT
 
 # Run it
-CMD [ "http-server", "-p", "8099" ]
+CMD [ "http-server", "-p", "8090", "--silent", "--gzip" ]
