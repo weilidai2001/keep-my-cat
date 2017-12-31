@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 RUN npm install http-server -g
 
 # Set environment
-ENV PORT 8099
+ENV PORT 80
 
 # Import source files
 COPY build .
@@ -14,4 +14,4 @@ COPY build .
 EXPOSE $PORT
 
 # Run it
-CMD [ "http-server", "-p", "8090", "--silent", "--gzip" ]
+CMD [ "http-server", "-p", "80", "--silent", "--gzip" ]

@@ -3,5 +3,5 @@ services:
   web:
     image: keep-my-cat:latest
     ports:
-      - 8099:8099
+      - 8099:80
     restart: always
