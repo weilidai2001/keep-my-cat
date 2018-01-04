@@ -1,8 +1,8 @@
-FROM node:9.2.0-alpine
+FROM nginx:alpine
 
 WORKDIR /usr/src/app
 
-RUN npm install http-server -g
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Set environment
 ENV PORT 80
@@ -12,6 +12,3 @@ COPY build .
 
 # Expose server port
 EXPOSE $PORT
-
-# Run it
-CMD [ "http-server", "-p", "80", "--silent", "--gzip" ]
